@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray-50: #F5F5F5;
+    --gray-100: #E5E5E5;
+    --gray-700: #737373;
+    --green: #10B981;
+    --red: #EF4444;
+  }
+
+  * {
+    @apply border-gray-100;
+  }
+
+  body {
+    @apply bg-white text-black font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.33%);
+    }
+  }
+}
