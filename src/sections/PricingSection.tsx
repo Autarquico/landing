@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Check } from 'lucide-react'
 
 export const PricingSection: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -26,11 +25,6 @@ export const PricingSection: React.FC = () => {
       }
     }
   }, [])
-
-  const scrollToWaitlist = () => {
-    const element = document.getElementById('waitlist-final')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   // const features = [
   //   'Fichaje ilimitado, 4 años de almacenamiento',
