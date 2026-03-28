@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import { EmailCapture } from '../components/EmailCapture'
 import { Check } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export const FinalCTASection: React.FC = () => {
+  const { t } = useTranslation()
+
   return (
     <section
       id="waitlist-final"
@@ -24,17 +27,17 @@ export const FinalCTASection: React.FC = () => {
         >
           {/* Headlines */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display mb-4 md:mb-6 leading-tight px-4">
-            MODERNIZA
+            {t('cta.headline1')}
             <br />
-            TU NEGOCIO
+            {t('cta.headline2')}
           </h2>
 
           <p className="text-2xl sm:text-3xl md:text-4xl font-display mb-3 md:mb-4 text-green">
-            APÚNTATE YA
+            {t('cta.signUp')}
           </p>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-8 md:mb-12 px-4">
-            Sé de los primeros en acceder
+            {t('cta.earlyAccess')}
           </p>
 
           {/* Email Capture */}
@@ -52,15 +55,15 @@ export const FinalCTASection: React.FC = () => {
           >
             <div className="flex items-center justify-center gap-2">
               <Check className="w-4 h-4 md:w-5 md:h-5 text-green flex-shrink-0" />
-              <span className="text-base md:text-lg">Acceso prioritario al lanzamiento</span>
+              <span className="text-base md:text-lg">{t('cta.benefit1')}</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <Check className="w-4 h-4 md:w-5 md:h-5 text-green flex-shrink-0" />
-              <span className="text-base md:text-lg">Descuento especial early adopters</span>
+              <span className="text-base md:text-lg">{t('cta.benefit2')}</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <Check className="w-4 h-4 md:w-5 md:h-5 text-green flex-shrink-0" />
-              <span className="text-base md:text-lg">Actualizaciones exclusivas</span>
+              <span className="text-base md:text-lg">{t('cta.benefit3')}</span>
             </div>
           </motion.div>
 
@@ -73,7 +76,7 @@ export const FinalCTASection: React.FC = () => {
             className="inline-flex flex-col sm:flex-row items-center gap-2 bg-white/10 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-white/20"
           >
             <span className="text-white/90 text-sm md:text-base text-center sm:text-left">
-              <span className="font-bold text-green">100+</span> microempresas ya en lista de espera
+              <span className="font-bold text-green">{t('cta.socialProofCount')}</span> {t('cta.socialProofText')}
             </span>
           </motion.div>
         </motion.div>

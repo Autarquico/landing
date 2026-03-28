@@ -1,37 +1,27 @@
 import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export const SolutionHero: React.FC = () => {
+  const { t } = useTranslation()
+
   const benefits = [
-    { stat: 'IA', label: 'Automátizado.' },
-    { stat: '24/7', label: 'Siempre disponible.' },
-    { stat: '<1 día', label: 'Configuración simple.' },
+    { stat: t('solution.benefitStat1'), label: t('solution.benefitLabel1') },
+    { stat: t('solution.benefitStat2'), label: t('solution.benefitLabel2') },
+    { stat: t('solution.benefitStat3'), label: t('solution.benefitLabel3') },
   ]
 
   const features = [
-    'Nóminas automáticas',
-    'Integración con bancos',
-    'Fichaje ilimitado, 4 años de almacenamiento',
-    'Portal para tus empleados',
-    'Gestion automática de subvenciones',
-    'Altas y bajas en la seguridad social',
-    'Analíticas de tu negocio en tiempo real',
-    'Cumplimiento normativo garantizado',
-    'Sin esperas, a tu ritmo',
+    t('solution.feature1'),
+    t('solution.feature2'),
+    t('solution.feature3'),
+    t('solution.feature4'),
+    t('solution.feature5'),
+    t('solution.feature6'),
+    t('solution.feature7'),
+    t('solution.feature8'),
+    t('solution.feature9'),
   ]
-
-    // const features = [
-  //   'Fichaje ilimitado, 4 años de almacenamiento',
-  //   'Nóminas automáticas',
-  //   'Integración con bancos',
-  //   'Altas y bajas en la seguridad social',
-  //   'Portal del empleado',
-  //   'Gestion automática de subvenciones',
-  //   'Agente IA especializado',
-  //   'Notificaciones automáticas',
-  //   'Soporte por email/chat',
-  //   'y mucho más...',
-  // ]
 
   return (
     <section className="relative min-h-screen bg-white flex items-center justify-center overflow-hidden">
@@ -62,23 +52,23 @@ export const SolutionHero: React.FC = () => {
           >
             {/* Headline */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display mb-6 md:mb-8 leading-tight">
-              GESTIONA
+              {t('solution.headline1')}
               <br />
-              <span className="text-green">TU NEGOCIO</span>
+              <span className="text-green">{t('solution.headline2')}</span>
             </h2>
 
             {/* Description */}
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 md:mb-10 leading-relaxed">
-              Automatiza la gestión de tu empresa.
+              {t('solution.description1')}
               <br />
-              Control total desde tu móvil.
+              {t('solution.description2')}
             </p>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-6 sm:gap-8 mb-8 md:mb-10">
               {benefits.map((benefit, index) => (
                 <motion.div
-                  key={benefit.label}
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -91,24 +81,6 @@ export const SolutionHero: React.FC = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* CTA */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <a
-                href="#waitlist-final"
-                className="inline-block bg-black text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-medium text-base sm:text-lg hover:bg-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-1"
-              >
-                Apúntate a la Lista →
-              </a>
-              <p className="text-xs sm:text-sm text-gray-600 mt-3 sm:mt-4">
-                Lanzamiento en 2026.
-              </p>
-            </motion.div> */}
           </motion.div>
 
           {/* Right: Features List */}
@@ -121,7 +93,7 @@ export const SolutionHero: React.FC = () => {
           >
             {features.map((feature, index) => (
               <motion.div
-                key={feature}
+                key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

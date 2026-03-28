@@ -4,15 +4,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Loader2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
-const emailSchema = z.object({
-  email: z
-    .string()
-    .min(5, 'Email muy corto')
-    .email('Email no válido')
-})
-
-type EmailFormData = z.infer<typeof emailSchema>
+type EmailFormData = { email: string }
 
 interface EmailCaptureProps {
   variant?: 'hero' | 'final'
@@ -26,6 +20,14 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const { t } = useTranslation()
+
+  const emailSchema = z.object({
+    email: z
+      .string()
+      .min(5, t('email.validationShort'))
+      .email(t('email.validationInvalid'))
+  })
 
   const {
     register,
@@ -57,7 +59,7 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
       // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000)
     } catch (err) {
-      setError('Error. Intenta de nuevo')
+      setError(t('email.error'))
     } finally {
       setIsLoading(false)
     }
@@ -80,7 +82,7 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
           >
             <Check className="w-6 h-6" />
             <p className="text-lg font-medium">
-              ¡Apuntado! 🎉 Revisa tu email
+              {t('email.success')}
             </p>
           </motion.div>
         ) : (
@@ -97,7 +99,7 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
                 <input
                   {...register('email')}
                   type="email"
-                  placeholder="tu@email.com"
+                  placeholder={t('email.placeholder')}
                   disabled={isLoading}
                   className={`w-full px-4 py-3 rounded-md border ${
                     errors.email
@@ -135,17 +137,17 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
                 {isLoading ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    <span>Apuntando...</span>
+                    <span>{t('email.submitting')}</span>
                   </>
                 ) : (
-                  <span>Apuntarme →</span>
+                  <span>{t('email.submit')}</span>
                 )}
               </motion.button>
             </div>
 
             <p className={`text-sm ${isFinalCTA ? 'text-white/70' : 'text-gray-700'} flex items-center gap-1`}>
               <Check className="w-4 h-4 text-green" />
-              Sin spam. Solo noticias importantes
+              {t('email.noSpam')}
             </p>
           </motion.form>
         )}

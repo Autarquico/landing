@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const ProblemHero: React.FC = () => {
+  const { t } = useTranslation()
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video Background */}
@@ -34,12 +37,12 @@ export const ProblemHero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xs md:text-sm uppercase tracking-wider text-gray-400 mb-4 md:mb-6"
           >
-            
+
           </motion.p>
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display mb-6 md:mb-8 leading-tight max-w-5xl mx-auto px-4">
-            Simplifica la gestión de tu negocio
+            {t('hero.headline')}
           </h1>
 
           {/* Subheadline */}
@@ -49,9 +52,9 @@ export const ProblemHero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4"
           >
-            Tu agente IA especializado disponible 24/7.
+            {t('hero.subheadline1')}
             <br />
-            Nóminas, fichajes, subvenciones... todo gestionado desde tu móvil.
+            {t('hero.subheadline2')}
           </motion.p>
 
           {/* Stats */}
@@ -61,7 +64,7 @@ export const ProblemHero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-16 mt-8 md:mt-12"
           >
-            
+
           </motion.div>
 
           {/* Scroll indicator */}

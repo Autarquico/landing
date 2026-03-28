@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,33 +49,37 @@ export const Navigation: React.FC = () => {
             href="#autonomos"
             className="text-gray-700 hover:text-black transition-colors font-medium"
           >
-            Autónomos y Pymes
+            {t('nav.freelancers')}
           </a>
           <a
             href="#asesorias"
             className="text-gray-700 hover:text-black transition-colors font-medium"
           >
-            Asesorías
+            {t('nav.advisors')}
           </a>
+          <LanguageSwitcher />
           <motion.button
             onClick={scrollToWaitlist}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="bg-black text-white px-6 py-2.5 lg:px-8 lg:py-3 rounded-full font-medium transition-all duration-200"
           >
-            Apúntate Ya
+            {t('nav.cta')}
           </motion.button>
         </div>
 
         {/* Mobile CTA */}
-        <motion.button
-          onClick={scrollToWaitlist}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="md:hidden bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
-        >
-          Apúntate
-        </motion.button>
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher />
+          <motion.button
+            onClick={scrollToWaitlist}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
+          >
+            {t('nav.ctaMobile')}
+          </motion.button>
+        </div>
       </div>
     </motion.nav>
   )

@@ -1,7 +1,9 @@
 import { Mail, Instagram } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
+  const { t } = useTranslation()
 
   return (
     <footer className="bg-black text-white py-12 md:py-16 px-4 md:px-6 lg:px-8">
@@ -9,26 +11,26 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Producto */}
           <div className="text-center">
-            <h4 className="font-display text-lg mb-4">Producto</h4>
+            <h4 className="font-display text-lg mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href="#features" className="hover:text-white transition-colors">
-                  Fichaje
+                  {t('footer.timekeeping')}
                 </a>
               </li>
               <li>
                 <a href="#features" className="hover:text-white transition-colors">
-                  Nóminas
+                  {t('footer.payroll')}
                 </a>
               </li>
               <li>
                 <a href="#features" className="hover:text-white transition-colors">
-                  Portal Empleado
+                  {t('footer.employeePortal')}
                 </a>
               </li>
               <li>
                 <a href="#pricing" className="hover:text-white transition-colors">
-                  Precios
+                  {t('footer.pricing')}
                 </a>
               </li>
             </ul>
@@ -36,16 +38,16 @@ export const Footer: React.FC = () => {
 
           {/* Legal */}
           <div className="text-center">
-            <h4 className="font-display text-lg mb-4">Legal</h4>
+            <h4 className="font-display text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Términos de Uso
+                  {t('footer.terms')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Privacidad
+                  {t('footer.privacy')}
                 </a>
               </li>
               <li>
@@ -58,7 +60,7 @@ export const Footer: React.FC = () => {
 
           {/* Contacto */}
           <div className="text-center">
-            <h4 className="font-display text-lg mb-4">Contacto</h4>
+            <h4 className="font-display text-lg mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -87,7 +89,7 @@ export const Footer: React.FC = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-white/10">
           <p className="text-center text-sm text-white/50">
-            © {currentYear} (R) Autárquico. Todos los derechos reservados.
+            {t('footer.copyright', { year: currentYear })}
           </p>
         </div>
       </div>
