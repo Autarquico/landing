@@ -36,9 +36,9 @@ export const Navigation: React.FC = () => {
         {/* Logo + Brand */}
         <div className="flex items-center gap-1.5">
           <img
-            src="/logo-dark.svg"
+            src={scrolled ? '/logo-clear.svg' : '/logo-dark.svg'}
             alt="Autárquico"
-            className="h-10 md:h-12 lg:h-14"
+            className="h-10 md:h-12 lg:h-14 transition-all duration-300"
           />
           <span className={`text-lg md:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
             scrolled ? 'text-black' : 'text-white'
