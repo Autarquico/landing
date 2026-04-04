@@ -26,8 +26,10 @@ export const Navigation: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
-        scrolled ? 'shadow-sm' : ''
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-12 py-4 flex items-center justify-between">
@@ -38,7 +40,9 @@ export const Navigation: React.FC = () => {
             alt="Autárquico"
             className="h-10 md:h-12 lg:h-14"
           />
-          <span className="text-lg md:text-xl lg:text-2xl font-semibold text-black">
+          <span className={`text-lg md:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
+            scrolled ? 'text-black' : 'text-white'
+          }`}>
             autarqui.co
           </span>
         </div>
@@ -47,17 +51,25 @@ export const Navigation: React.FC = () => {
         <div className="hidden md:flex items-center gap-8 lg:gap-12">
           <a
             href="#autonomos"
-            className="text-gray-700 hover:text-black transition-colors font-medium"
+            className={`font-medium transition-colors duration-300 ${
+              scrolled
+                ? 'text-gray-600 hover:text-black'
+                : 'text-white/80 hover:text-white'
+            }`}
           >
             {t('nav.freelancers')}
           </a>
           <a
             href="#asesorias"
-            className="text-gray-700 hover:text-black transition-colors font-medium"
+            className={`font-medium transition-colors duration-300 ${
+              scrolled
+                ? 'text-gray-600 hover:text-black'
+                : 'text-white/80 hover:text-white'
+            }`}
           >
             {t('nav.advisors')}
           </a>
-          <LanguageSwitcher />
+          <LanguageSwitcher dark={!scrolled} />
           <motion.button
             onClick={scrollToWaitlist}
             whileHover={{ scale: 1.02 }}
@@ -70,7 +82,7 @@ export const Navigation: React.FC = () => {
 
         {/* Mobile CTA */}
         <div className="md:hidden flex items-center gap-3">
-          <LanguageSwitcher />
+          <LanguageSwitcher dark={!scrolled} />
           <motion.button
             onClick={scrollToWaitlist}
             whileHover={{ scale: 1.02 }}

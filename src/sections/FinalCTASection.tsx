@@ -11,6 +11,9 @@ export const FinalCTASection: React.FC = () => {
       id="waitlist-final"
       className="py-16 md:py-24 px-4 md:px-6 lg:px-8 bg-black text-white relative overflow-hidden"
     >
+      {/* Section transition fade */}
+      <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white to-transparent z-20" />
+
       {/* Animated gradient background */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.8),transparent_50%)]" />
@@ -51,7 +54,7 @@ export const FinalCTASection: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="space-y-3 md:space-y-4 mb-8 md:mb-10 px-4"
+            className="space-y-4 md:space-y-5 mb-8 md:mb-10 px-4"
           >
             <div className="flex items-center justify-center gap-2">
               <Check className="w-4 h-4 md:w-5 md:h-5 text-green flex-shrink-0" />

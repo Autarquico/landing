@@ -44,7 +44,6 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
 
     try {
       // TODO: Replace with actual API call to MongoDB + Resend
-      // For now, simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       console.log('Email submitted:', {
@@ -56,7 +55,6 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
       setIsSubmitted(true)
       reset()
 
-      // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000)
     } catch (err) {
       setError(t('email.error'))
@@ -76,7 +74,7 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className={`flex items-center gap-2 ${
+            className={`flex items-center justify-center gap-2 ${
               isFinalCTA ? 'text-white' : 'text-green'
             }`}
           >
@@ -94,45 +92,37 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-3"
           >
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className={`flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 ${
+              isFinalCTA
+                ? 'sm:bg-white/10 sm:border sm:border-white/30 sm:rounded-full sm:p-1.5'
+                : 'sm:bg-gray-100 sm:border sm:border-gray-200 sm:rounded-full sm:p-1.5'
+            }`}>
               <div className="flex-1">
                 <input
                   {...register('email')}
                   type="email"
                   placeholder={t('email.placeholder')}
                   disabled={isLoading}
-                  className={`w-full px-4 py-3 rounded-md border ${
+                  className={`w-full px-5 py-3 sm:py-2.5 rounded-full sm:rounded-full sm:bg-transparent sm:border-none ${
                     errors.email
-                      ? 'border-red focus:border-red focus:ring-red'
+                      ? 'border border-red focus:ring-red'
                       : isFinalCTA
-                      ? 'border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:border-white focus:ring-white'
-                      : 'border-gray-100 focus:border-green focus:ring-green'
-                  } focus:outline-none focus:ring-2 focus:ring-offset-2 ${
-                    isFinalCTA ? 'focus:ring-offset-black' : ''
-                  } transition-all duration-200 disabled:opacity-50`}
+                      ? 'border border-white/30 bg-white/10 text-white placeholder:text-white/60 sm:border-none sm:bg-transparent'
+                      : 'border border-gray-200 sm:border-none sm:bg-transparent'
+                  } focus:outline-none focus:ring-0 transition-all duration-200 disabled:opacity-50`}
                 />
-                {errors.email && (
-                  <p className={`text-sm mt-1 ${isFinalCTA ? 'text-red-300' : 'text-red'}`}>
-                    {errors.email.message}
-                  </p>
-                )}
-                {error && (
-                  <p className={`text-sm mt-1 ${isFinalCTA ? 'text-red-300' : 'text-red'}`}>
-                    {error}
-                  </p>
-                )}
               </div>
 
               <motion.button
                 type="submit"
                 disabled={isLoading}
-                whileHover={{ scale: isLoading ? 1 : 1.02, y: isLoading ? 0 : -2 }}
+                whileHover={{ scale: isLoading ? 1 : 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className={`${
                   isFinalCTA
                     ? 'bg-white text-black hover:bg-gray-50'
-                    : 'bg-black text-white hover:bg-gray-700'
-                } px-6 py-3 rounded-md font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap`}
+                    : 'bg-black text-white hover:bg-gray-800'
+                } px-6 py-3 sm:py-2.5 rounded-full font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap`}
               >
                 {isLoading ? (
                   <>
@@ -145,7 +135,13 @@ export const EmailCapture: React.FC<EmailCaptureProps> = ({
               </motion.button>
             </div>
 
-            <p className={`text-sm ${isFinalCTA ? 'text-white/70' : 'text-gray-700'} flex items-center gap-1`}>
+            {(errors.email || error) && (
+              <p className={`text-sm ${isFinalCTA ? 'text-red-300' : 'text-red'}`}>
+                {errors.email?.message || error}
+              </p>
+            )}
+
+            <p className={`text-sm ${isFinalCTA ? 'text-white/70' : 'text-gray-500'} flex items-center gap-1`}>
               <Check className="w-4 h-4 text-green" />
               {t('email.noSpam')}
             </p>

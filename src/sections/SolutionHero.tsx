@@ -34,16 +34,16 @@ export const SolutionHero: React.FC = () => {
           playsInline
           className="w-full h-full object-cover opacity-20 md:opacity-30"
         >
-          <source src="/guy-hammock.mp4" type="video/mp4" />
+          <source src="/guy-hammock-nologo.mp4" type="video/mp4" />
         </video>
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-12 py-16 md:py-20">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
-          {/* Left: Headline, Description, Stats, CTA */}
+          {/* Left: Headline, Description, Stats */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export const SolutionHero: React.FC = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-8 md:mb-10 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-500 mb-8 md:mb-10 leading-relaxed">
               {t('solution.description1')}
               <br />
               {t('solution.description2')}
@@ -77,19 +77,19 @@ export const SolutionHero: React.FC = () => {
                   <div className="text-3xl sm:text-4xl md:text-5xl font-display text-black mb-1">
                     {benefit.stat}
                   </div>
-                  <div className="text-gray-600 text-sm md:text-base">{benefit.label}</div>
+                  <div className="text-gray-500 text-sm md:text-base">{benefit.label}</div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Right: Features List */}
+          {/* Right: Features List — 2 columns on desktop */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-3 md:space-y-4"
+            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
           >
             {features.map((feature, index) => (
               <motion.div
@@ -97,13 +97,13 @@ export const SolutionHero: React.FC = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
                 className="flex items-center gap-3"
               >
                 <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-green flex items-center justify-center flex-shrink-0">
                   <Check className="w-3 h-3 md:w-4 md:h-4 text-white" />
                 </div>
-                <span className="text-base md:text-lg text-gray-700">{feature}</span>
+                <span className="text-base md:text-lg text-gray-600">{feature}</span>
               </motion.div>
             ))}
           </motion.div>
