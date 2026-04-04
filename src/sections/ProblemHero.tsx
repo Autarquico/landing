@@ -1,55 +1,10 @@
-import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export const ProblemHero: React.FC = () => {
   const { t } = useTranslation()
-  const turbulenceRef = useRef<SVGFETurbulenceElement>(null)
-
-  useEffect(() => {
-    let frame: number
-    let seed = 0
-
-    const animate = () => {
-      seed += 0.3
-      if (turbulenceRef.current) {
-        turbulenceRef.current.setAttribute(
-          'baseFrequency',
-          `${0.01 + Math.sin(seed * 0.05) * 0.003} ${0.015 + Math.cos(seed * 0.03) * 0.005}`
-        )
-        turbulenceRef.current.setAttribute('seed', String(Math.floor(seed) % 100))
-      }
-      frame = requestAnimationFrame(animate)
-    }
-
-    frame = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(frame)
-  }, [])
 
   return (
     <section id="autonomos" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* SVG filter for wave displacement */}
-      <svg className="absolute w-0 h-0" aria-hidden="true">
-        <defs>
-          <filter id="wave-flag" x="-20%" y="-20%" width="140%" height="140%">
-            <feTurbulence
-              ref={turbulenceRef}
-              type="fractalNoise"
-              baseFrequency="0.01 0.015"
-              numOctaves={3}
-              seed={0}
-              result="noise"
-            />
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="noise"
-              scale={35}
-              xChannelSelector="R"
-              yChannelSelector="G"
-            />
-          </filter>
-        </defs>
-      </svg>
-
       {/* Video loop background */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
@@ -57,7 +12,6 @@ export const ProblemHero: React.FC = () => {
           alt=""
           className="w-full h-full object-cover opacity-40"
           style={{
-            filter: 'url(#wave-flag)',
             maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)',
             WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)'
           }}
