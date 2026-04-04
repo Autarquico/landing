@@ -36,7 +36,7 @@ export const Navigation: React.FC = () => {
         {/* Logo + Brand */}
         <div className="flex items-center gap-1.5">
           <img
-            src="/logo.jpeg"
+            src="/logo-dark.svg"
             alt="Autárquico"
             className="h-10 md:h-12 lg:h-14"
           />

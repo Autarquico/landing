@@ -50,16 +50,16 @@ export const ProblemHero: React.FC = () => {
         </defs>
       </svg>
 
-      {/* Logo as waving flag */}
+      {/* Video loop background */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src="/logo.jpeg"
+          src="/busy-freelancer.gif"
           alt=""
-          className="w-[60vw] md:w-[40vw] lg:w-[30vw] max-w-lg opacity-15"
+          className="w-full h-full object-cover opacity-40"
           style={{
             filter: 'url(#wave-flag)',
-            maskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, transparent 75%)'
+            maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)'
           }}
         />
       </div>
