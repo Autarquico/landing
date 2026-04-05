@@ -34,16 +34,16 @@ export const Navigation: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo + Brand */}
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-0">
           <img
             src={scrolled ? '/logo-clear.svg' : '/logo-dark.svg'}
             alt="Autárquico"
             className="h-10 md:h-12 lg:h-14 transition-all duration-300"
           />
-          <span className={`text-lg md:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
+          <span className={`-ml-0.5 text-lg md:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
             scrolled ? 'text-black' : 'text-white'
           }`}>
-            autarqui.co
+            utarqui.co
           </span>
         </div>
 
