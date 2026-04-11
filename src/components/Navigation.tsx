@@ -34,7 +34,7 @@ export const Navigation: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo + Brand */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5">
           <img
             src={scrolled ? '/logo-clear.svg' : '/logo-dark.svg'}
             alt="α"
