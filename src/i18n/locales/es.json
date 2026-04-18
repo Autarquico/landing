@@ -4,14 +4,14 @@
   "nav.cta": "Apúntate Ya",
   "nav.ctaMobile": "Apúntate",
 
-  "hero.headline": "Cada mes, lo mismo",
-  "hero.subheadline1": "Calcular nóminas, cuadrar fichajes, perseguir trámites. Tedioso, repetitivo y costoso.",
-  "hero.subheadline2": "La gestión de personal no ha cambiado en 20 años, pero las reglas no dejan de cambiar. Tu negocio merece más.",
+  "hero.headline": "Lleva la gestión laboral y fiscal de tu negocio a otro nivel",
+  "hero.subheadline1": "Nóminas, fichajes, facturación, impuestos y mucho más.",
+  "hero.subheadline2": "Todo automatizado, desde tu móvil, sin complicaciones.",
 
   "solution.headline1": "GESTIONA",
   "solution.headline2": "TU NEGOCIO",
-  "solution.description1": "Automatiza la gestión de tu empresa.",
-  "solution.description2": "Control total desde tu móvil.",
+  "solution.description1": "Automatiza la gestión de tu negocio.",
+  "solution.description2": "Agentes de IA especializados. Gestionados totalmente desde tu móvil.",
   "solution.benefitStat1": "IA",
   "solution.benefitLabel1": "Automátizado.",
   "solution.benefitStat2": "24/7",
@@ -29,7 +29,6 @@
   "solution.feature9": "Sin esperas, a tu ritmo",
   "solution.feature10": "Facturación automática",
   "solution.feature11": "Gestión de impuestos",
-  "solution.feature12": "Y mucho más...",
 
   "pricing.headline": "Adaptado a tus Necesidades.",
   "pricing.payForNeeds": "Paga por lo que necesitas",

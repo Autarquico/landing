@@ -4,14 +4,14 @@
   "nav.cta": "Join the Waitlist",
   "nav.ctaMobile": "Join",
 
-  "hero.headline": "Every month, the same thing",
-  "hero.subheadline1": "Calculating payroll, tracking hours, chasing paperwork. Tedious, repetitive and costly.",
-  "hero.subheadline2": "Workforce management hasn't changed in 20 years, but the rules never stop changing. Your business deserves better.",
+  "hero.headline": "Take your business's workforce and tax management to the next level",
+  "hero.subheadline1": "Payroll, time tracking, invoicing, taxes and much more.",
+  "hero.subheadline2": "Fully automated, from your phone, hassle-free.",
 
   "solution.headline1": "MANAGE",
   "solution.headline2": "YOUR BUSINESS",
-  "solution.description1": "Automate your company's management.",
-  "solution.description2": "Full control from your phone.",
+  "solution.description1": "Automate your business management.",
+  "solution.description2": "Specialized AI agents. Fully managed from your phone.",
   "solution.benefitStat1": "AI",
   "solution.benefitLabel1": "Automated.",
   "solution.benefitStat2": "24/7",
@@ -29,7 +29,6 @@
   "solution.feature9": "No waiting, at your own pace",
   "solution.feature10": "Automatic invoicing",
   "solution.feature11": "Tax management",
-  "solution.feature12": "And much more...",
 
   "pricing.headline": "Tailored to Your Needs.",
   "pricing.payForNeeds": "Pay for what you need",

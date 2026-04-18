@@ -23,7 +23,6 @@ export const SolutionHero: React.FC = () => {
     t('solution.feature9'),
     t('solution.feature10'),
     t('solution.feature11'),
-    t('solution.feature12'),
   ]
 
   return (
