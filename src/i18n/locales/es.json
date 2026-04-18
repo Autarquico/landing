@@ -4,9 +4,9 @@
   "nav.cta": "Apúntate Ya",
   "nav.ctaMobile": "Apúntate",
 
-  "hero.headline": "Simplifica la gestión de tu negocio",
-  "hero.subheadline1": "Tu agente IA especializado disponible 24/7.",
-  "hero.subheadline2": "Nóminas, fichajes, subvenciones... todo gestionado desde tu móvil.",
+  "hero.headline": "Cada mes, lo mismo",
+  "hero.subheadline1": "Calcular nóminas, cuadrar fichajes, perseguir trámites. Tedioso, repetitivo y costoso.",
+  "hero.subheadline2": "La gestión de personal no ha cambiado en 20 años, pero las reglas no dejan de cambiar. Tu negocio merece más.",
 
   "solution.headline1": "GESTIONA",
   "solution.headline2": "TU NEGOCIO",
@@ -27,6 +27,8 @@
   "solution.feature7": "Analíticas de tu negocio en tiempo real",
   "solution.feature8": "Cumplimiento normativo garantizado",
   "solution.feature9": "Sin esperas, a tu ritmo",
+  "solution.feature10": "Facturación automática",
+  "solution.feature11": "Gestión de impuestos",
 
   "pricing.headline": "Adaptado a tus Necesidades.",
   "pricing.payForNeeds": "Paga por lo que necesitas",

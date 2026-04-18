@@ -21,6 +21,8 @@ export const SolutionHero: React.FC = () => {
     t('solution.feature7'),
     t('solution.feature8'),
     t('solution.feature9'),
+    t('solution.feature10'),
+    t('solution.feature11'),
   ]
 
   return (
