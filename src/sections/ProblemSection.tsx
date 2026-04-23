@@ -43,7 +43,7 @@ export const ProblemSection: React.FC = () => {
     {
       icon: FileText,
       title: 'Dependes de Terceros',
-      description: 'Tus nóminas, tus datos, tu negocio... pero no tienes control.',
+      description: 'Tus datos, tus procesos, tu negocio... pero no tienes control.',
       color: 'text-red',
     },
   ]

@@ -8,50 +8,23 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white py-12 md:py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-4xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
-          {/* Producto */}
-          <div className="text-center md:text-left">
-            <h4 className="font-display text-lg mb-4">{t('footer.product')}</h4>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li>
-                <a href="#autonomos" className="hover:text-white transition-colors">
-                  {t('footer.timekeeping')}
-                </a>
-              </li>
-              <li>
-                <a href="#autonomos" className="hover:text-white transition-colors">
-                  {t('footer.payroll')}
-                </a>
-              </li>
-              <li>
-                <a href="#autonomos" className="hover:text-white transition-colors">
-                  {t('footer.employeePortal')}
-                </a>
-              </li>
-              <li>
-                <a href="#pricing" className="hover:text-white transition-colors">
-                  {t('footer.pricing')}
-                </a>
-              </li>
-            </ul>
-          </div>
-
+        <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-24 mb-8 md:mb-12">
           {/* Legal */}
           <div className="text-center md:text-left">
             <h4 className="font-display text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/legal/terminos" className="hover:text-white transition-colors">
                   {t('footer.terms')}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/legal/privacidad" className="hover:text-white transition-colors">
                   {t('footer.privacy')}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/legal/gdpr" className="hover:text-white transition-colors">
                   GDPR
                 </a>
               </li>

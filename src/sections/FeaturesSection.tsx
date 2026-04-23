@@ -30,18 +30,18 @@ export const FeaturesSection: React.FC = () => {
   const features = [
     {
       icon: Clock,
-      title: 'Fichaje Automático',
-      description: 'Tablet o móvil. PIN simple. Calcula horas ordinarias, extras, nocturnas automáticamente.',
+      title: 'Automatización Inteligente',
+      description: 'Procesos repetitivos resueltos por IA. Sin intervención manual.',
     },
     {
       icon: FileText,
-      title: 'Nóminas Automáticas',
-      description: 'Genera, envía, almacena. Modelo oficial español. 100% compliance RED y AEAT.',
+      title: 'Gestión Documental',
+      description: 'Genera, organiza y envía documentos automáticamente.',
     },
     {
       icon: Users,
-      title: 'Portal del Empleado',
-      description: 'Tus empleados acceden a sus nóminas 24/7. Sin llamadas, sin emails.',
+      title: 'Portal de Colaboradores',
+      description: 'Tu equipo accede a la información que necesita, 24/7.',
     },
     {
       icon: Smartphone,
@@ -51,7 +51,7 @@ export const FeaturesSection: React.FC = () => {
     {
       icon: BarChart3,
       title: 'Analytics Tiempo Real',
-      description: 'Costes laborales, tendencias, predicciones. Dashboard limpio.',
+      description: 'Costes operativos, tendencias, predicciones. Dashboard limpio.',
     },
     {
       icon: Lock,

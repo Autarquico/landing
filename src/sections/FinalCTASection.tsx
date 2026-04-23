@@ -70,18 +70,6 @@ export const FinalCTASection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Social proof counter */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="inline-flex flex-col sm:flex-row items-center gap-2 bg-white/10 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-full border border-white/20"
-          >
-            <span className="text-white/90 text-sm md:text-base text-center sm:text-left">
-              <span className="font-bold text-green">{t('cta.socialProofCount')}</span> {t('cta.socialProofText')}
-            </span>
-          </motion.div>
         </motion.div>
       </div>
 

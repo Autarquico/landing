@@ -116,7 +116,7 @@ export const HeroSection: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-700">Espera 5 días</p>
-                    <p className="text-sm text-gray-700">Para tus nóminas</p>
+                    <p className="text-sm text-gray-700">Para tus solicitudes</p>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export const HeroSection: React.FC = () => {
                     <span className="text-2xl">✓</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-black">Nóminas en minutos</p>
+                    <p className="font-semibold text-black">Resultados en minutos</p>
                     <p className="text-sm text-gray-700">Email automático</p>
                   </div>
                 </motion.div>

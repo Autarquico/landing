@@ -49,26 +49,6 @@ export const Navigation: React.FC = () => {
 
         {/* Menu Items */}
         <div className="hidden md:flex items-center gap-8 lg:gap-12">
-          <a
-            href="#autonomos"
-            className={`font-medium transition-colors duration-300 ${
-              scrolled
-                ? 'text-gray-600 hover:text-black'
-                : 'text-white/80 hover:text-white'
-            }`}
-          >
-            {t('nav.freelancers')}
-          </a>
-          <a
-            href="#asesorias"
-            className={`font-medium transition-colors duration-300 ${
-              scrolled
-                ? 'text-gray-600 hover:text-black'
-                : 'text-white/80 hover:text-white'
-            }`}
-          >
-            {t('nav.advisors')}
-          </a>
           <LanguageSwitcher dark={!scrolled} />
           <motion.button
             onClick={scrollToWaitlist}
