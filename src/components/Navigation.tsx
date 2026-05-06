@@ -1,20 +1,26 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
-export const Navigation: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false)
+interface NavigationProps {
+  lightBackground?: boolean
+}
+
+export const Navigation: React.FC<NavigationProps> = ({ lightBackground = false }) => {
+  const [scrolled, setScrolled] = useState(lightBackground)
   const { t } = useTranslation()
 
   useEffect(() => {
+    if (lightBackground) return
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [lightBackground])
 
   const scrollToWaitlist = () => {
     const element = document.getElementById('waitlist-final')
@@ -34,7 +40,7 @@ export const Navigation: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo + Brand */}
-        <div className="flex items-center gap-1.5">
+        <Link to="/" className="flex items-center gap-1.5">
           <img
             src={scrolled ? '/logo-clear.svg' : '/logo-dark.svg'}
             alt="α"
@@ -45,7 +51,7 @@ export const Navigation: React.FC = () => {
           }`}>
             utarqui<span className="text-emerald-500">.co</span>
           </span>
-        </div>
+        </Link>
 
         {/* Menu Items */}
         <div className="hidden md:flex items-center gap-8 lg:gap-12">
