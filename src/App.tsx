@@ -1,22 +1,21 @@
-import { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
 import { ProblemHero } from './sections/ProblemHero'
 import { SolutionHero } from './sections/SolutionHero'
 import { FinalCTASection } from './sections/FinalCTASection'
+import { SEO } from './seo/SEO'
+import { useLocale } from './seo/useLocale'
+import type { Locale } from './seo/routes'
 
-function App() {
-  const { t } = useTranslation()
+interface AppProps {
+  locale?: Locale
+}
 
-  useEffect(() => {
-    document.title = t('meta.title')
-    document.querySelector('meta[name="description"]')
-      ?.setAttribute('content', t('meta.description'))
-  }, [t])
-
+function App({ locale = 'es' }: AppProps) {
+  useLocale(locale)
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
+      <SEO routeId="home" locale={locale} />
       <Navigation />
 
       <main>

@@ -1,8 +1,10 @@
 import { LegalLayout } from './LegalLayout'
+import { SEO } from '../../seo/SEO'
 
 export const GdprPage: React.FC = () => {
   return (
     <LegalLayout title="Política de Protección de Datos (RGPD)" lastUpdated="23 de abril de 2026">
+      <SEO routeId="gdpr" locale="es" />
       <h2>1. Marco normativo</h2>
       <p>
         Autárquico cumple con el Reglamento (UE) 2016/679 del Parlamento Europeo y del

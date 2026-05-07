@@ -1,4 +1,20 @@
 {
+  "seo.home.title": "autarqui.co — IA, integraciones y automatización empresarial",
+  "seo.home.description": "La capa tecnológica que permite a las empresas operar con mayor autonomía: IA aplicada, integraciones nativas y automatización con criterio.",
+  "seo.home.ogAlt": "autarqui.co — IA, integraciones y automatización empresarial",
+  "seo.sigma.title": "sigma — Asesoría laboral y fiscal con IA · autarqui.co",
+  "seo.sigma.description": "Nóminas, impuestos y plazos en una sola plataforma. Asesoría laboral y fiscal asistida por IA, con el rigor de una gestoría tradicional.",
+  "seo.sigma.ogAlt": "sigma — Asesoría laboral y fiscal con IA",
+  "seo.delta.title": "delta — Integraciones y APIs con IA · autarqui.co",
+  "seo.delta.description": "La capa de automatización e IA que conecta tus sistemas — ERP, CRM, banco, fiscal, e-commerce — sin duplicar datos ni parches manuales.",
+  "seo.delta.ogAlt": "delta — Integraciones y APIs con IA",
+  "seo.terms.title": "Términos de uso · autarqui.co",
+  "seo.terms.description": "Términos y condiciones de uso de autarqui.co.",
+  "seo.privacy.title": "Privacidad · autarqui.co",
+  "seo.privacy.description": "Política de privacidad de autarqui.co conforme a GDPR y LOPDGDD.",
+  "seo.gdpr.title": "GDPR · autarqui.co",
+  "seo.gdpr.description": "Información sobre el tratamiento de datos personales en autarqui.co.",
+
   "nav.cta": "Apúntate Ya",
   "nav.ctaMobile": "Apúntate",
 

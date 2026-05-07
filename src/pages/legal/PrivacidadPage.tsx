@@ -1,8 +1,10 @@
 import { LegalLayout } from './LegalLayout'
+import { SEO } from '../../seo/SEO'
 
 export const PrivacidadPage: React.FC = () => {
   return (
     <LegalLayout title="Política de Privacidad" lastUpdated="23 de abril de 2026">
+      <SEO routeId="privacy" locale="es" />
       <h2>1. Responsable del tratamiento</h2>
       <p>
         Autárquico (en adelante, "el Responsable"), con correo electrónico de contacto:

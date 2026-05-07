@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { SEO } from '../seo/SEO'
+import { useLocale } from '../seo/useLocale'
+import type { Locale } from '../seo/routes'
 
 const Eyebrow: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
   <p className={`text-xs font-medium tracking-[0.22em] uppercase text-gray-500 dark:text-neutral-400 ${className}`}>
@@ -8,10 +11,12 @@ const Eyebrow: React.FC<{ children: React.ReactNode; className?: string }> = ({ 
   </p>
 )
 
-export const SigmaPage: React.FC = () => {
+export const SigmaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
+  useLocale(locale)
   const { t } = useTranslation()
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
+      <SEO routeId="sigma" locale={locale} />
       <Navigation lightBackground />
 
       <main className="pt-24 md:pt-28">

@@ -1,6 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { SEO } from '../seo/SEO'
+import { useLocale } from '../seo/useLocale'
+import type { Locale } from '../seo/routes'
 
 const DeltaMark: React.FC<{ className?: string }> = ({ className }) => (
   <svg
@@ -22,10 +25,12 @@ const Eyebrow: React.FC<{ children: React.ReactNode; className?: string }> = ({ 
   </p>
 )
 
-export const DeltaPage: React.FC = () => {
+export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
+  useLocale(locale)
   const { t } = useTranslation()
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
+      <SEO routeId="delta" locale={locale} />
       <Navigation lightBackground />
 
       <main className="pt-24 md:pt-28">

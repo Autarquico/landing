@@ -1,4 +1,20 @@
 {
+  "seo.home.title": "autarqui.co — AI, integrations, and business automation",
+  "seo.home.description": "The technology layer that lets companies operate with greater autonomy: applied AI, native integrations, and automation built with judgment.",
+  "seo.home.ogAlt": "autarqui.co — AI, integrations, and business automation",
+  "seo.sigma.title": "sigma — AI-assisted payroll, tax, and compliance · autarqui.co",
+  "seo.sigma.description": "Payroll, taxes, and deadlines in a single platform. AI-assisted labor and tax compliance with the rigor of a traditional firm.",
+  "seo.sigma.ogAlt": "sigma — AI-assisted payroll, tax, and compliance",
+  "seo.delta.title": "delta — AI-powered API integrations · autarqui.co",
+  "seo.delta.description": "The AI and automation layer that connects your systems — ERP, CRM, banking, tax, e-commerce — with no duplicate data and no manual patches.",
+  "seo.delta.ogAlt": "delta — AI-powered API integrations",
+  "seo.terms.title": "Terms of use · autarqui.co",
+  "seo.terms.description": "Terms and conditions of use for autarqui.co.",
+  "seo.privacy.title": "Privacy · autarqui.co",
+  "seo.privacy.description": "autarqui.co privacy policy compliant with GDPR and LOPDGDD.",
+  "seo.gdpr.title": "GDPR · autarqui.co",
+  "seo.gdpr.description": "Information about the processing of personal data at autarqui.co.",
+
   "nav.cta": "Join the Waitlist",
   "nav.ctaMobile": "Join",
 

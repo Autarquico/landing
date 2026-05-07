@@ -1,8 +1,10 @@
 import { LegalLayout } from './LegalLayout'
+import { SEO } from '../../seo/SEO'
 
 export const TerminosPage: React.FC = () => {
   return (
     <LegalLayout title="Términos de Uso" lastUpdated="23 de abril de 2026">
+      <SEO routeId="terms" locale="es" />
       <h2>1. Identificación del titular</h2>
       <p>
         El presente sitio web es propiedad de Autárquico (en adelante, "la Empresa"),
