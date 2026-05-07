@@ -24,11 +24,18 @@ export const ProblemHero: React.FC = () => {
           {t('hero.headline')}
         </h1>
 
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 md:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed px-4">
           {t('hero.subheadline1')}
-          <br />
-          {t('hero.subheadline2')}
         </p>
+
+        <figure className="max-w-2xl mx-auto px-4">
+          <blockquote className="text-sm sm:text-base md:text-lg italic text-gray-400 leading-relaxed">
+            "{t('hero.quote')}"
+          </blockquote>
+          <figcaption className="mt-2 text-xs sm:text-sm text-gray-500 not-italic">
+            — {t('hero.quoteAuthor')}
+          </figcaption>
+        </figure>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow text-gray-500">
