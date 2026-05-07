@@ -81,7 +81,7 @@ function buildSvg({ markSvg, brand, headlineBefore, headlineKw, headlineAfter, f
 const slots = [
   {
     name: 'home',
-    mark: 'logo-clear.svg',
+    mark: 'logo-circle.svg',
     brand: 'AUTARQUI.CO',
     before: 'IA, integraciones',
     kw: 'y automatización',
