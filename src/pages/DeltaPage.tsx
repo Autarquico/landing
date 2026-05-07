@@ -91,6 +91,11 @@ export const DeltaPage: React.FC = () => {
 
         <section id="contacto" className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center gap-8">
+            <img
+              src="/delta-sample.gif"
+              alt=""
+              className="w-full max-w-3xl rounded-lg border border-gray-100 dark:border-neutral-800"
+            />
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[22ch]">
               {t('delta.cta.before')}{' '}
               <span className="italic text-emerald-500">{t('delta.cta.kw')}</span>
