@@ -17,7 +17,11 @@ const ACCENT = '#10B981'
 
 async function readSvg(rel) {
   const raw = await fs.readFile(path.join(PUBLIC, rel), 'utf8')
-  return raw.replace(/<\?xml[^>]*\?>\s*/, '').trim()
+  return raw
+    .replace(/<\?xml[^>]*\?>\s*/, '')
+    .replace(/<!DOCTYPE[^>]*>\s*/i, '')
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .trim()
 }
 
 function extractViewBox(svg) {
@@ -77,7 +81,7 @@ function buildSvg({ markSvg, brand, headlineBefore, headlineKw, headlineAfter, f
 const slots = [
   {
     name: 'home',
-    mark: 'autarquico-logo.svg',
+    mark: 'logo-clear.svg',
     brand: 'AUTARQUI.CO',
     before: 'IA, integraciones',
     kw: 'y automatización',
