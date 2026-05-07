@@ -11,7 +11,6 @@ const Eyebrow: React.FC<{ children: React.ReactNode; className?: string }> = ({ 
 export const SigmaPage: React.FC = () => {
   const { t } = useTranslation()
   return (
-    <div className="dark">
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
       <Navigation lightBackground />
 
@@ -97,7 +96,6 @@ export const SigmaPage: React.FC = () => {
       </main>
 
       <Footer />
-    </div>
     </div>
   )
 }
