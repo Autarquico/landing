@@ -24,6 +24,11 @@ async function readSvg(rel) {
     .trim()
 }
 
+async function readPngDataUrl(rel) {
+  const buf = await fs.readFile(path.join(PUBLIC, rel))
+  return `data:image/png;base64,${buf.toString('base64')}`
+}
+
 function extractViewBox(svg) {
   const vb = svg.match(/viewBox="([^"]+)"/)
   if (vb) return vb[1]
@@ -33,7 +38,12 @@ function extractViewBox(svg) {
   return '0 0 100 100'
 }
 
-function inlineMark(svg, { x, y, size, color = '#000' }) {
+async function inlineMark(filename, { x, y, size, color = '#000' }) {
+  if (filename.endsWith('.png')) {
+    const url = await readPngDataUrl(filename)
+    return `<image x="${x}" y="${y}" width="${size}" height="${size}" href="${url}" preserveAspectRatio="xMidYMid meet"/>`
+  }
+  const svg = await readSvg(filename)
   const viewBox = extractViewBox(svg)
   const inner = svg
     .replace(/^<svg[^>]*>/, '')
@@ -49,7 +59,7 @@ function escapeXml(s) {
     .replace(/>/g, '&gt;')
 }
 
-function buildSvg({ markSvg, brand, headlineBefore, headlineKw, headlineAfter, footerLeft, footerRight }) {
+async function buildSvg({ markFile, brand, headlineBefore, headlineKw, headlineAfter, footerLeft, footerRight }) {
   const markSize = 200
   const markX = 80
   const markY = (H - markSize) / 2
@@ -62,11 +72,12 @@ function buildSvg({ markSvg, brand, headlineBefore, headlineKw, headlineAfter, f
   const fl = escapeXml(footerLeft)
   const fr = escapeXml(footerRight)
   const b = escapeXml(brand)
+  const markEl = await inlineMark(markFile, { x: markX, y: markY, size: markSize, color: '#000' })
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect width="${W}" height="${H}" fill="#ffffff"/>
-  ${inlineMark(markSvg, { x: markX, y: markY, size: markSize, color: '#000' })}
+  ${markEl}
   <g font-family="Inter, system-ui, sans-serif" fill="#000">
     <text x="${textX}" y="${textTop}" font-size="34" font-weight="600" letter-spacing="2">${b}</text>
     <text x="${textX}" y="${textTop + lineH}" font-size="60" font-weight="700">${before}</text>
@@ -81,7 +92,7 @@ function buildSvg({ markSvg, brand, headlineBefore, headlineKw, headlineAfter, f
 const slots = [
   {
     name: 'home',
-    mark: 'logo-circle.svg',
+    mark: 'android-chrome-512x512.png',
     brand: 'AUTARQUI.CO',
     before: 'IA, integraciones',
     kw: 'y automatización',
@@ -146,9 +157,8 @@ async function main() {
   const fontBuffers = fontFiles.map((f) => f.data)
 
   for (const slot of slots) {
-    const markSvg = await readSvg(slot.mark)
-    const svg = buildSvg({
-      markSvg,
+    const svg = await buildSvg({
+      markFile: slot.mark,
       brand: slot.brand,
       headlineBefore: slot.before,
       headlineKw: slot.kw,
