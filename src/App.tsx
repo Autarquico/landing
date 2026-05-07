@@ -16,7 +16,7 @@ function App() {
   }, [t])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
       <Navigation />
 
       <main>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
@@ -9,19 +8,9 @@ interface NavigationProps {
   lightBackground?: boolean
 }
 
-export const Navigation: React.FC<NavigationProps> = ({ lightBackground = false }) => {
-  const [scrolled, setScrolled] = useState(lightBackground)
+export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightBackground = false }) => {
+  const scrolled = true
   const { t } = useTranslation()
-
-  useEffect(() => {
-    if (lightBackground) return
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [lightBackground])
 
   const scrollToWaitlist = () => {
     const element = document.getElementById('waitlist-final')
