@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { ThemeSwitcher } from './ThemeSwitcher'
 
 interface NavigationProps {
   lightBackground?: boolean
@@ -55,7 +56,10 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground = false 
 
         {/* Menu Items */}
         <div className="hidden md:flex items-center gap-8 lg:gap-12">
-          <LanguageSwitcher dark={!scrolled} />
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher dark={!scrolled} />
+            <ThemeSwitcher dark={!scrolled} />
+          </div>
           <motion.button
             onClick={scrollToWaitlist}
             whileHover={{ scale: 1.02 }}
@@ -69,6 +73,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground = false 
         {/* Mobile CTA */}
         <div className="md:hidden flex items-center gap-3">
           <LanguageSwitcher dark={!scrolled} />
+          <ThemeSwitcher dark={!scrolled} />
           <motion.button
             onClick={scrollToWaitlist}
             whileHover={{ scale: 1.02 }}
