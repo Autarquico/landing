@@ -33,20 +33,20 @@ export const DeltaPage: React.FC = () => {
           id="producto"
           className="container mx-auto px-4 md:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-[minmax(220px,35%)_1fr] items-center gap-10 lg:gap-24 py-16 md:py-24 lg:py-32 min-h-[80vh]"
         >
-          <div className="flex flex-col items-start lg:items-center gap-7">
+          <div className="flex flex-col items-center gap-7">
             <DeltaMark className="w-[clamp(140px,22vw,280px)] h-auto text-black dark:text-neutral-100" />
             <span className="text-xs font-medium tracking-[0.42em] text-black dark:text-neutral-100">
               D&nbsp;E&nbsp;L&nbsp;T&nbsp;A
             </span>
           </div>
 
-          <div className="max-w-[42ch]">
+          <div className="max-w-[42ch] text-center mx-auto lg:text-left lg:mx-0">
             <h1 className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight mb-7">
               {t('delta.hero.h1.line1')}<br />
               {t('delta.hero.h1.line2')}<br />
               <span className="italic text-emerald-500">{t('delta.hero.h1.line3')}</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-500 dark:text-neutral-400 leading-snug max-w-[38ch]">
+            <p className="text-lg md:text-xl text-gray-500 dark:text-neutral-400 leading-snug max-w-[38ch] mx-auto lg:mx-0">
               {t('delta.hero.sub')}
             </p>
           </div>
@@ -68,18 +68,18 @@ export const DeltaPage: React.FC = () => {
         </section>
 
         <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12">
+          <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center lg:text-left">
             <Eyebrow className="mb-10">{t('delta.how.eyebrow')}</Eyebrow>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
               {[1, 2, 3].map((i) => (
-                <article key={i}>
-                  <span className="block text-xs font-medium tracking-[0.22em] text-black dark:text-neutral-100 border-t border-black dark:border-neutral-100 pt-2 w-7 mb-5">
+                <article key={i} className="text-center lg:text-left">
+                  <span className="block text-xs font-medium tracking-[0.22em] text-black dark:text-neutral-100 border-t border-black dark:border-neutral-100 pt-2 w-7 mb-5 mx-auto lg:mx-0">
                     {String(i).padStart(2, '0')}
                   </span>
                   <h3 className="font-display text-2xl md:text-3xl tracking-tight mb-4 italic text-emerald-500">
                     {t(`delta.pillar${i}.title`)}
                   </h3>
-                  <p className="text-gray-500 dark:text-neutral-400 max-w-[32ch] leading-relaxed">
+                  <p className="text-gray-500 dark:text-neutral-400 max-w-[32ch] leading-relaxed mx-auto lg:mx-0">
                     {t(`delta.pillar${i}.body`)}
                   </p>
                 </article>
