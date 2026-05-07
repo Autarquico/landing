@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Head } from 'vite-react-ssg'
 import { useTranslation } from 'react-i18next'
 import { routes, ogImageFor, SITE_URL, type Locale } from './routes'
 import { organizationJsonLd, softwareAppJsonLd } from './jsonLd'
@@ -41,7 +41,7 @@ export const SEO: React.FC<SEOProps> = ({ routeId, locale }) => {
   }
 
   return (
-    <Helmet>
+    <Head>
       <html lang={locale} />
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -74,6 +74,6 @@ export const SEO: React.FC<SEOProps> = ({ routeId, locale }) => {
           {JSON.stringify(j)}
         </script>
       ))}
-    </Helmet>
+    </Head>
   )
 }
