@@ -6,7 +6,7 @@ export const organizationJsonLd = {
   name: 'Autárquico',
   alternateName: 'autarqui.co',
   url: SITE_URL,
-  logo: `${SITE_URL}/logo-circle.svg`,
+  logo: `${SITE_URL}/android-chrome-512x512.png`,
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'info@autarqui.co',
