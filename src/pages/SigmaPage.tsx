@@ -53,10 +53,12 @@ export const SigmaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             <p className="font-display text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight max-w-[32ch]">
               {t('sigma.manifesto.before')}{' '}
               <span className="italic text-emerald-500">{t('sigma.manifesto.kw1')}</span>{' '}
-              {t('sigma.manifesto.middle')}{' '}
+              {t('sigma.manifesto.middle1')}{' '}
               <span className="italic text-emerald-500">{t('sigma.manifesto.kw2')}</span>{' '}
-              {t('sigma.manifesto.between')}{' '}
-              <span className="italic text-emerald-500">{t('sigma.manifesto.kw3')}</span>
+              {t('sigma.manifesto.middle2')}{' '}
+              <span className="italic text-emerald-500">{t('sigma.manifesto.kw3')}</span>{' '}
+              {t('sigma.manifesto.middle3')}{' '}
+              <span className="italic text-emerald-500">{t('sigma.manifesto.kw4')}</span>{' '}
               {t('sigma.manifesto.after')}
             </p>
           </div>
