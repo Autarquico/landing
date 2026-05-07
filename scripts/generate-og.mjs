@@ -13,7 +13,7 @@ await fs.mkdir(OUT, { recursive: true })
 
 const W = 1200
 const H = 630
-const ACCENT = '#10B981'
+const ACCENT = '#000000'
 
 async function readSvg(rel) {
   const raw = await fs.readFile(path.join(PUBLIC, rel), 'utf8')
