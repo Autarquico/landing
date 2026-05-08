@@ -199,8 +199,8 @@
   "sigma.proposal.example3": "\"Are we current with Social Security?\"",
 
   "sigma.assumes.eyebrow": "what sigma takes on",
-  "sigma.assumes.heading.before": "The mechanical work,",
-  "sigma.assumes.heading.kw": "without you touching it.",
+  "sigma.assumes.heading.before": "Sigma prepares it.",
+  "sigma.assumes.heading.kw": "You decide.",
   "sigma.assumes.item1.title": "Tax filings",
   "sigma.assumes.item1.body": "Calculation and submission of forms: 303, 111, 130, 390, 190 — and whatever comes next.",
   "sigma.assumes.item2.title": "Payroll & SS",

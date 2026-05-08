@@ -199,8 +199,8 @@
   "sigma.proposal.example3": "\"¿Estoy al día con la Seguridad Social?\"",
 
   "sigma.assumes.eyebrow": "lo que sigma asume",
-  "sigma.assumes.heading.before": "El trabajo mecánico,",
-  "sigma.assumes.heading.kw": "sin que tú lo toques.",
+  "sigma.assumes.heading.before": "Sigma lo prepara.",
+  "sigma.assumes.heading.kw": "Tú decides.",
   "sigma.assumes.item1.title": "Impuestos",
   "sigma.assumes.item1.body": "Cálculo y presentación de modelos: 303, 111, 130, 390, 190 y los que vengan.",
   "sigma.assumes.item2.title": "Nóminas y SS",
