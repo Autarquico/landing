@@ -211,8 +211,8 @@
   "sigma.assumes.item4.body": "Bank reconciliation and month-end close. Balances always aligned, no inherited mismatches.",
   "sigma.assumes.item5.title": "Pre-deadline alerts",
   "sigma.assumes.item5.body": "Warns you before the problem is a problem. Zero fines for things you knew were due.",
-  "sigma.assumes.item6.title": "Simulations",
-  "sigma.assumes.item6.body": "Answers \"what if…?\" in seconds. Salary raises, new hires, IRPF changes.",
+  "sigma.assumes.item6.title": "Compliance",
+  "sigma.assumes.item6.body": "Working-time registers, equality plans, mandatory filings. Whatever the law requires, sigma keeps it current.",
 
   "sigma.trust.eyebrow": "trust",
   "sigma.trust.heading.before": "You sign off.",

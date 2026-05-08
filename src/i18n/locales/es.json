@@ -211,8 +211,8 @@
   "sigma.assumes.item4.body": "Conciliación bancaria y cuadre mes a mes. Saldos siempre alineados, sin descuadres heredados.",
   "sigma.assumes.item5.title": "Avisos pre-plazo",
   "sigma.assumes.item5.body": "Te avisa antes de que el problema sea problema. Cero multas por algo que sabías que tocaba.",
-  "sigma.assumes.item6.title": "Simulaciones",
-  "sigma.assumes.item6.body": "Responde a \"¿qué pasa si…?\" en segundos. Subidas de sueldo, contrataciones, cambios de IRPF.",
+  "sigma.assumes.item6.title": "Cumplimiento normativo",
+  "sigma.assumes.item6.body": "Registro de jornada laboral, plan de igualdad, comunicaciones obligatorias. Lo que la ley exige, sigma lo lleva al día.",
 
   "sigma.trust.eyebrow": "confianza",
   "sigma.trust.heading.before": "Tú firmas.",
