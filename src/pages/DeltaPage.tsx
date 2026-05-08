@@ -36,11 +36,14 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
     const html = document.documentElement
     const prevSnap = html.style.scrollSnapType
     const prevBehavior = html.style.scrollBehavior
+    const prevPaddingTop = html.style.scrollPaddingTop
     html.style.scrollSnapType = 'y mandatory'
     html.style.scrollBehavior = 'smooth'
+    html.style.scrollPaddingTop = '5rem'
     return () => {
       html.style.scrollSnapType = prevSnap
       html.style.scrollBehavior = prevBehavior
+      html.style.scrollPaddingTop = prevPaddingTop
     }
   }, [])
   return (
