@@ -29,7 +29,7 @@ export const SectorTabs: React.FC = () => {
       </div>
 
       <div className="max-w-3xl mx-auto text-center lg:text-left">
-        <h3 className="font-display text-2xl md:text-3xl lg:text-4xl tracking-tight mb-5 leading-snug">
+        <h3 className="font-body font-semibold text-xl md:text-2xl lg:text-3xl tracking-tight mb-5 leading-snug">
           {t(`delta.sector.${active}.title`)}
         </h3>
         <p className="text-gray-500 dark:text-neutral-400 leading-relaxed text-base md:text-lg">

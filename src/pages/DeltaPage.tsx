@@ -136,7 +136,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               {t('delta.proposal.intro')}
             </p>
             <ul className="w-full max-w-2xl space-y-3 text-left mb-12">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {[1, 2, 3].map((i) => (
                 <li key={i} className="italic text-gray-600 dark:text-neutral-300 text-base md:text-lg leading-relaxed">
                   {t(`delta.proposal.example${i}`)}
                 </li>
