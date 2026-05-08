@@ -4,7 +4,7 @@ export const ProblemHero: React.FC = () => {
   const { t } = useTranslation()
 
   return (
-    <section id="autonomos" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section id="autonomos" className="snap-start relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video loop background */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
