@@ -154,28 +154,28 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
         {/* Resultados — stats + testimonial; caption + body paragraph trimmed */}
         <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
-            <Eyebrow className="mb-10">{t('delta.results.eyebrow')}</Eyebrow>
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-14">
+            <Eyebrow className="mb-6 md:mb-10">{t('delta.results.eyebrow')}</Eyebrow>
+            <h2 className="font-display text-2xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-8 md:mb-14">
               {t('delta.results.heading.before')}{' '}
               <span className="italic text-emerald-500">{t('delta.results.heading.kw')}</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 w-full max-w-4xl mb-14">
+            <div className="grid grid-cols-3 gap-4 md:gap-12 w-full max-w-4xl mb-8 md:mb-14">
               {[1, 2, 3].map((i) => (
-                <div key={i} className="border-t border-gray-100 dark:border-neutral-800 pt-6 text-left">
-                  <div className="font-display italic text-5xl md:text-6xl lg:text-7xl leading-none mb-4">
+                <div key={i} className="border-t border-gray-100 dark:border-neutral-800 pt-3 md:pt-6 text-left">
+                  <div className="font-display italic text-3xl md:text-6xl lg:text-7xl leading-none mb-2 md:mb-4">
                     {t(`delta.results.stat${i}.value`)}
                   </div>
-                  <p className="text-sm md:text-base text-gray-500 dark:text-neutral-400 leading-relaxed max-w-[28ch]">
+                  <p className="text-[11px] leading-snug md:text-base md:leading-relaxed text-gray-500 dark:text-neutral-400 max-w-[28ch]">
                     {t(`delta.results.stat${i}.label`)}
                   </p>
                 </div>
               ))}
             </div>
-            <figure className="max-w-2xl border-l-2 border-black dark:border-neutral-100 pl-6 text-left">
-              <blockquote className="font-display text-lg md:text-xl italic leading-snug mb-3">
+            <figure className="max-w-2xl border-l-2 border-black dark:border-neutral-100 pl-4 md:pl-6 text-left">
+              <blockquote className="font-display text-sm md:text-xl italic leading-snug mb-2 md:mb-3">
                 "{t('delta.results.quote')}"
               </blockquote>
-              <figcaption className="text-xs text-gray-500 dark:text-neutral-400 not-italic tracking-[0.12em] uppercase">
+              <figcaption className="text-[10px] md:text-xs text-gray-500 dark:text-neutral-400 not-italic tracking-[0.12em] uppercase">
                 {t('delta.results.author')}
               </figcaption>
             </figure>
