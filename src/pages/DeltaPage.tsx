@@ -76,27 +76,6 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
           </div>
         </section>
 
-        <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center lg:text-left">
-            <Eyebrow className="mb-10">{t('delta.how.eyebrow')}</Eyebrow>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-              {[1, 2, 3].map((i) => (
-                <article key={i} className="text-center lg:text-left">
-                  <span className="block text-xs font-medium tracking-[0.22em] text-black dark:text-neutral-100 border-t border-black dark:border-neutral-100 pt-2 w-7 mb-5 mx-auto lg:mx-0">
-                    {String(i).padStart(2, '0')}
-                  </span>
-                  <h3 className="font-display text-2xl md:text-3xl tracking-tight mb-4 italic text-emerald-500">
-                    {t(`delta.pillar${i}.title`)}
-                  </h3>
-                  <p className="text-gray-500 dark:text-neutral-400 max-w-[32ch] leading-relaxed mx-auto lg:mx-0">
-                    {t(`delta.pillar${i}.body`)}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pain situations */}
         <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
