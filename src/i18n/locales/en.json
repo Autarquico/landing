@@ -35,8 +35,9 @@
   "home.pain.item3.a": "The technology moves faster than the organization that has to absorb it.",
 
   "home.proposal.eyebrow": "what autarqui.co is",
-  "home.proposal.heading.before": "A technology layer",
-  "home.proposal.heading.kw": "to optimize and automate your business.",
+  "home.proposal.heading.before": "A technology layer to",
+  "home.proposal.heading.kw": "optimize and automate",
+  "home.proposal.heading.after": " your business.",
   "home.proposal.body1.before": "We don't sell software. We sell",
   "home.proposal.body1.kw": "operational autonomy",
   "home.proposal.body1.after": " — the real ability to operate without unnecessary intermediaries, without reactive emergencies, without constant manual reviews.",
@@ -70,8 +71,8 @@
   "home.diff.row4.market": "Management software",
   "home.diff.row4.us": "Operational layer with autonomy",
 
-  "home.cta.before": "Ready for your business to run",
-  "home.cta.kw": "better on its own",
+  "home.cta.before": "Ready for the age",
+  "home.cta.kw": "of efficiency",
   "home.cta.after": "?",
   "home.cta.link": "Let's talk →",
 

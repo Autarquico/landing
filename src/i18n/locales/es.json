@@ -35,8 +35,9 @@
   "home.pain.item3.a": "La tecnología avanza más rápido que la organización que la asume.",
 
   "home.proposal.eyebrow": "qué es autarqui.co",
-  "home.proposal.heading.before": "Una capa tecnológica",
-  "home.proposal.heading.kw": "para optimizar y automatizar tu empresa.",
+  "home.proposal.heading.before": "Una capa tecnológica para",
+  "home.proposal.heading.kw": "optimizar y automatizar",
+  "home.proposal.heading.after": " tu empresa.",
   "home.proposal.body1.before": "No vendemos software. Vendemos",
   "home.proposal.body1.kw": "autonomía operativa",
   "home.proposal.body1.after": " — la capacidad real de funcionar sin intermediarios innecesarios, sin emergencias reactivas y sin revisiones manuales constantes.",
@@ -70,8 +71,8 @@
   "home.diff.row4.market": "Software de gestión",
   "home.diff.row4.us": "Capa operativa con autonomía",
 
-  "home.cta.before": "¿Listo para que tu empresa funcione",
-  "home.cta.kw": "mejor por sí misma",
+  "home.cta.before": "¿Listo para la era",
+  "home.cta.kw": "de la eficiencia",
   "home.cta.after": "?",
   "home.cta.link": "Hablemos →",
 

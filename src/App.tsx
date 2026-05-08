@@ -86,6 +86,7 @@ function App({ locale = 'es' }: AppProps) {
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[28ch] mb-10">
               {t('home.proposal.heading.before')}{' '}
               <span className="italic text-emerald-500">{t('home.proposal.heading.kw')}</span>
+              {t('home.proposal.heading.after')}
             </h2>
             <div className="max-w-2xl space-y-6 text-base md:text-lg text-gray-600 dark:text-neutral-300 leading-relaxed">
               <p>
