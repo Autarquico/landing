@@ -1,0 +1,81 @@
+- generic [ref=e4]:
+  - navigation [ref=e5]:
+    - generic [ref=e6]:
+      - link "α utarqui.co" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - img "α" [ref=e8]
+        - generic [ref=e9]: utarqui.co
+      - generic [ref=e10]:
+        - button "Cambiar a Español" [ref=e11] [cursor=pointer]: ES
+        - button "Join the Waitlist" [ref=e12] [cursor=pointer]
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - img "delta" [ref=e16]
+        - generic [ref=e20]: D E L T A
+      - generic [ref=e21]:
+        - heading "connect, relate, integrate." [level=1] [ref=e22]:
+          - text: connect,
+          - text: relate,
+          - text: integrate.
+        - paragraph [ref=e23]: The automation and AI layer that makes your systems speak the same language.
+    - generic [ref=e25]:
+      - paragraph [ref=e26]: manifesto
+      - paragraph [ref=e27]: Self-sufficient companies make their tools work together and efficiently.
+    - generic [ref=e29]:
+      - paragraph [ref=e30]: how it works
+      - generic [ref=e31]:
+        - article [ref=e32]:
+          - generic [ref=e33]: "01"
+          - heading "connect" [level=3] [ref=e34]
+          - paragraph [ref=e35]: APIs across your systems — ERP, CRM, bank, tax, e-commerce. No duplicate data, no manual patches.
+        - article [ref=e36]:
+          - generic [ref=e37]: "02"
+          - heading "relate" [level=3] [ref=e38]
+          - paragraph [ref=e39]: Cross-referenced data, consolidated state, a single operational truth to make decisions with confidence.
+        - article [ref=e40]:
+          - generic [ref=e41]: "03"
+          - heading "integrate" [level=3] [ref=e42]
+          - paragraph [ref=e43]: "An AI layer that acts: classifies, reconciles, suggests and executes tasks inside the flow, not outside."
+    - generic [ref=e45]:
+      - heading "Ready for your systems to understand each other?" [level=2] [ref=e46]
+      - link "Let's talk →" [ref=e47] [cursor=pointer]:
+        - /url: mailto:hola@autarqui.co?subject=delta
+  - contentinfo [ref=e48]:
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - heading "Product" [level=4] [ref=e52]
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - link "δ delta" [ref=e55] [cursor=pointer]:
+                - /url: /delta
+            - listitem [ref=e56]:
+              - link "σ sigma" [ref=e57] [cursor=pointer]:
+                - /url: /sigma
+        - generic [ref=e58]:
+          - heading "Legal" [level=4] [ref=e59]
+          - list [ref=e60]:
+            - listitem [ref=e61]:
+              - link "Terms of Use" [ref=e62] [cursor=pointer]:
+                - /url: /legal/terminos
+            - listitem [ref=e63]:
+              - link "Privacy" [ref=e64] [cursor=pointer]:
+                - /url: /legal/privacidad
+            - listitem [ref=e65]:
+              - link "GDPR" [ref=e66] [cursor=pointer]:
+                - /url: /legal/gdpr
+        - generic [ref=e67]:
+          - heading "Contact" [level=4] [ref=e68]
+          - list [ref=e69]:
+            - listitem [ref=e70]:
+              - link "info@autarqui.co" [ref=e71] [cursor=pointer]:
+                - /url: mailto:info@autarqui.co
+                - img [ref=e72]
+                - text: info@autarqui.co
+            - listitem [ref=e75]:
+              - link "@autarqui.co" [ref=e76] [cursor=pointer]:
+                - /url: https://instagram.com/autarqui.co
+                - img [ref=e77]
+                - text: "@autarqui.co"
+      - paragraph [ref=e81]: © 2026 (R) Autárquico. All rights reserved.
