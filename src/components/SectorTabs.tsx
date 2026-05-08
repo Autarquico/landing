@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const SECTORS = ['lawyers', 'clinics', 'accountants', 'insurance', 'general'] as const
+const SECTORS = ['lawyers', 'clinics', 'general'] as const
 
 export const SectorTabs: React.FC = () => {
   const { t } = useTranslation()
