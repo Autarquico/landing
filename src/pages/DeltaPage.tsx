@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import { SectorTabs } from '../components/SectorTabs'
+import { RevealSection } from '../components/RevealSection'
 import { SEO } from '../seo/SEO'
 import { useLocale } from '../seo/useLocale'
 import type { Locale } from '../seo/routes'
@@ -61,8 +62,8 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
           </div>
         </section>
 
-        {/* Pain situations */}
-        <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        {/* Pain situations — 3 strongest items, no closing paragraph */}
+        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.painPoints.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-12">
@@ -71,7 +72,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               {t('delta.painPoints.heading.after')}
             </h2>
             <ul className="w-full max-w-3xl divide-y divide-gray-100 dark:divide-neutral-800 text-left">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {[1, 2, 3].map((i) => (
                 <li key={i} className="py-6">
                   <p className="font-medium text-base md:text-lg text-black dark:text-neutral-100 mb-1">
                     — {t(`delta.painPoints.item${i}.q`)}
@@ -82,47 +83,46 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
                 </li>
               ))}
             </ul>
-            <p className="mt-12 text-gray-500 dark:text-neutral-400 max-w-2xl leading-relaxed">
-              {t('delta.painPoints.close')}
-            </p>
           </div>
-        </section>
+        </RevealSection>
 
-        {/* Propuesta */}
-        <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        {/* Propuesta — heading + 3 examples; intro + close trimmed */}
+        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.proposal.eyebrow')}</Eyebrow>
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-8">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
               {t('delta.proposal.heading.before')}{' '}
               <span className="italic text-emerald-500">{t('delta.proposal.heading.kw')}</span>
             </h2>
-            <p className="text-gray-500 dark:text-neutral-400 max-w-2xl leading-relaxed text-base md:text-lg mb-10">
-              {t('delta.proposal.intro')}
-            </p>
-            <ul className="w-full max-w-2xl space-y-3 text-left mb-12">
+            <ul className="w-full max-w-2xl space-y-3 text-left">
               {[1, 2, 3].map((i) => (
                 <li key={i} className="italic text-gray-600 dark:text-neutral-300 text-base md:text-lg leading-relaxed">
                   {t(`delta.proposal.example${i}`)}
                 </li>
               ))}
             </ul>
-            <p className="text-gray-500 dark:text-neutral-400 max-w-2xl leading-relaxed">
-              {t('delta.proposal.close')}
-            </p>
           </div>
-        </section>
+        </RevealSection>
 
-        {/* Confianza */}
-        <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        {/* Demo gif — visual break mid-page */}
+        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6 lg:px-12 flex justify-center">
+            <img
+              src="/delta-sample.gif"
+              alt=""
+              className="w-full max-w-3xl rounded-lg border border-gray-100 dark:border-neutral-800"
+            />
+          </div>
+        </RevealSection>
+
+        {/* Confianza — heading + 5 checks; intro paragraph trimmed */}
+        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.trust.eyebrow')}</Eyebrow>
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-8">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
               {t('delta.trust.heading.before')}{' '}
               <span className="italic text-emerald-500">{t('delta.trust.heading.kw')}</span>
             </h2>
-            <p className="text-gray-500 dark:text-neutral-400 max-w-2xl leading-relaxed text-base md:text-lg mb-10">
-              {t('delta.trust.intro')}
-            </p>
             <ul className="w-full max-w-2xl space-y-4 text-left">
               {[1, 2, 3, 4, 5].map((i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -134,10 +134,10 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               ))}
             </ul>
           </div>
-        </section>
+        </RevealSection>
 
         {/* Sectoriales */}
-        <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12">
             <div className="flex flex-col items-center text-center mb-12">
               <Eyebrow className="mb-10">{t('delta.sectors.eyebrow')}</Eyebrow>
@@ -148,17 +148,17 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             </div>
             <SectorTabs />
           </div>
-        </section>
+        </RevealSection>
 
-        {/* Resultados */}
-        <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        {/* Resultados — stats + testimonial; caption + body paragraph trimmed */}
+        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.results.eyebrow')}</Eyebrow>
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-12">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-14">
               {t('delta.results.heading.before')}{' '}
               <span className="italic text-emerald-500">{t('delta.results.heading.kw')}</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 w-full max-w-4xl mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 w-full max-w-4xl mb-14">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="border-t border-gray-100 dark:border-neutral-800 pt-6 text-left">
                   <div className="font-display italic text-5xl md:text-6xl lg:text-7xl leading-none mb-4">
@@ -170,12 +170,6 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-400 dark:text-neutral-500 mb-10">
-              {t('delta.results.caption')}
-            </p>
-            <p className="text-gray-500 dark:text-neutral-400 max-w-2xl leading-relaxed mb-12">
-              {t('delta.results.body')}
-            </p>
             <figure className="max-w-2xl border-l-2 border-black dark:border-neutral-100 pl-6 text-left">
               <blockquote className="font-display text-lg md:text-xl italic leading-snug mb-3">
                 "{t('delta.results.quote')}"
@@ -185,15 +179,10 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               </figcaption>
             </figure>
           </div>
-        </section>
+        </RevealSection>
 
-        <section id="contacto" className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection id="contacto" className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center gap-8">
-            <img
-              src="/delta-sample.gif"
-              alt=""
-              className="w-full max-w-3xl rounded-lg border border-gray-100 dark:border-neutral-800"
-            />
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[22ch]">
               {t('delta.cta.before')}{' '}
               <span className="italic text-emerald-500">{t('delta.cta.kw')}</span>
@@ -206,7 +195,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               {t('delta.cta.link')}
             </a>
           </div>
-        </section>
+        </RevealSection>
       </main>
 
       <Footer />
