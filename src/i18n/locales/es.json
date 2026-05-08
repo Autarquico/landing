@@ -102,6 +102,7 @@
   "footer.contact": "Contacto",
   "footer.copyright": "© {{year}} (R) Autárquico. Todos los derechos reservados.",
 
+  "delta.hero.tagline": "Plataforma de BI conversacional.",
   "delta.hero.h1.line1": "Tu negocio sabe más",
   "delta.hero.h1.line2": "de lo que crees.",
   "delta.hero.h1.line3": "El problema es que no puedes preguntarle.",
@@ -194,6 +195,7 @@
   "delta.cta.after": " con tu empresa?",
   "delta.cta.link": "Hablemos →",
 
+  "sigma.hero.tagline": "Asesoría laboral y fiscal asistida por IA.",
   "sigma.hero.h1.line1": "El trabajo",
   "sigma.hero.h1.line2": "repetitivo",
   "sigma.hero.h1.line3": "es tedioso.",

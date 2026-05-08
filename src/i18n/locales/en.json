@@ -103,6 +103,7 @@
   "footer.contact": "Contact",
   "footer.copyright": "© {{year}} (R) Autárquico. All rights reserved.",
 
+  "delta.hero.tagline": "Conversational BI platform.",
   "delta.hero.h1.line1": "Your business knows",
   "delta.hero.h1.line2": "more than you think.",
   "delta.hero.h1.line3": "The problem is you can't ask it.",
@@ -195,6 +196,7 @@
   "delta.cta.after": " with your business?",
   "delta.cta.link": "Let's talk →",
 
+  "sigma.hero.tagline": "AI-assisted payroll and tax advisory.",
   "sigma.hero.h1.line1": "Repetitive",
   "sigma.hero.h1.line2": "work",
   "sigma.hero.h1.line3": "is tedious.",

@@ -54,6 +54,9 @@ export const SigmaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             <span className="text-xs font-medium tracking-[0.42em] text-black dark:text-neutral-100">
               S&nbsp;I&nbsp;G&nbsp;M&nbsp;A
             </span>
+            <p className="text-sm text-gray-500 dark:text-neutral-400 text-center max-w-[24ch]">
+              {t('sigma.hero.tagline')}
+            </p>
           </div>
 
           <div className="max-w-[44ch] text-center mx-auto lg:text-left lg:mx-0">
