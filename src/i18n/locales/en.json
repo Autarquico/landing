@@ -42,6 +42,16 @@
   "home.proposal.body1.after": " — the real ability to operate without unnecessary intermediaries, without reactive emergencies, without constant manual reviews.",
   "home.proposal.body2": "Applied AI, native integrations, and automation with judgment — all under one system. Your data where it is. Your decisions, yours.",
 
+  "home.products.eyebrow": "the products",
+  "home.products.heading.before": "One brand,",
+  "home.products.heading.kw": "specialized products.",
+  "home.products.sigma.name": "sigma",
+  "home.products.sigma.desc": "AI-assisted payroll, tax, and compliance.",
+  "home.products.sigma.cta": "Learn more →",
+  "home.products.delta.name": "delta",
+  "home.products.delta.desc": "System integration with AI.",
+  "home.products.delta.cta": "Learn more →",
+
   "home.diff.eyebrow": "what sets us apart",
   "home.diff.heading.before": "The market sells software.",
   "home.diff.heading.kw": "We sell autonomy.",

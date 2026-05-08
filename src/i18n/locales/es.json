@@ -42,6 +42,16 @@
   "home.proposal.body1.after": " — la capacidad real de funcionar sin intermediarios innecesarios, sin emergencias reactivas y sin revisiones manuales constantes.",
   "home.proposal.body2": "IA aplicada, integraciones nativas y automatización con criterio, todo bajo un mismo sistema. Tus datos donde están. Tus decisiones, tuyas.",
 
+  "home.products.eyebrow": "los productos",
+  "home.products.heading.before": "Una marca,",
+  "home.products.heading.kw": "productos especializados.",
+  "home.products.sigma.name": "sigma",
+  "home.products.sigma.desc": "Asesoría laboral y fiscal asistida por IA.",
+  "home.products.sigma.cta": "Conocer →",
+  "home.products.delta.name": "delta",
+  "home.products.delta.desc": "Integración de sistemas con IA.",
+  "home.products.delta.cta": "Conocer →",
+
   "home.diff.eyebrow": "qué nos diferencia",
   "home.diff.heading.before": "El mercado vende software.",
   "home.diff.heading.kw": "Nosotros, autonomía.",
