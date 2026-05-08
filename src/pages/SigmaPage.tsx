@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import { RevealSection } from '../components/RevealSection'
+import { ScrollToTop } from '../components/ScrollToTop'
 import { AudienceTabs, type Audience } from '../components/AudienceTabs'
 import { SEO } from '../seo/SEO'
 import { useLocale } from '../seo/useLocale'
@@ -35,6 +36,7 @@ export const SigmaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
   }, [])
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
+      <ScrollToTop />
       <SEO routeId="sigma" locale={locale} />
       <Navigation lightBackground />
 

@@ -5,6 +5,7 @@ import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
 import { Eyebrow } from './components/Eyebrow'
 import { RevealSection } from './components/RevealSection'
+import { ScrollToTop } from './components/ScrollToTop'
 import { ProblemHero } from './sections/ProblemHero'
 import { SEO } from './seo/SEO'
 import { useLocale } from './seo/useLocale'
@@ -48,6 +49,7 @@ function App({ locale = 'es' }: AppProps) {
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
+      <ScrollToTop />
       <SEO routeId="home" locale={locale} />
       <Navigation />
 

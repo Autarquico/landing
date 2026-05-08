@@ -5,6 +5,7 @@ import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
 import { SectorTabs } from '../components/SectorTabs'
 import { RevealSection } from '../components/RevealSection'
+import { ScrollToTop } from '../components/ScrollToTop'
 import { SEO } from '../seo/SEO'
 import { useLocale } from '../seo/useLocale'
 import type { Locale } from '../seo/routes'
@@ -48,6 +49,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
   }, [])
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
+      <ScrollToTop />
       <SEO routeId="delta" locale={locale} />
       <Navigation lightBackground />
 
