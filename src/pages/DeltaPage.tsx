@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Check } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Navigation } from '../components/Navigation'
@@ -31,6 +32,17 @@ const Eyebrow: React.FC<{ children: React.ReactNode; className?: string }> = ({ 
 export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
   useLocale(locale)
   const { t } = useTranslation()
+  useEffect(() => {
+    const html = document.documentElement
+    const prevSnap = html.style.scrollSnapType
+    const prevBehavior = html.style.scrollBehavior
+    html.style.scrollSnapType = 'y mandatory'
+    html.style.scrollBehavior = 'smooth'
+    return () => {
+      html.style.scrollSnapType = prevSnap
+      html.style.scrollBehavior = prevBehavior
+    }
+  }, [])
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
       <SEO routeId="delta" locale={locale} />
@@ -39,7 +51,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
       <main className="pt-24 md:pt-28">
         <section
           id="producto"
-          className="container mx-auto px-4 md:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-[minmax(220px,35%)_1fr] items-center gap-10 lg:gap-24 py-16 md:py-24 lg:py-32 min-h-[80vh]"
+          className="snap-start min-h-screen container mx-auto px-4 md:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-[minmax(220px,35%)_1fr] items-center gap-10 lg:gap-24 py-16 md:py-24 lg:py-32"
         >
           <div className="flex flex-col items-center gap-7">
             <DeltaMark className="w-[clamp(140px,22vw,280px)] h-auto text-black dark:text-neutral-100" />
@@ -63,7 +75,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
         </section>
 
         {/* Pain situations — 3 strongest items, no closing paragraph */}
-        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.painPoints.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-12">
@@ -87,7 +99,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
         </RevealSection>
 
         {/* Propuesta — heading + 3 examples; intro + close trimmed */}
-        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.proposal.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
@@ -105,7 +117,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
         </RevealSection>
 
         {/* Confianza — heading + 5 checks; intro paragraph trimmed */}
-        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.trust.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
@@ -126,7 +138,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
         </RevealSection>
 
         {/* Sectoriales */}
-        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12">
             <div className="flex flex-col items-center text-center mb-12">
               <Eyebrow className="mb-10">{t('delta.sectors.eyebrow')}</Eyebrow>
@@ -140,7 +152,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
         </RevealSection>
 
         {/* Resultados — stats + testimonial; caption + body paragraph trimmed */}
-        <RevealSection className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
             <Eyebrow className="mb-10">{t('delta.results.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-14">
@@ -170,7 +182,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
           </div>
         </RevealSection>
 
-        <RevealSection id="contacto" className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
+        <RevealSection id="contacto" className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center gap-8">
             <img
               src="/delta-sample.gif"
