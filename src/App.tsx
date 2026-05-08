@@ -102,11 +102,7 @@ function App({ locale = 'es' }: AppProps) {
         <RevealSection className="snap-start min-h-screen flex flex-col justify-center border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12">
             <div className="flex flex-col items-center text-center mb-14">
-              <Eyebrow className="mb-10">{t('home.products.eyebrow')}</Eyebrow>
-              <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch]">
-                {t('home.products.heading.before')}{' '}
-                <span className="italic text-emerald-500">{t('home.products.heading.kw')}</span>
-              </h2>
+              <Eyebrow>{t('home.products.eyebrow')}</Eyebrow>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
