@@ -61,21 +61,6 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
           </div>
         </section>
 
-        <section id="como" className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
-            <Eyebrow className="mb-10">{t('delta.manifesto.eyebrow')}</Eyebrow>
-            <p className="font-display text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight max-w-[32ch]">
-              {t('delta.manifesto.before')}{' '}
-              <span className="italic text-emerald-500">{t('delta.manifesto.kw1')}</span>{' '}
-              {t('delta.manifesto.middle')}{' '}
-              <span className="italic text-emerald-500">{t('delta.manifesto.kw2')}</span>{' '}
-              {t('delta.manifesto.between')}{' '}
-              <span className="italic text-emerald-500">{t('delta.manifesto.kw3')}</span>
-              {t('delta.manifesto.after')}
-            </p>
-          </div>
-        </section>
-
         {/* Pain situations */}
         <section className="border-t border-gray-100 dark:border-neutral-800 py-16 md:py-24 lg:py-32">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 flex flex-col items-center text-center">
