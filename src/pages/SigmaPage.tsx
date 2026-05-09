@@ -202,7 +202,7 @@ export const SigmaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               loop
               muted
               playsInline
-              className="w-full max-w-3xl rounded-lg border border-gray-100 dark:border-neutral-800"
+              className="w-full max-w-3xl lg:max-w-6xl rounded-lg border border-gray-100 dark:border-neutral-800"
             />
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[22ch]">
               {t('sigma.cta.before')}{' '}
