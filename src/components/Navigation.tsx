@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
@@ -11,9 +11,17 @@ interface NavigationProps {
 export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightBackground = false }) => {
   const scrolled = true
   const { t } = useTranslation()
+  const { pathname } = useLocation()
+  const isDelta = pathname === '/delta' || pathname === '/en/delta'
+  const isSigma = pathname === '/sigma' || pathname === '/en/sigma'
+  const productSignupUrl = isDelta
+    ? 'https://delta.autarqui.co/signup'
+    : isSigma
+      ? 'https://sigma.autarqui.co/signup'
+      : null
 
   const scrollToWaitlist = () => {
-    const element = document.getElementById('waitlist-final')
+    const element = document.getElementById('productos')
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -49,28 +57,54 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
             <LanguageSwitcher dark={!scrolled} />
             <ThemeSwitcher dark={!scrolled} />
           </div>
-          <motion.button
-            onClick={scrollToWaitlist}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-black text-white px-6 py-2.5 lg:px-8 lg:py-3 rounded-full font-medium transition-all duration-200"
-          >
-            {t('nav.cta')}
-          </motion.button>
+          {productSignupUrl ? (
+            <motion.a
+              href={productSignupUrl}
+              target="_blank"
+              rel="noopener"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-black text-white px-6 py-2.5 lg:px-8 lg:py-3 rounded-full font-medium transition-all duration-200"
+            >
+              {t('nav.cta')}
+            </motion.a>
+          ) : (
+            <motion.button
+              onClick={scrollToWaitlist}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-black text-white px-6 py-2.5 lg:px-8 lg:py-3 rounded-full font-medium transition-all duration-200"
+            >
+              {t('nav.cta')}
+            </motion.button>
+          )}
         </div>
 
         {/* Mobile CTA */}
         <div className="md:hidden flex items-center gap-3">
           <LanguageSwitcher dark={!scrolled} />
           <ThemeSwitcher dark={!scrolled} />
-          <motion.button
-            onClick={scrollToWaitlist}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
-          >
-            {t('nav.ctaMobile')}
-          </motion.button>
+          {productSignupUrl ? (
+            <motion.a
+              href={productSignupUrl}
+              target="_blank"
+              rel="noopener"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
+            >
+              {t('nav.ctaMobile')}
+            </motion.a>
+          ) : (
+            <motion.button
+              onClick={scrollToWaitlist}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
+            >
+              {t('nav.ctaMobile')}
+            </motion.button>
+          )}
         </div>
       </div>
     </motion.nav>

@@ -210,7 +210,9 @@ export const SigmaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               {t('sigma.cta.after')}
             </h2>
             <a
-              href="mailto:hola@autarqui.co?subject=sigma"
+              href="https://sigma.autarqui.co/signup"
+              target="_blank"
+              rel="noopener"
               className="text-base font-medium border-b border-black dark:border-neutral-100 pb-1 hover:opacity-60 transition-opacity"
             >
               {t('sigma.cta.link')}

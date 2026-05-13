@@ -203,7 +203,9 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               {t('delta.cta.after')}
             </h2>
             <a
-              href="mailto:hola@autarqui.co?subject=delta"
+              href="https://delta.autarqui.co/signup"
+              target="_blank"
+              rel="noopener"
               className="text-base font-medium border-b border-black dark:border-neutral-100 pb-1 hover:opacity-60 transition-opacity"
             >
               {t('delta.cta.link')}
