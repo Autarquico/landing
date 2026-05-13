@@ -13,7 +13,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
   const { t } = useTranslation()
   const { pathname } = useLocation()
   const isDelta = pathname === '/delta' || pathname === '/en/delta'
-  const isSigma = pathname === '/sigma' || pathname === '/en/sigma'
+  const isSigma = pathname === '/sigma' || pathname === '/en/sigma' || pathname.startsWith('/sigma/') || pathname.startsWith('/en/sigma/')
   const productSignupUrl = isDelta
     ? 'https://delta.autarqui.co/signup'
     : isSigma
