@@ -207,7 +207,7 @@ function App({ locale = 'es' }: AppProps) {
               {t('home.cta.after')}
             </h2>
             <a
-              href="mailto:hola@autarqui.co?subject=autarqui"
+              href="mailto:info@autarqui.co?subject=autarqui"
               className="text-base font-medium border-b border-black dark:border-neutral-100 pb-1 hover:opacity-60 transition-opacity"
             >
               {t('home.cta.link')}

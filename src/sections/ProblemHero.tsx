@@ -7,9 +7,12 @@ export const ProblemHero: React.FC = () => {
     <section id="autonomos" className="snap-start relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video loop background */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <img
-          src="/busy-freelancer.gif"
-          alt=""
+        <video
+          src="/busy-freelancer.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover opacity-40"
           style={{
             maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)',

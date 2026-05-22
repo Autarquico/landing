@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const prefix = i18n.language === 'en' ? '/en' : ''
 
   return (
     <footer className="bg-black text-white py-12 md:py-16 px-4 md:px-6 lg:px-8">
@@ -14,12 +15,12 @@ export const Footer: React.FC = () => {
             <h4 className="font-display text-lg mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href="/delta" className="hover:text-white transition-colors">
+                <a href={`${prefix}/delta`} className="hover:text-white transition-colors">
                   δ delta
                 </a>
               </li>
               <li>
-                <a href="/sigma" className="hover:text-white transition-colors">
+                <a href={`${prefix}/sigma`} className="hover:text-white transition-colors">
                   σ sigma
                 </a>
               </li>
@@ -31,17 +32,17 @@ export const Footer: React.FC = () => {
             <h4 className="font-display text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href="/legal/terminos" className="hover:text-white transition-colors">
+                <a href={`${prefix}/legal/terminos`} className="hover:text-white transition-colors">
                   {t('footer.terms')}
                 </a>
               </li>
               <li>
-                <a href="/legal/privacidad" className="hover:text-white transition-colors">
+                <a href={`${prefix}/legal/privacidad`} className="hover:text-white transition-colors">
                   {t('footer.privacy')}
                 </a>
               </li>
               <li>
-                <a href="/legal/gdpr" className="hover:text-white transition-colors">
+                <a href={`${prefix}/legal/gdpr`} className="hover:text-white transition-colors">
                   GDPR
                 </a>
               </li>

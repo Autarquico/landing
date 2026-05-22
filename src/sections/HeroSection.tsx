@@ -65,11 +65,14 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="bg-gray-50 rounded-2xl p-8 border border-gray-100 relative overflow-hidden"
           >
-            {/* Video/GIF background */}
+            {/* Video background */}
             <div className="absolute inset-0 opacity-20">
-              <img
-                src="/busy-freelancer.gif"
-                alt="Busy freelancer"
+              <video
+                src="/busy-freelancer.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full h-full object-cover"
               />
             </div>

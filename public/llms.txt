@@ -1,0 +1,23 @@
+# autarqui.co
+
+Autárquico builds AI-powered tools for business autonomy.
+
+## Products
+
+### sigma
+AI-assisted labor and tax advisory for freelancers, SMEs, and accounting firms.
+- For businesses: https://autarqui.co/sigma/negocios
+- For advisors: https://autarqui.co/sigma/asesorias
+
+### delta
+Conversational BI platform that turns business data into actionable insights.
+https://autarqui.co/delta
+
+## Contact
+info@autarqui.co
+https://instagram.com/autarqui.co
+
+## Canonical URLs
+- Home: https://autarqui.co/
+- Sigma: https://autarqui.co/sigma
+- Delta: https://autarqui.co/delta
