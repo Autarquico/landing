@@ -27,6 +27,18 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Recursos */}
+          <div className="text-center md:text-left">
+            <h4 className="font-display text-lg mb-4">{t('footer.resources')}</h4>
+            <ul className="space-y-2 text-sm text-white/70">
+              <li>
+                <a href={`${prefix}/canarias`} className="hover:text-white transition-colors">
+                  {t('footer.subsidies')}
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal */}
           <div className="text-center md:text-left">
             <h4 className="font-display text-lg mb-4">{t('footer.legal')}</h4>

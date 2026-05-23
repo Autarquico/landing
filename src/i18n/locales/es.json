@@ -361,5 +361,47 @@
   "sigma.advisors.cta.link": "Pide una demo →",
 
   "meta.title": "Autárquico - Software de Gestión para Microempresas | Automatiza tu negocio",
-  "meta.description": "Automatiza los procesos de tu negocio con agentes de IA especializados. Apúntate para ser de los primeros."
+  "meta.description": "Automatiza los procesos de tu negocio con agentes de IA especializados. Apúntate para ser de los primeros.",
+
+  "seo.canarias.title": "Subvenciones digitalización Canarias — Hasta 25.000€ · autarqui.co",
+  "seo.canarias.description": "Ayudas 100% a fondo perdido para proyectos de IA, BI, ERP y CRM en empresas canarias. Te ayudamos a preparar tu solicitud.",
+  "seo.canarias.ogAlt": "Subvenciones digitalización Canarias",
+
+  "footer.resources": "Recursos",
+  "footer.subsidies": "Subvenciones Canarias",
+
+  "contact.name": "Nombre",
+  "contact.email": "Email",
+  "contact.company": "Empresa",
+  "contact.submit": "Enviar",
+  "contact.sending": "Enviando...",
+  "contact.success": "¡Gracias! Nos pondremos en contacto contigo pronto.",
+  "contact.error": "Error al enviar. Inténtalo de nuevo.",
+
+  "canarias.hero.eyebrow": "Subvenciones Canarias 2026",
+  "canarias.hero.title": "Hasta 25.000€ para digitalizar tu empresa",
+  "canarias.hero.subtitle": "Subvenciones 100% a fondo perdido para proyectos de IA, Business Intelligence, ERP y más.",
+  "canarias.hero.nextCall": "Próxima convocatoria: 2027",
+  "canarias.stats.subsidy": "Subvención",
+  "canarias.stats.max": "Importe máximo",
+  "canarias.stats.months": "Meses para ejecutar",
+  "canarias.stats.advanceValue": "Anticip.",
+  "canarias.stats.advance": "Pago anticipado",
+  "canarias.projects.title": "¿Para qué proyectos?",
+  "canarias.projects.processes": "Gestión de procesos",
+  "canarias.projects.cyber": "Ciberseguridad",
+  "canarias.projects.ai": "Inteligencia Artificial",
+  "canarias.requirements.title": "¿Puedes solicitarla?",
+  "canarias.requirements.years": "Tu empresa tiene más de 3 años de antigüedad",
+  "canarias.requirements.location": "Domicilio fiscal en Canarias",
+  "canarias.requirements.employees": "Al menos 1 empleado en plantilla",
+  "canarias.requirements.taxes": "Al corriente con Hacienda y Seguridad Social",
+  "canarias.solutions.title": "Nuestras soluciones elegibles",
+  "canarias.solutions.subtitle": "Proyectos llave en mano, 100% subvencionables.",
+  "canarias.solutions.sigma": "Gestión fiscal y laboral",
+  "canarias.contact.title": "¿Preparamos tu solicitud?",
+  "canarias.contact.subtitle": "Déjanos tus datos y te ayudamos con el proceso.",
+  "canarias.resources.title": "Recursos oficiales",
+  "canarias.resources.sede": "Sede electrónica",
+  "canarias.resources.boc": "BOC bases reguladoras"
 }

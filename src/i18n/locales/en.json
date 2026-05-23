@@ -362,5 +362,47 @@
   "sigma.advisors.cta.link": "Book a demo →",
 
   "meta.title": "Autárquico - Business Management Software for Small Businesses | Automate your business",
-  "meta.description": "Automate your business processes with specialized AI agents. Sign up to be among the first."
+  "meta.description": "Automate your business processes with specialized AI agents. Sign up to be among the first.",
+
+  "seo.canarias.title": "Canary Islands Digitalization Grants — Up to €25,000 · autarqui.co",
+  "seo.canarias.description": "100% non-refundable grants for AI, BI, ERP, and CRM projects in Canary Islands businesses. We help you prepare your application.",
+  "seo.canarias.ogAlt": "Canary Islands Digitalization Grants",
+
+  "footer.resources": "Resources",
+  "footer.subsidies": "Canary Islands Grants",
+
+  "contact.name": "Name",
+  "contact.email": "Email",
+  "contact.company": "Company",
+  "contact.submit": "Send",
+  "contact.sending": "Sending...",
+  "contact.success": "Thank you! We'll be in touch soon.",
+  "contact.error": "Error sending. Please try again.",
+
+  "canarias.hero.eyebrow": "Canary Islands Grants 2026",
+  "canarias.hero.title": "Up to €25,000 to digitalize your business",
+  "canarias.hero.subtitle": "100% non-refundable grants for AI, Business Intelligence, ERP, and more.",
+  "canarias.hero.nextCall": "Next call: 2027",
+  "canarias.stats.subsidy": "Grant coverage",
+  "canarias.stats.max": "Maximum amount",
+  "canarias.stats.months": "Months to execute",
+  "canarias.stats.advanceValue": "Upfront",
+  "canarias.stats.advance": "Advance payment",
+  "canarias.projects.title": "Eligible projects",
+  "canarias.projects.processes": "Process management",
+  "canarias.projects.cyber": "Cybersecurity",
+  "canarias.projects.ai": "Artificial Intelligence",
+  "canarias.requirements.title": "Are you eligible?",
+  "canarias.requirements.years": "Your company is over 3 years old",
+  "canarias.requirements.location": "Registered office in the Canary Islands",
+  "canarias.requirements.employees": "At least 1 employee",
+  "canarias.requirements.taxes": "Up to date with taxes and Social Security",
+  "canarias.solutions.title": "Our eligible solutions",
+  "canarias.solutions.subtitle": "Turnkey projects, 100% eligible for funding.",
+  "canarias.solutions.sigma": "Tax and payroll management",
+  "canarias.contact.title": "Shall we prepare your application?",
+  "canarias.contact.subtitle": "Leave your details and we'll help you through the process.",
+  "canarias.resources.title": "Official resources",
+  "canarias.resources.sede": "Government portal",
+  "canarias.resources.boc": "Official regulations"
 }
