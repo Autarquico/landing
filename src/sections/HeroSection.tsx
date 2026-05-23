@@ -126,7 +126,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE - Autárquico (After) */}
+          {/* RIGHT SIDE - Autarqui (After) */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -144,7 +144,7 @@ export const HeroSection: React.FC = () => {
 
             <div className="relative z-10">
               <h3 className="text-2xl font-display mb-6 text-black">
-                Con Autárquico
+                Con Autarqui
               </h3>
 
               <div className="space-y-4">

@@ -10,15 +10,6 @@ import { SEO } from '../seo/SEO'
 import { useLocale } from '../seo/useLocale'
 import type { Locale } from '../seo/routes'
 
-const DeltaMark: React.FC<{ className?: string }> = ({ className }) => (
-  <svg viewBox="0 0 501 499" xmlns="http://www.w3.org/2000/svg" aria-label="delta" className={className}>
-    <g transform="translate(0,499) scale(0.1,-0.1)" fill="currentColor">
-      <path d="M2293 4970 c-574 -56 -1093 -292 -1499 -683 -395 -380 -641 -841 -734 -1377 -134 -768 109 -1556 654 -2119 354 -366 783 -609 1258 -715 202 -45 318 -58 533 -58 226 0 396 20 604 73 345 86 691 265 981 505 82 68 270 258 341 344 234 284 407 636 488 993 52 230 65 343 65 562 0 220 -14 347 -64 564 -97 423 -314 825 -615 1139 -256 267 -513 446 -833 582 -210 88 -408 143 -636 175 -129 18 -424 26 -543 15z m467 -231 c668 -80 1249 -436 1621 -993 190 -283 314 -614 364 -970 19 -132 19 -431 0 -564 -51 -356 -170 -673 -358 -955 -108 -161 -190 -259 -322 -386 -460 -439 -1089 -673 -1694 -631 -258 18 -519 82 -751 182 -676 294 -1179 909 -1324 1618 -37 182 -46 274 -46 460 1 331 64 625 198 919 213 467 531 807 1002 1073 65 37 262 121 355 151 293 96 653 133 955 96z" />
-      <path d="M2389 3990 c-170 -20 -310 -81 -397 -174 -120 -127 -139 -285 -56 -456 29 -58 58 -96 128 -166 75 -74 296 -250 385 -306 29 -18 26 -25 -11 -33 -80 -17 -202 -61 -303 -109 -298 -143 -493 -381 -536 -658 -16 -103 -6 -304 20 -393 71 -243 254 -442 486 -530 341 -128 750 -57 1008 177 127 114 220 256 273 418 28 82 29 92 28 290 0 204 0 206 -32 300 -95 285 -292 488 -688 710 -381 213 -478 278 -549 364 -18 23 -39 55 -45 71 -17 43 -15 126 3 160 43 83 153 144 275 152 100 7 173 -9 274 -59 67 -34 99 -59 197 -158 123 -124 155 -147 223 -156 124 -17 228 74 228 197 0 103 -76 198 -211 263 -169 81 -472 122 -700 96z m325 -1350 c129 -136 207 -273 254 -450 33 -127 38 -384 8 -495 -46 -177 -135 -299 -264 -362 -75 -37 -78 -38 -191 -38 -108 0 -120 2 -176 29 -89 44 -184 144 -233 248 -58 122 -73 191 -79 363 -6 164 8 263 52 382 51 135 160 263 275 321 54 27 226 80 266 82 6 0 46 -36 88 -80z" />
-    </g>
-  </svg>
-)
-
 const StatCard: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div className="bg-gray-50 dark:bg-neutral-900 rounded-2xl p-6 text-center">
     <p className="font-display text-3xl md:text-4xl text-emerald-500 mb-1">{value}</p>
@@ -139,17 +130,19 @@ export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) =
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               <a
                 href={locale === 'en' ? '/en/delta' : '/delta'}
-                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
+                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
               >
-                <DeltaMark className="w-16 h-16 mb-4 text-black dark:text-white" />
+                <img src="/delta-logo.svg" alt="delta" className="w-16 h-16 mb-4 dark:hidden" />
+                <img src="/delta-logo-dark.svg" alt="delta" className="w-16 h-16 mb-4 hidden dark:block" />
                 <span className="text-xs font-medium tracking-[0.42em] mb-2">D&nbsp;E&nbsp;L&nbsp;T&nbsp;A</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">Business Intelligence</p>
               </a>
               <a
                 href={locale === 'en' ? '/en/sigma' : '/sigma'}
-                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
+                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-sigma transition-colors"
               >
-                <img src="/sigma-logo.svg" alt="sigma" className="w-16 h-16 mb-4 dark:invert" />
+                <img src="/sigma-logo.svg" alt="sigma" className="w-16 h-16 mb-4 dark:hidden" />
+                <img src="/sigma-logo-dark.svg" alt="sigma" className="w-16 h-16 mb-4 hidden dark:block" />
                 <span className="text-xs font-medium tracking-[0.42em] mb-2">S&nbsp;I&nbsp;G&nbsp;M&nbsp;A</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">{t(k('solutions.sigma'))}</p>
               </a>

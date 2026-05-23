@@ -6,7 +6,7 @@ export const organizationJsonLd = {
     {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#org`,
-      name: 'Autárquico',
+      name: 'Autarqui',
       alternateName: 'autarqui.co',
       url: SITE_URL,
       logo: `${SITE_URL}/android-chrome-512x512.png`,
@@ -46,7 +46,7 @@ export function softwareAppJsonLd(opts: {
     url: `${SITE_URL}${opts.path}`,
     publisher: {
       '@type': 'Organization',
-      name: 'Autárquico',
+      name: 'Autarqui',
       url: SITE_URL,
     },
     inLanguage: opts.locale,

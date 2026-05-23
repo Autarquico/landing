@@ -7,12 +7,12 @@ export const Footer: React.FC = () => {
   const prefix = i18n.language === 'en' ? '/en' : ''
 
   return (
-    <footer className="bg-black text-white py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <footer className="bg-ink text-white py-12 md:py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-4xl">
         <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-24 mb-8 md:mb-12">
           {/* Producto */}
           <div className="text-center md:text-left">
-            <h4 className="font-display text-lg mb-4">{t('footer.product')}</h4>
+            <h4 className="font-display font-light text-lg mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href={`${prefix}/delta`} className="hover:text-white transition-colors">
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
 
           {/* Recursos */}
           <div className="text-center md:text-left">
-            <h4 className="font-display text-lg mb-4">{t('footer.resources')}</h4>
+            <h4 className="font-display font-light text-lg mb-4">{t('footer.resources')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href={`${prefix}/canarias`} className="hover:text-white transition-colors">
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
 
           {/* Legal */}
           <div className="text-center md:text-left">
-            <h4 className="font-display text-lg mb-4">{t('footer.legal')}</h4>
+            <h4 className="font-display font-light text-lg mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href={`${prefix}/legal/terminos`} className="hover:text-white transition-colors">
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
 
           {/* Contacto */}
           <div className="text-center md:text-left">
-            <h4 className="font-display text-lg mb-4">{t('footer.contact')}</h4>
+            <h4 className="font-display font-light text-lg mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-3">
               <li>
                 <a

@@ -8,6 +8,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        ink: '#0a0a0a',
+        paper: '#fafaf7',
+        muted: '#6b6b6b',
+        hairline: '#e8e8e3',
         black: '#000000',
         white: '#FFFFFF',
         gray: {
@@ -24,10 +28,20 @@ export default {
         },
         green: '#10B981',
         red: '#EF4444',
+        delta: {
+          DEFAULT: '#5DBCD0',
+          hover: '#4FA8BB',
+          soft: '#E6F4F7',
+        },
+        sigma: {
+          DEFAULT: '#5DBC83',
+          hover: '#4FA86E',
+          soft: '#E6F7ED',
+        },
       },
       fontFamily: {
-        display: ['"Archivo Black"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Fraunces', '"Iowan Old Style"', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       fontSize: {
         'display': ['72px', { lineHeight: '1.2' }],

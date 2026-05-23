@@ -7,7 +7,7 @@ export const TerminosPage: React.FC = () => {
       <SEO routeId="terms" locale="es" />
       <h2>1. Identificación del titular</h2>
       <p>
-        El presente sitio web es propiedad de Autárquico (en adelante, "la Empresa"),
+        El presente sitio web es propiedad de Autarqui (en adelante, "la Empresa"),
         con domicilio social en España y correo electrónico de contacto: info@autarqui.co.
       </p>
 

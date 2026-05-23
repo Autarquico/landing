@@ -39,7 +39,7 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, lastUpdated, ch
 
       <footer className="border-t border-gray-100 py-8 px-4">
         <p className="text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} (R) Autárquico. Todos los derechos reservados.
+          © {new Date().getFullYear()} Autarqui®. Todos los derechos reservados.
         </p>
       </footer>
     </div>

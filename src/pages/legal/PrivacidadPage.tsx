@@ -7,7 +7,7 @@ export const PrivacidadPage: React.FC = () => {
       <SEO routeId="privacy" locale="es" />
       <h2>1. Responsable del tratamiento</h2>
       <p>
-        Autárquico (en adelante, "el Responsable"), con correo electrónico de contacto:
+        Autarqui (en adelante, "el Responsable"), con correo electrónico de contacto:
         info@autarqui.co, es el responsable del tratamiento de los datos personales
         recogidos a través del sitio web autarqui.co.
       </p>

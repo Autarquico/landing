@@ -44,10 +44,10 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
             alt="α"
             className="h-10 md:h-12 lg:h-14 transition-all duration-300"
           />
-          <span className={`text-lg md:text-xl lg:text-2xl font-semibold transition-colors duration-300 ${
+          <span className={`font-display text-lg md:text-xl transition-colors duration-300 ${
             scrolled ? 'text-black' : 'text-white'
           }`}>
-            utarqui<span className="text-emerald-500">.co</span>
+            <em className="font-light">autarqui</em>.co
           </span>
         </Link>
 

@@ -11,17 +11,18 @@ import { useLocale } from '../seo/useLocale'
 import type { Locale } from '../seo/routes'
 
 const DeltaMark: React.FC<{ className?: string }> = ({ className }) => (
-  <svg
-    viewBox="0 0 501 499"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-label="delta"
-    className={className}
-  >
-    <g transform="translate(0,499) scale(0.1,-0.1)" fill="currentColor">
-      <path d="M2293 4970 c-574 -56 -1093 -292 -1499 -683 -395 -380 -641 -841 -734 -1377 -134 -768 109 -1556 654 -2119 354 -366 783 -609 1258 -715 202 -45 318 -58 533 -58 226 0 396 20 604 73 345 86 691 265 981 505 82 68 270 258 341 344 234 284 407 636 488 993 52 230 65 343 65 562 0 220 -14 347 -64 564 -97 423 -314 825 -615 1139 -256 267 -513 446 -833 582 -210 88 -408 143 -636 175 -129 18 -424 26 -543 15z m467 -231 c668 -80 1249 -436 1621 -993 190 -283 314 -614 364 -970 19 -132 19 -431 0 -564 -51 -356 -170 -673 -358 -955 -108 -161 -190 -259 -322 -386 -460 -439 -1089 -673 -1694 -631 -258 18 -519 82 -751 182 -676 294 -1179 909 -1324 1618 -37 182 -46 274 -46 460 1 331 64 625 198 919 213 467 531 807 1002 1073 65 37 262 121 355 151 293 96 653 133 955 96z" />
-      <path d="M2389 3990 c-170 -20 -310 -81 -397 -174 -120 -127 -139 -285 -56 -456 29 -58 58 -96 128 -166 75 -74 296 -250 385 -306 29 -18 26 -25 -11 -33 -80 -17 -202 -61 -303 -109 -298 -143 -493 -381 -536 -658 -16 -103 -6 -304 20 -393 71 -243 254 -442 486 -530 341 -128 750 -57 1008 177 127 114 220 256 273 418 28 82 29 92 28 290 0 204 0 206 -32 300 -95 285 -292 488 -688 710 -381 213 -478 278 -549 364 -18 23 -39 55 -45 71 -17 43 -15 126 3 160 43 83 153 144 275 152 100 7 173 -9 274 -59 67 -34 99 -59 197 -158 123 -124 155 -147 223 -156 124 -17 228 74 228 197 0 103 -76 198 -211 263 -169 81 -472 122 -700 96z m325 -1350 c129 -136 207 -273 254 -450 33 -127 38 -384 8 -495 -46 -177 -135 -299 -264 -362 -75 -37 -78 -38 -191 -38 -108 0 -120 2 -176 29 -89 44 -184 144 -233 248 -58 122 -73 191 -79 363 -6 164 8 263 52 382 51 135 160 263 275 321 54 27 226 80 266 82 6 0 46 -36 88 -80z" />
-    </g>
-  </svg>
+  <>
+    <img
+      src="/delta-logo.svg"
+      alt="delta"
+      className={`${className} dark:hidden`}
+    />
+    <img
+      src="/delta-logo-dark.svg"
+      alt="delta"
+      className={`${className} hidden dark:block`}
+    />
+  </>
 )
 
 const Eyebrow: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
@@ -73,7 +74,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               {t('delta.hero.h1.line1')}<br />
               {t('delta.hero.h1.line2')}
             </h1>
-            <p className="font-display italic text-emerald-500 text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight mb-8">
+            <p className="font-display italic text-delta text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight mb-8">
               {t('delta.hero.h1.line3')}
             </p>
             <p className="text-base md:text-lg text-gray-500 dark:text-neutral-400 leading-relaxed max-w-[44ch] mx-auto lg:mx-0">
@@ -88,7 +89,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             <Eyebrow className="mb-10">{t('delta.painPoints.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-12">
               {t('delta.painPoints.heading.before')}{' '}
-              <span className="italic text-emerald-500">{t('delta.painPoints.heading.kw')}</span>
+              <span className="italic text-delta">{t('delta.painPoints.heading.kw')}</span>
               {t('delta.painPoints.heading.after')}
             </h2>
             <ul className="w-full max-w-3xl divide-y divide-gray-100 dark:divide-neutral-800 text-left">
@@ -112,7 +113,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             <Eyebrow className="mb-10">{t('delta.proposal.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
               {t('delta.proposal.heading.before')}{' '}
-              <span className="italic text-emerald-500">{t('delta.proposal.heading.kw')}</span>
+              <span className="italic text-delta">{t('delta.proposal.heading.kw')}</span>
             </h2>
             <ul className="w-full max-w-2xl space-y-3 text-left">
               {[1, 2, 3].map((i) => (
@@ -130,12 +131,12 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             <Eyebrow className="mb-10">{t('delta.trust.eyebrow')}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
               {t('delta.trust.heading.before')}{' '}
-              <span className="italic text-emerald-500">{t('delta.trust.heading.kw')}</span>
+              <span className="italic text-delta">{t('delta.trust.heading.kw')}</span>
             </h2>
             <ul className="w-full max-w-2xl space-y-4 text-left">
               {[1, 2, 3, 4, 5].map((i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-emerald-500" strokeWidth={2.5} />
+                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-delta" strokeWidth={2.5} />
                   <span className="text-gray-600 dark:text-neutral-300 leading-relaxed">
                     {t(`delta.trust.bullet${i}`)}
                   </span>
@@ -152,7 +153,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
               <Eyebrow className="mb-10">{t('delta.sectors.eyebrow')}</Eyebrow>
               <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[22ch]">
                 {t('delta.sectors.heading.before')}{' '}
-                <span className="italic text-emerald-500">{t('delta.sectors.heading.kw')}</span>
+                <span className="italic text-delta">{t('delta.sectors.heading.kw')}</span>
               </h2>
             </div>
             <SectorTabs />
@@ -165,7 +166,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             <Eyebrow className="mb-6 md:mb-10">{t('delta.results.eyebrow')}</Eyebrow>
             <h2 className="font-display text-2xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-8 md:mb-14">
               {t('delta.results.heading.before')}{' '}
-              <span className="italic text-emerald-500">{t('delta.results.heading.kw')}</span>
+              <span className="italic text-delta">{t('delta.results.heading.kw')}</span>
             </h2>
             <div className="grid grid-cols-3 gap-4 md:gap-12 w-full max-w-4xl mb-8 md:mb-14">
               {[1, 2, 3].map((i) => (
@@ -202,7 +203,7 @@ export const DeltaPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
             />
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[22ch]">
               {t('delta.cta.before')}{' '}
-              <span className="italic text-emerald-500">{t('delta.cta.kw')}</span>
+              <span className="italic text-delta">{t('delta.cta.kw')}</span>
               {t('delta.cta.after')}
             </h2>
             <a

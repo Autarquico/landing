@@ -58,7 +58,12 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <img
               src="/sigma-logo.svg"
               alt="sigma"
-              className="w-[clamp(140px,22vw,280px)] h-auto dark:invert"
+              className="w-[clamp(140px,22vw,280px)] h-auto dark:hidden"
+            />
+            <img
+              src="/sigma-logo-dark.svg"
+              alt="sigma"
+              className="w-[clamp(140px,22vw,280px)] h-auto hidden dark:block"
             />
             <span className="text-xs font-medium tracking-[0.42em] text-black dark:text-neutral-100">
               S&nbsp;I&nbsp;G&nbsp;M&nbsp;A
@@ -73,7 +78,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
               {t(k('hero.h1.line1'))}<br />
               {t(k('hero.h1.line2'))}
             </h1>
-            <p className="font-display italic text-emerald-500 text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight mb-8">
+            <p className="font-display italic text-sigma text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight mb-8">
               {t(k('hero.h1.line3'))}
             </p>
             <p className="text-base md:text-lg text-gray-500 dark:text-neutral-400 leading-relaxed max-w-[44ch] mx-auto lg:mx-0">
@@ -88,7 +93,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <Eyebrow className="mb-10">{t(k('painPoints.eyebrow'))}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-12">
               {t(k('painPoints.heading.before'))}{' '}
-              <span className="italic text-emerald-500">{t(k('painPoints.heading.kw'))}</span>
+              <span className="italic text-sigma">{t(k('painPoints.heading.kw'))}</span>
               {t(k('painPoints.heading.after'))}
             </h2>
             <ul className="w-full max-w-3xl divide-y divide-gray-100 dark:divide-neutral-800 text-left">
@@ -112,7 +117,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <Eyebrow className="mb-10">{t(k('proposal.eyebrow'))}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[26ch] mb-10">
               {t(k('proposal.heading.before'))}{' '}
-              <span className="italic text-emerald-500">{t(k('proposal.heading.kw'))}</span>
+              <span className="italic text-sigma">{t(k('proposal.heading.kw'))}</span>
             </h2>
             <ul className="w-full max-w-2xl space-y-3 text-left">
               {[1, 2, 3].map((i) => (
@@ -131,7 +136,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
               <Eyebrow className="mb-10">{t(k('assumes.eyebrow'))}</Eyebrow>
               <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch]">
                 {t(k('assumes.heading.before'))}{' '}
-                <span className="italic text-emerald-500">{t(k('assumes.heading.kw'))}</span>
+                <span className="italic text-sigma">{t(k('assumes.heading.kw'))}</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 max-w-5xl mx-auto">
@@ -155,7 +160,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <Eyebrow className="mb-10">{t(k('compliance.eyebrow'))}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
               {t(k('compliance.heading.before'))}{' '}
-              <span className="italic text-emerald-500">{t(k('compliance.heading.kw'))}</span>
+              <span className="italic text-sigma">{t(k('compliance.heading.kw'))}</span>
             </h2>
             <p className="text-base md:text-lg text-gray-500 dark:text-neutral-400 leading-relaxed max-w-[52ch] mb-10">
               {t(k('compliance.body'))}
@@ -163,7 +168,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <ul className="w-full max-w-2xl space-y-4 text-left">
               {[1, 2, 3].map((i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-emerald-500" strokeWidth={2.5} />
+                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-sigma" strokeWidth={2.5} />
                   <span className="text-gray-600 dark:text-neutral-300 leading-relaxed">
                     {t(k(`compliance.bullet${i}`))}
                   </span>
@@ -179,12 +184,12 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <Eyebrow className="mb-10">{t(k('trust.eyebrow'))}</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-10">
               {t(k('trust.heading.before'))}{' '}
-              <span className="italic text-emerald-500">{t(k('trust.heading.kw'))}</span>
+              <span className="italic text-sigma">{t(k('trust.heading.kw'))}</span>
             </h2>
             <ul className="w-full max-w-2xl space-y-4 text-left">
               {[1, 2, 3].map((i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-emerald-500" strokeWidth={2.5} />
+                  <Check className="w-5 h-5 mt-1 flex-shrink-0 text-sigma" strokeWidth={2.5} />
                   <span className="text-gray-600 dark:text-neutral-300 leading-relaxed">
                     {t(k(`trust.bullet${i}`))}
                   </span>
@@ -200,7 +205,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <Eyebrow className="mb-6 md:mb-10">{t(k('results.eyebrow'))}</Eyebrow>
             <h2 className="font-display text-2xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[24ch] mb-8 md:mb-14">
               {t(k('results.heading.before'))}{' '}
-              <span className="italic text-emerald-500">{t(k('results.heading.kw'))}</span>
+              <span className="italic text-sigma">{t(k('results.heading.kw'))}</span>
             </h2>
             <div className="grid grid-cols-3 gap-4 md:gap-12 w-full max-w-4xl mb-8 md:mb-14">
               {[1, 2, 3].map((i) => (
@@ -238,7 +243,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             />
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-[22ch]">
               {t(k('cta.before'))}{' '}
-              <span className="italic text-emerald-500">{t(k('cta.kw'))}</span>
+              <span className="italic text-sigma">{t(k('cta.kw'))}</span>
               {t(k('cta.after'))}
             </h2>
             <a
