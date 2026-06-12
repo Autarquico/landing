@@ -1,0 +1,64 @@
+{
+  "slug": "manifiesto",
+  "date": "2026-05-28",
+  "author": "Alex",
+  "readingTime": 6,
+  "title": {
+    "es": "Manifiesto por la autosuficiencia",
+    "en": "Manifesto for self-sufficiency"
+  },
+  "subtitle": {
+    "es": "Por qué la tecnología debería liberarnos, no hacernos más dependientes",
+    "en": "Why technology should free us, not make us more dependent"
+  },
+  "excerpt": {
+    "es": "La historia de la tecnología siempre ha sido la misma. La historia de nuestra búsqueda de autonomía.",
+    "en": "The history of technology has always been the same. The story of our search for autonomy."
+  },
+  "body": {
+    "es": [
+      "Existe una constante silenciosa que atraviesa toda la historia de la tecnología. Una fuerza casi invisible que explica por qué inventamos herramientas, construimos máquinas y desarrollamos sistemas cada vez más complejos.",
+      "La historia de la tecnología, si uno la observa con cierta distancia, se da cuenta que siempre ha sido la misma historia. La historia de nuestra búsqueda de autonomía.",
+      "Inventamos la rueda para depender menos de la distancia. Domesticamos el fuego para depender menos del clima. Construimos carretas, coches, barcos y aviones para depender menos de la geografía. Desarrollamos la imprenta para depender menos de la transmisión oral del conocimiento, y poder evolucionar más rápidamente como especie. Creamos internet para depender menos de la proximidad física y conectarnos.",
+      "Cada avance técnico ha perseguido, en esencia, el mismo objetivo. Reducir dependencias. Expandir libertad. Aumentar nuestra capacidad de actuar por nosotros mismos y el de nuestra especie.",
+      "Siempre me ha parecido curioso que, precisamente en una época de progreso tecnológico sin precedentes, muchas empresas hayan terminado atrapadas en una paradoja extraña. Cuantas más herramientas y tecnología, mayor dependencia de esta última.",
+      "Dependientes de proveedores externos, de procesos manuales, de tareas repetitivas, de software que no entendemos del todo, de sistemas sobre los que tenemos poco o ningún control.",
+      "Durante años hemos confundido digitalización con autonomía, o eficiencia. Pero no son lo mismo. Digitalizar un proceso no significa comprenderlo. Automatizar una tarea no significa controlar el sistema que la ejecuta. El software no nos hace necesariamente más libres.",
+      "Y lo peor es que a veces significa exactamente lo contrario.",
+      "Durante décadas hemos construido empresas sobre capas sucesivas de dependencia. Herramientas desconectadas entre sí. Procesos fragmentados. Datos dispersos. Decisiones operativas delegadas en sistemas diseñados por terceros.",
+      "Y poco a poco aceptamos algo que quizá nunca debimos aceptar. Que para beneficiarnos de la tecnología debíamos ceder control a cambio. Nos acostumbramos a depender.",
+      "Pero la dependencia nunca fue el objetivo de la tecnología. Era precisamente aquello que la tecnología debía eliminar.",
+      "Hoy estamos entrando en una nueva etapa. La IA puede hacer que esto sea mucho peor aún, o radicalmente diferente. Todo depende del uso que hagamos de ella.",
+      "Podemos construir sistemas capaces de adaptarse a nosotros, y no solamente obligarnos a adaptarnos a ellos. Sistemas capaces de comprender cómo trabajamos. De aprender nuestros procesos y absorber nuestras particularidades. De operar junto a nosotros.",
+      "No se trata simplemente de automatizar. La automatización, por sí sola, nunca fue suficiente. Se trata de algo mucho más importante.",
+      "Construir organizaciones capaces de funcionar mejor por sí mismas. Más productivas. Más resilientes. Menos frágiles. Menos dependientes de intermediarios innecesarios. Más dueñas de sus propios procesos, sus propios datos y sus propias decisiones.",
+      "En el fondo, esta siempre fue nuestra obsesión. No construir software. No implementar inteligencia artificial. No seguir tendencias tecnológicas. Sino perseguir una idea mucho más simple. Ayudar a que las organizaciones recuperen control sobre sí mismas.",
+      "Creemos que el futuro pertenecerá a aquellas empresas capaces de operar con mayor independencia. Empresas que entiendan profundamente cómo funcionan y que sean capaces de traducir ese conocimiento en sistemas que amplifiquen su capacidad de actuar.",
+      "La autosuficiencia significa libertad. Libertad de depender menos. Libertad para decidir mejor. Libertad para construir sistemas alineados con nuestra propia manera de operar.",
+      "Durante demasiado tiempo la tecnología nos prometió eficiencia. Quizás haya llegado el momento de exigir algo más. Autonomía.",
+      "Porque, al final, el mayor fruto de la autosuficiencia siempre ha sido el mismo. La libertad."
+    ],
+    "en": [
+      "There is a silent constant that runs through the entire history of technology. An almost invisible force that explains why we invent tools, build machines, and develop increasingly complex systems.",
+      "The history of technology, if you look at it from a certain distance, has always been the same story. The story of our search for autonomy.",
+      "We invented the wheel to depend less on distance. We domesticated fire to depend less on climate. We built carts, cars, ships, and planes to depend less on geography. We developed the printing press to depend less on oral transmission of knowledge, and to evolve more rapidly as a species. We created the internet to depend less on physical proximity and connect.",
+      "Every technical advance has pursued, in essence, the same goal. Reduce dependencies. Expand freedom. Increase our capacity to act for ourselves and for our species.",
+      "I have always found it curious that, precisely in an era of unprecedented technological progress, many companies have ended up trapped in a strange paradox. The more tools and technology, the greater the dependence on the latter.",
+      "Dependent on external suppliers, on manual processes, on repetitive tasks, on software we don't fully understand, on systems over which we have little or no control.",
+      "For years we have confused digitization with autonomy, or efficiency. But they are not the same. Digitizing a process does not mean understanding it. Automating a task does not mean controlling the system that executes it. Software does not necessarily make us freer.",
+      "And the worst part is that sometimes it means exactly the opposite.",
+      "For decades we have built companies on successive layers of dependency. Disconnected tools. Fragmented processes. Scattered data. Operational decisions delegated to systems designed by third parties.",
+      "And little by little we accepted something that perhaps we should never have accepted. That to benefit from technology we had to give up control in return. We got used to depending.",
+      "But dependency was never the goal of technology. It was precisely what technology was supposed to eliminate.",
+      "Today we are entering a new stage. AI can make this much worse, or radically different. It all depends on how we use it.",
+      "We can build systems capable of adapting to us, and not just forcing us to adapt to them. Systems capable of understanding how we work. Of learning our processes and absorbing our particularities. Of operating alongside us.",
+      "It's not simply about automating. Automation alone was never enough. It's about something much more important.",
+      "Building organizations capable of functioning better on their own. More productive. More resilient. Less fragile. Less dependent on unnecessary intermediaries. More in control of their own processes, their own data, and their own decisions.",
+      "Deep down, this was always our obsession. Not building software. Not implementing artificial intelligence. Not following technological trends. But pursuing a much simpler idea. Helping organizations regain control over themselves.",
+      "We believe the future will belong to those companies capable of operating with greater independence. Companies that deeply understand how they work and are capable of translating that knowledge into systems that amplify their capacity to act.",
+      "Self-sufficiency means freedom. Freedom to depend less. Freedom to decide better. Freedom to build systems aligned with our own way of operating.",
+      "For too long technology promised us efficiency. Perhaps the time has come to demand something more. Autonomy.",
+      "Because, in the end, the greatest fruit of self-sufficiency has always been the same. Freedom."
+    ]
+  }
+}

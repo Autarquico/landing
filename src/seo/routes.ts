@@ -20,6 +20,9 @@ export const routes: RouteEntry[] = [
   { id: 'terms',   paths: { es: '/legal/terminos' },                     ogImage: 'home.png' },
   { id: 'privacy', paths: { es: '/legal/privacidad' },                   ogImage: 'home.png' },
   { id: 'gdpr',    paths: { es: '/legal/gdpr' },                         ogImage: 'home.png' },
+  { id: 'journal', paths: { es: '/journal', en: '/en/journal' },         ogImage: 'home.png' },
+  { id: 'journal-software-a-medida', paths: { es: '/journal/software-a-medida', en: '/en/journal/software-a-medida' }, ogImage: 'home.png' },
+  { id: 'journal-manifiesto', paths: { es: '/journal/manifiesto', en: '/en/journal/manifiesto' }, ogImage: 'home.png' },
 ]
 
 export function ogImageFor(routeId: string, locale: Locale): string {

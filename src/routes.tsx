@@ -7,6 +7,8 @@ import { SigmaSelectorPage } from './pages/SigmaSelectorPage'
 import { TerminosPage } from './pages/legal/TerminosPage'
 import { PrivacidadPage } from './pages/legal/PrivacidadPage'
 import { GdprPage } from './pages/legal/GdprPage'
+import { JournalIndex } from './pages/journal/JournalIndex'
+import { JournalArticle } from './pages/journal/JournalArticle'
 
 export const routes: RouteRecord[] = [
   { path: '/',                       element: <App locale="es" /> },
@@ -24,4 +26,10 @@ export const routes: RouteRecord[] = [
   { path: '/legal/terminos',         element: <TerminosPage /> },
   { path: '/legal/privacidad',       element: <PrivacidadPage /> },
   { path: '/legal/gdpr',             element: <GdprPage /> },
+  { path: '/journal',                element: <JournalIndex locale="es" /> },
+  { path: '/en/journal',             element: <JournalIndex locale="en" /> },
+  { path: '/journal/software-a-medida', element: <JournalArticle locale="es" slug="software-a-medida" /> },
+  { path: '/en/journal/software-a-medida', element: <JournalArticle locale="en" slug="software-a-medida" /> },
+  { path: '/journal/manifiesto', element: <JournalArticle locale="es" slug="manifiesto" /> },
+  { path: '/en/journal/manifiesto', element: <JournalArticle locale="en" slug="manifiesto" /> },
 ]
