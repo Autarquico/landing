@@ -38,7 +38,7 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
       <Navigation lightBackground />
 
       <main className="pt-24 md:pt-32 pb-16 md:pb-24">
-        <article className="container mx-auto px-4 md:px-6 max-w-2xl">
+        <article className="container mx-auto px-4 md:px-6 max-w-3xl">
           <header className="mb-12 md:mb-16 text-center">
             <a
               href={`${prefix}/journal`}
@@ -70,7 +70,7 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
             {article.body[locale].map((paragraph, i) => (
               <p
                 key={i}
-                className="text-base md:text-lg leading-relaxed text-ink/80 dark:text-white/80 mb-6"
+                className="text-lg md:text-xl leading-relaxed text-ink/80 dark:text-white/80 mb-6 text-justify"
               >
                 {paragraph}
               </p>
