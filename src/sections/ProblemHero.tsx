@@ -8,12 +8,12 @@ export const ProblemHero: React.FC = () => {
       {/* Video loop background */}
       <div className="absolute inset-0 flex items-center justify-center">
         <video
-          src="/busy-freelancer.mp4"
+          src="/hero-video.mp4"
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-25"
           style={{
             maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)',
             WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 85%)'
@@ -32,10 +32,10 @@ export const ProblemHero: React.FC = () => {
         </p>
 
         <figure className="max-w-2xl mx-auto px-4">
-          <blockquote className="text-sm sm:text-base md:text-lg italic text-gray-400 leading-relaxed">
+          <blockquote className="text-sm sm:text-base md:text-lg italic text-gray-200 leading-relaxed">
             "{t('hero.quote')}"
           </blockquote>
-          <figcaption className="mt-2 text-xs sm:text-sm text-gray-500 not-italic">
+          <figcaption className="mt-2 text-xs sm:text-sm text-gray-300 not-italic">
             — {t('hero.quoteAuthor')}
           </figcaption>
         </figure>
@@ -56,8 +56,6 @@ export const ProblemHero: React.FC = () => {
         </div>
       </div>
 
-      {/* Section transition fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-white" />
-    </section>
+          </section>
   )
 }

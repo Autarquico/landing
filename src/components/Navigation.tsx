@@ -36,13 +36,13 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-12 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 py-2 flex items-center justify-between">
         {/* Logo + Brand */}
         <Link to="/" className="flex items-center gap-1.5">
           <img
             src={scrolled ? '/logo-clear.svg' : '/logo-dark.svg'}
             alt="α"
-            className="h-10 md:h-12 lg:h-14 transition-all duration-300"
+            className="h-8 md:h-9 lg:h-10 transition-all duration-300"
           />
           <span className={`font-display text-lg md:text-xl transition-colors duration-300 ${
             scrolled ? 'text-black' : 'text-white'
@@ -64,7 +64,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
               rel="noopener"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-black text-white px-6 py-2.5 lg:px-8 lg:py-3 rounded-full font-medium transition-all duration-200"
+              className="bg-black text-white px-5 py-1.5 lg:px-6 lg:py-1.5 rounded-full text-sm font-medium transition-all duration-200"
             >
               {t('nav.cta')}
             </motion.a>
@@ -73,7 +73,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
               onClick={scrollToWaitlist}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-black text-white px-6 py-2.5 lg:px-8 lg:py-3 rounded-full font-medium transition-all duration-200"
+              className="bg-black text-white px-5 py-1.5 lg:px-6 lg:py-1.5 rounded-full text-sm font-medium transition-all duration-200"
             >
               {t('nav.cta')}
             </motion.button>
