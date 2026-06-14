@@ -7,7 +7,7 @@ export const GdprPage: React.FC = () => {
       <SEO routeId="gdpr" locale="es" />
       <h2>1. Marco normativo</h2>
       <p>
-        Autarqui cumple con el Reglamento (UE) 2016/679 del Parlamento Europeo y del
+        Autarquico Labs S.L.U. cumple con el Reglamento (UE) 2016/679 del Parlamento Europeo y del
         Consejo, de 27 de abril de 2016, relativo a la protección de las personas
         físicas en lo que respecta al tratamiento de datos personales (RGPD), así como
         con la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
@@ -15,7 +15,7 @@ export const GdprPage: React.FC = () => {
       </p>
 
       <h2>2. Principios del tratamiento</h2>
-      <p>Todo tratamiento de datos personales realizado por Autarqui respeta los siguientes principios:</p>
+      <p>Todo tratamiento de datos personales realizado por Autarquico Labs S.L.U. respeta los siguientes principios:</p>
       <ul>
         <li><strong>Licitud, lealtad y transparencia:</strong> los datos se tratan de manera lícita y transparente para el interesado.</li>
         <li><strong>Limitación de la finalidad:</strong> los datos se recogen con fines determinados, explícitos y legítimos.</li>
@@ -67,7 +67,7 @@ export const GdprPage: React.FC = () => {
       <h2>6. Brechas de seguridad</h2>
       <p>
         En caso de que se produzca una violación de seguridad que afecte a datos
-        personales, Autarqui notificará a la Agencia Española de Protección de Datos
+        personales, Autarquico Labs S.L.U. notificará a la Agencia Española de Protección de Datos
         (AEPD) en un plazo máximo de 72 horas, conforme al artículo 33 del RGPD. Si la
         violación entraña un alto riesgo para los derechos y libertades de los
         interesados, estos serán informados sin dilación indebida (artículo 34 del RGPD).
@@ -75,7 +75,7 @@ export const GdprPage: React.FC = () => {
 
       <h2>7. Delegado de Protección de Datos</h2>
       <p>
-        Dada la naturaleza y volumen del tratamiento actual, Autarqui no está
+        Dada la naturaleza y volumen del tratamiento actual, Autarquico Labs S.L.U. no está
         obligado a designar un Delegado de Protección de Datos conforme al artículo 37
         del RGPD. No obstante, para cualquier consulta relacionada con la protección de
         datos puede contactar con nosotros en info@autarqui.co.

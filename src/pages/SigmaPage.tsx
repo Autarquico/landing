@@ -58,12 +58,7 @@ export const SigmaPage: React.FC<SigmaPageProps> = ({ locale = 'es', audience })
             <img
               src="/sigma-logo.svg"
               alt="sigma"
-              className="w-[clamp(140px,22vw,280px)] h-auto dark:hidden"
-            />
-            <img
-              src="/sigma-logo-dark.svg"
-              alt="sigma"
-              className="w-[clamp(140px,22vw,280px)] h-auto hidden dark:block"
+              className="w-[clamp(140px,22vw,280px)] h-auto dark:invert"
             />
             <span className="text-xs font-medium tracking-[0.42em] text-black dark:text-neutral-100">
               S&nbsp;I&nbsp;G&nbsp;M&nbsp;A
