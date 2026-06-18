@@ -30,6 +30,8 @@ export const routes: RouteRecord[] = [
   { path: '/en/journal',             element: <JournalIndex locale="en" /> },
   { path: '/journal/software-a-medida', element: <JournalArticle locale="es" slug="software-a-medida" /> },
   { path: '/en/journal/software-a-medida', element: <JournalArticle locale="en" slug="software-a-medida" /> },
+  { path: '/journal/software-personal', element: <JournalArticle locale="es" slug="software-personal" /> },
+  { path: '/en/journal/software-personal', element: <JournalArticle locale="en" slug="software-personal" /> },
   { path: '/journal/manifiesto', element: <JournalArticle locale="es" slug="manifiesto" /> },
   { path: '/en/journal/manifiesto', element: <JournalArticle locale="en" slug="manifiesto" /> },
 ]

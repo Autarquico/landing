@@ -1,5 +1,6 @@
 import manifiesto from './manifiesto.json'
 import softwareAMedida from './software-a-medida.json'
+import softwarePersonal from './software-personal.json'
 
 export interface JournalArticle {
   slug: string
@@ -13,6 +14,7 @@ export interface JournalArticle {
 }
 
 export const articles: JournalArticle[] = [
+  softwarePersonal as JournalArticle,
   softwareAMedida as JournalArticle,
   manifiesto as JournalArticle,
 ]
