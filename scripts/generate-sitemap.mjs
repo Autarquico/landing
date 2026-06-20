@@ -14,11 +14,25 @@ const routes = [
   { id: 'terms',   paths: { es: '/legal/terminos' } },
   { id: 'privacy', paths: { es: '/legal/privacidad' } },
   { id: 'gdpr',    paths: { es: '/legal/gdpr' } },
+  { id: 'journal', paths: { es: '/journal',          en: '/en/journal' } },
 ]
+
+async function getJournalArticles() {
+  const journalDir = path.join(ROOT, 'src/content/journal')
+  const files = await fs.readdir(journalDir)
+  const articles = []
+  for (const file of files) {
+    if (!file.endsWith('.json')) continue
+    const content = JSON.parse(await fs.readFile(path.join(journalDir, file), 'utf-8'))
+    if (content.published === false) continue
+    articles.push({ slug: content.slug, date: content.date })
+  }
+  return articles
+}
 
 const today = new Date().toISOString().slice(0, 10)
 
-function urlEntry(loc, esPath, enPath) {
+function urlEntry(loc, esPath, enPath, lastmod = today) {
   const alts = [
     `    <xhtml:link rel="alternate" hreflang="es" href="${SITE_URL}${esPath}"/>`,
   ]
@@ -30,7 +44,7 @@ function urlEntry(loc, esPath, enPath) {
   return `  <url>
     <loc>${SITE_URL}${loc}</loc>
 ${alts.join('\n')}
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
   </url>`
 }
 
@@ -40,6 +54,14 @@ for (const r of routes) {
   if (r.paths.en) {
     entries.push(urlEntry(r.paths.en, r.paths.es, r.paths.en))
   }
+}
+
+const journalArticles = await getJournalArticles()
+for (const article of journalArticles) {
+  const esPath = `/journal/${article.slug}`
+  const enPath = `/en/journal/${article.slug}`
+  entries.push(urlEntry(esPath, esPath, enPath, article.date))
+  entries.push(urlEntry(enPath, esPath, enPath, article.date))
 }
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

@@ -53,6 +53,14 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
 
         {/* Menu Items */}
         <div className="hidden md:flex items-center gap-8 lg:gap-12">
+          <Link
+            to={pathname.startsWith('/en') ? '/en/journal' : '/journal'}
+            className={`text-sm font-medium transition-colors duration-300 ${
+              scrolled ? 'text-ink/70 hover:text-ink' : 'text-white/70 hover:text-white'
+            }`}
+          >
+            Journal
+          </Link>
           <div className="flex items-center gap-2">
             <LanguageSwitcher dark={!scrolled} />
             <ThemeSwitcher dark={!scrolled} />
