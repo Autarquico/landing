@@ -1,5 +1,10 @@
 # TODO SEO/GEO — autarqui.co
 
+## Completado 2026-06-20
+- [x] Sitemap dinámico con journal articles
+- [x] Journal link en navegación principal
+- [x] Meta descriptions con keywords explícitas (agentes IA, workflows, ERP/CRM, BI conversacional)
+
 ## P2 · Páginas localización × servicio
 
 - [ ] **Nueva página `/ia-tenerife`**: "Asesoramiento de IA en Tenerife para empresas"
@@ -50,6 +55,30 @@
 - [ ] "Ayudas del Gobierno de Canarias para digitalización e IA"
 - [ ] "IA para empresas turísticas en Tenerife"
 - [ ] "IA y la ZEC: implicaciones para empresas tecnológicas en Canarias"
+
+## P5 · Service pages (de instrucciones SEO/GEO)
+
+Crear landing pages dedicadas por servicio:
+- [ ] `/services/ai-automation` — Automatización con IA
+- [ ] `/services/ai-agents` — Agentes de IA para empresas
+- [ ] `/services/workflow-automation` — Automatización de workflows
+- [ ] `/services/api-integrations` — Integraciones API
+- [ ] `/services/erp-automation` — Automatización ERP
+- [ ] `/services/crm-automation` — Automatización CRM
+- [ ] `/services/conversational-bi` — BI conversacional
+
+Cada página incluir: H1 con keyword, problema, solución, casos de uso, Service schema, FAQ.
+
+## P6 · GEO/Resources (artículos definitorios)
+
+Artículos para LLM discoverability:
+- [ ] ¿Qué es la automatización de workflows con IA?
+- [ ] ¿Qué son los agentes de IA para empresas?
+- [ ] Cómo integrar IA con sistemas ERP
+- [ ] Guía de BI conversacional
+- [ ] IA vs RPA tradicional
+- [ ] Cómo medir ROI de automatización IA
+- [ ] Errores comunes al implementar IA en empresas
 
 ## OFF-SITE (no es código)
 
