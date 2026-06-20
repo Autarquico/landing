@@ -15,7 +15,6 @@ const routes = [
   { id: 'privacy', paths: { es: '/legal/privacidad' } },
   { id: 'gdpr',    paths: { es: '/legal/gdpr' } },
   { id: 'journal', paths: { es: '/journal',          en: '/en/journal' } },
-  { id: 'llms',    paths: { es: '/llms.txt' } },
 ]
 
 async function getJournalArticles() {
