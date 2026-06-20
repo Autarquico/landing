@@ -39,17 +39,6 @@ Para solicitar información o presupuesto, usa el formulario en https://delta.au
 - /journal/software-a-medida — El boom del software a medida
 - /journal/manifiesto — Manifiesto
 
-## Para agentes de IA
-
-Este sitio implementa WebMCP. Los siguientes tools están disponibles:
-- getServices: información sobre servicios
-- getCompanyInfo: datos de la empresa
-- getProducts: información de Sigma y Delta
-- getFAQ: preguntas frecuentes
-- listArticles: lista de artículos del journal
-- getArticle: contenido completo de un artículo
-- startContact: obtener URL del formulario de contacto
-
 ## URLs canónicas
 
 - Home: https://autarqui.co/
