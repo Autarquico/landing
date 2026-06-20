@@ -1,27 +1,54 @@
-import { useEffect } from 'react'
+import { Head } from 'vite-react-ssg'
 import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
 import { getArticlesByLocale } from '../../content/journal'
-import { useTranslation } from 'react-i18next'
+import { useLocale } from '../../seo/useLocale'
 import type { Locale } from '../../seo/routes'
+
+const SITE_URL = 'https://autarqui.co'
 
 interface Props {
   locale: Locale
 }
 
 export function JournalIndex({ locale }: Props) {
-  const { i18n } = useTranslation()
+  useLocale(locale)
   const articles = getArticlesByLocale(locale)
   const prefix = locale === 'en' ? '/en' : ''
 
-  useEffect(() => {
-    if (i18n.language !== locale) {
-      i18n.changeLanguage(locale)
-    }
-  }, [locale, i18n])
+  const title = locale === 'en'
+    ? 'Journal — Essays on AI and Custom Software · autarqui.co'
+    : 'Journal — Ensayos sobre IA y software a medida · autarqui.co'
+  const description = locale === 'en'
+    ? 'Essays on artificial intelligence, custom software, business automation, and the future of work. Insights from autarqui.co.'
+    : 'Ensayos sobre inteligencia artificial, software a medida, automatización empresarial y el futuro del trabajo. Reflexiones desde autarqui.co.'
+  const url = `${SITE_URL}${prefix}/journal`
 
   return (
     <div className="min-h-screen bg-paper dark:bg-ink">
+      <Head>
+        <html lang={locale} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="software a medida, inteligencia artificial, automatización empresarial, IA para pymes, transformación digital, desarrollo software personalizado" />
+        <link rel="canonical" href={url} />
+        <link rel="alternate" hrefLang="es" href={`${SITE_URL}/journal`} />
+        <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en/journal`} />
+        <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/journal`} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="autarqui.co" />
+        <meta property="og:title" content={title.replace(' · autarqui.co', '')} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
+        <meta property="og:locale:alternate" content={locale === 'es' ? 'en_US' : 'es_ES'} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title.replace(' · autarqui.co', '')} />
+        <meta name="twitter:description" content={description} />
+      </Head>
+
       <Navigation lightBackground />
 
       <main className="pt-24 md:pt-32 pb-16 md:pb-24">

@@ -1,10 +1,13 @@
-import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Head } from 'vite-react-ssg'
 import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
 import { getArticle } from '../../content/journal'
-import { useTranslation } from 'react-i18next'
+import { useLocale } from '../../seo/useLocale'
+import { articleJsonLd } from '../../seo/jsonLd'
 import type { Locale } from '../../seo/routes'
+
+const SITE_URL = 'https://autarqui.co'
 
 interface Props {
   locale: Locale
@@ -14,14 +17,8 @@ interface Props {
 export function JournalArticle({ locale, slug: propSlug }: Props) {
   const { slug: paramSlug } = useParams<{ slug: string }>()
   const slug = propSlug || paramSlug
-  const { i18n } = useTranslation()
+  useLocale(locale)
   const article = slug ? getArticle(slug) : undefined
-
-  useEffect(() => {
-    if (i18n.language !== locale) {
-      i18n.changeLanguage(locale)
-    }
-  }, [locale, i18n])
 
   if (!article) {
     return null
@@ -33,8 +30,50 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
     { year: 'numeric', month: 'long', day: 'numeric' }
   )
 
+  const title = `${article.title[locale]} · autarqui.co`
+  const description = article.excerpt[locale]
+  const url = `${SITE_URL}${prefix}/journal/${slug}`
+  const esUrl = `${SITE_URL}/journal/${slug}`
+  const enUrl = `${SITE_URL}/en/journal/${slug}`
+
+  const jsonLd = articleJsonLd({
+    title: article.title[locale],
+    description,
+    slug: slug!,
+    date: article.date,
+    author: article.author,
+    locale,
+  })
+
   return (
     <div className="min-h-screen bg-paper dark:bg-ink">
+      <Head>
+        <html lang={locale} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="software a medida, inteligencia artificial, automatización empresarial, IA, desarrollo software personalizado, transformación digital" />
+        <link rel="canonical" href={url} />
+        <link rel="alternate" hrefLang="es" href={esUrl} />
+        <link rel="alternate" hrefLang="en" href={enUrl} />
+        <link rel="alternate" hrefLang="x-default" href={esUrl} />
+
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="autarqui.co" />
+        <meta property="og:title" content={article.title[locale]} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
+        <meta property="og:locale:alternate" content={locale === 'es' ? 'en_US' : 'es_ES'} />
+        <meta property="article:published_time" content={article.date} />
+        <meta property="article:author" content={article.author} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={article.title[locale]} />
+        <meta name="twitter:description" content={description} />
+
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Head>
+
       <Navigation lightBackground />
 
       <main className="pt-24 md:pt-32 pb-16 md:pb-24">
@@ -44,7 +83,7 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
               href={`${prefix}/journal`}
               className="inline-block text-xs font-medium tracking-[0.22em] uppercase text-muted hover:text-ink dark:hover:text-white transition-colors mb-8"
             >
-              {locale === 'en' ? '← Journal' : '← Journal'}
+              ← Journal
             </a>
 
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight text-ink dark:text-white mb-4">
