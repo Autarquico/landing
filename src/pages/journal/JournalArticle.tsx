@@ -4,7 +4,7 @@ import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
 import { getArticle } from '../../content/journal'
 import { useLocale } from '../../seo/useLocale'
-import { articleJsonLd } from '../../seo/jsonLd'
+import { articleJsonLd, breadcrumbJsonLd } from '../../seo/jsonLd'
 import type { Locale } from '../../seo/routes'
 
 const SITE_URL = 'https://autarqui.co'
@@ -45,6 +45,12 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
     locale,
   })
 
+  const breadcrumb = breadcrumbJsonLd([
+    { name: locale === 'en' ? 'Home' : 'Inicio', url: `${SITE_URL}${prefix}/` },
+    { name: 'Journal', url: `${SITE_URL}${prefix}/journal` },
+    { name: article.title[locale], url },
+  ])
+
   return (
     <div className="min-h-screen bg-paper dark:bg-ink">
       <Head>
@@ -72,6 +78,7 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
         <meta name="twitter:description" content={description} />
 
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
       </Head>
 
       <Navigation lightBackground />

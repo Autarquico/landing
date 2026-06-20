@@ -5,25 +5,28 @@ export const organizationJsonLd = {
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': `${SITE_URL}/#org`,
-      name: 'Autarquico Labs',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'autarqui.co',
       legalName: 'Autarquico Labs S.L.U.',
-      alternateName: ['autarqui.co', 'Autarqui'],
+      alternateName: ['Autarquico Labs', 'Autarqui'],
       url: SITE_URL,
-      logo: `${SITE_URL}/android-chrome-512x512.png`,
+      logo: `${SITE_URL}/logo-clear.svg`,
       email: 'info@autarqui.co',
       foundingDate: '2024',
-      areaServed: ['ES', 'Canarias', 'Tenerife'],
+      description: 'Consultora de inteligencia artificial con sede en Tenerife (Canarias): asesoramiento, integración y automatización para empresas.',
+      areaServed: [
+        { '@type': 'AdministrativeArea', name: 'Tenerife' },
+        { '@type': 'AdministrativeArea', name: 'Canarias' },
+        { '@type': 'Country', name: 'España' },
+      ],
       knowsAbout: [
-        'inteligencia artificial empresarial',
+        'Inteligencia artificial aplicada',
+        'Automatización de procesos',
+        'Integración de sistemas y APIs',
+        'Software a medida',
         'IA para pymes',
-        'automatización de procesos',
-        'software a medida',
-        'software personalizado',
-        'transformación digital',
-        'gestión laboral',
-        'gestión fiscal',
-        'business intelligence',
+        'Transformación digital',
+        'Kit Digital y ayudas a la digitalización',
       ],
       sameAs: ['https://instagram.com/autarqui.co'],
       contactPoint: {
@@ -34,13 +37,39 @@ export const organizationJsonLd = {
       },
     },
     {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE_URL}/#localbusiness`,
+      name: 'autarqui.co',
+      url: SITE_URL,
+      image: `${SITE_URL}/og/home.png`,
+      email: 'info@autarqui.co',
+      parentOrganization: { '@id': `${SITE_URL}/#organization` },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Santa Úrsula',
+        addressRegion: 'Santa Cruz de Tenerife',
+        addressCountry: 'ES',
+      },
+      areaServed: [
+        { '@type': 'AdministrativeArea', name: 'Tenerife' },
+        { '@type': 'AdministrativeArea', name: 'Canarias' },
+        { '@type': 'Country', name: 'España' },
+      ],
+      knowsAbout: [
+        'Inteligencia artificial aplicada',
+        'Automatización de procesos',
+        'Integración de sistemas y APIs',
+        'Kit Digital y ayudas a la digitalización',
+      ],
+    },
+    {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
       name: 'autarqui.co',
-      description: 'IA, integraciones y automatización empresarial',
-      publisher: { '@id': `${SITE_URL}/#org` },
-      inLanguage: ['es-ES', 'en-US'],
+      description: 'Consultora de IA en Tenerife: asesoramiento, integración y automatización empresarial',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+      inLanguage: 'es-ES',
     },
   ],
 }
@@ -68,6 +97,19 @@ export function softwareAppJsonLd(opts: {
   }
 }
 
+export function breadcrumbJsonLd(items: Array<{ name: string; url: string }>) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
+}
+
 export function articleJsonLd(opts: {
   title: string
   description: string
@@ -91,15 +133,7 @@ export function articleJsonLd(opts: {
       name: opts.author,
       url: SITE_URL,
     },
-    publisher: {
-      '@type': 'Organization',
-      '@id': `${SITE_URL}/#org`,
-      name: 'Autarquico Labs',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${SITE_URL}/android-chrome-512x512.png`,
-      },
-    },
+    publisher: { '@id': `${SITE_URL}/#organization` },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${SITE_URL}${path}`,
