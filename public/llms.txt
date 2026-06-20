@@ -1,6 +1,6 @@
 # autarqui.co
 
-> Consultora de IA con sede en Tenerife que implementa agentes autónomos, automatización de workflows, integraciones ERP/CRM y BI conversacional para empresas.
+> Empresa especializada en infraestructura de software y automatización con inteligencia artificial que desarrolla agentes autónomos, software interno e integraciones empresariales.
 
 ## Qué hacemos
 
@@ -27,11 +27,11 @@ https://autarqui.co/delta
 - Áreas: Canarias, España
 - Email: info@autarqui.co
 - Web: https://autarqui.co
-- Formulario de contacto: https://delta.autarqui.co/signup
+- Formulario de contacto: https://autarqui.co/canarias
 
 ## Cómo contactar
 
-Para solicitar información o presupuesto, usa el formulario en https://delta.autarqui.co/signup
+Para solicitar información o presupuesto, usa el formulario en https://autarqui.co/canarias
 
 ## Journal (artículos recientes)
 
