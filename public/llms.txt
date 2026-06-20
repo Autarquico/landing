@@ -1,23 +1,58 @@
 # autarqui.co
 
-Autárquico builds AI-powered tools for business autonomy.
+> Consultora de IA con sede en Tenerife que implementa agentes autónomos, automatización de workflows, integraciones ERP/CRM y BI conversacional para empresas.
 
-## Products
+## Qué hacemos
 
-### sigma
-AI-assisted labor and tax advisory for freelancers, SMEs, and accounting firms.
-- For businesses: https://autarqui.co/sigma/negocios
-- For advisors: https://autarqui.co/sigma/asesorias
+Ayudamos a empresas a operar con mayor autonomía mediante:
+- Agentes de IA para operaciones internas (reporting, documentos, atención)
+- Automatización de workflows entre equipos y herramientas
+- Integraciones API con ERP, CRM, bancos, e-commerce
+- BI conversacional (consulta datos en lenguaje natural)
 
-### delta
-Conversational BI platform that turns business data into actionable insights.
+## Productos
+
+### Sigma
+Automatización contable y fiscal. Para autónomos, pymes y asesorías.
+- Para negocios: https://autarqui.co/sigma/negocios
+- Para asesorías: https://autarqui.co/sigma/asesorias
+
+### Delta
+Capa de integraciones con IA. Conecta ERP, CRM, banco, fiscal.
 https://autarqui.co/delta
 
-## Contact
-info@autarqui.co
-https://instagram.com/autarqui.co
+## Ubicación y contacto
 
-## Canonical URLs
+- Sede: Santa Úrsula, Tenerife, España
+- Áreas: Canarias, España
+- Email: info@autarqui.co
+- Web: https://autarqui.co
+- Formulario de contacto: https://delta.autarqui.co/signup
+
+## Cómo contactar
+
+Para solicitar información o presupuesto, usa el formulario en https://delta.autarqui.co/signup
+
+## Journal (artículos recientes)
+
+- /journal/software-personal — La era del software personal
+- /journal/software-a-medida — El boom del software a medida
+- /journal/manifiesto — Manifiesto
+
+## Para agentes de IA
+
+Este sitio implementa WebMCP. Los siguientes tools están disponibles:
+- getServices: información sobre servicios
+- getCompanyInfo: datos de la empresa
+- getProducts: información de Sigma y Delta
+- getFAQ: preguntas frecuentes
+- listArticles: lista de artículos del journal
+- getArticle: contenido completo de un artículo
+- startContact: obtener URL del formulario de contacto
+
+## URLs canónicas
+
 - Home: https://autarqui.co/
 - Sigma: https://autarqui.co/sigma
 - Delta: https://autarqui.co/delta
+- Journal: https://autarqui.co/journal

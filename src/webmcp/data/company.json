@@ -1,0 +1,26 @@
+{
+  "name": "autarqui.co",
+  "legalName": "Autarquico Labs S.L.U.",
+  "tagline": "Autonomía operativa para empresas",
+  "mission": "Ayudar a empresas a operar con mayor autonomía mediante IA aplicada, integraciones y automatización",
+  "founded": "2024",
+  "location": {
+    "city": "Santa Úrsula",
+    "region": "Tenerife",
+    "country": "España"
+  },
+  "contact": {
+    "email": "info@autarqui.co",
+    "web": "https://autarqui.co",
+    "form": "https://delta.autarqui.co/signup"
+  },
+  "areasServed": ["Tenerife", "Canarias", "España"],
+  "languages": ["Español", "Inglés"],
+  "expertise": [
+    "Inteligencia artificial aplicada",
+    "Automatización de procesos",
+    "Integración de sistemas y APIs",
+    "Software a medida",
+    "Transformación digital"
+  ]
+}

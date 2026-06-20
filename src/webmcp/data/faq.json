@@ -1,0 +1,28 @@
+{
+  "faqs": [
+    {
+      "question": "¿Qué tipo de empresas trabajan con Autarqui?",
+      "answer": "Principalmente pymes y asesorías en España que buscan automatizar procesos repetitivos con IA."
+    },
+    {
+      "question": "¿Cuánto cuesta implementar un agente de IA?",
+      "answer": "Depende del alcance. Contacta en https://delta.autarqui.co/signup para evaluar tu caso y recibir un presupuesto personalizado."
+    },
+    {
+      "question": "¿Trabajan con Kit Digital?",
+      "answer": "Sí, nuestros servicios son elegibles para ayudas de digitalización como Kit Digital y otros programas de Canarias."
+    },
+    {
+      "question": "¿En qué se diferencia Autarqui de otras consultoras?",
+      "answer": "Combinamos productos propios (Sigma, Delta) con servicios de consultoría. No solo asesoramos, implementamos."
+    },
+    {
+      "question": "¿Dónde está ubicada Autarqui?",
+      "answer": "Nuestra sede está en Santa Úrsula, Tenerife. Trabajamos con empresas de toda España."
+    },
+    {
+      "question": "¿Qué sistemas pueden integrar?",
+      "answer": "ERP (SAP, Odoo, Holded), CRM (Salesforce, HubSpot), bancos, plataformas fiscales, e-commerce y más vía API."
+    }
+  ]
+}

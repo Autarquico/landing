@@ -1,0 +1,37 @@
+{
+  "products": [
+    {
+      "id": "sigma",
+      "name": "Sigma",
+      "tagline": "Tu contabilidad sin pensar en ella",
+      "description": "Automatización contable y fiscal para autónomos, pymes y asesorías",
+      "features": [
+        "Conciliación bancaria automática",
+        "Generación de modelos fiscales",
+        "Alertas de plazos y vencimientos",
+        "Captura inteligente de documentos",
+        "Cumplimiento normativo en tiempo real"
+      ],
+      "targetAudience": ["autónomos", "pymes", "asesorías fiscales"],
+      "url": "https://autarqui.co/sigma",
+      "variants": [
+        { "id": "negocios", "name": "Sigma para Negocios", "url": "https://autarqui.co/sigma/negocios" },
+        { "id": "asesorias", "name": "Sigma para Asesorías", "url": "https://autarqui.co/sigma/asesorias" }
+      ]
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "tagline": "Integraciones y APIs con IA",
+      "description": "Capa de automatización que conecta ERP, CRM, banco, fiscal y e-commerce sin duplicar datos",
+      "features": [
+        "Conectores nativos a sistemas comunes",
+        "Transformación de datos con IA",
+        "Webhooks y eventos en tiempo real",
+        "Sin parches manuales"
+      ],
+      "targetAudience": ["empresas con múltiples sistemas", "integradores"],
+      "url": "https://autarqui.co/delta"
+    }
+  ]
+}
