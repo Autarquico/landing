@@ -28,6 +28,8 @@ export const routes: RouteRecord[] = [
   { path: '/legal/gdpr',             element: <GdprPage /> },
   { path: '/journal',                element: <JournalIndex locale="es" /> },
   { path: '/en/journal',             element: <JournalIndex locale="en" /> },
+  { path: '/journal/just-a-hobby', element: <JournalArticle locale="es" slug="just-a-hobby" /> },
+  { path: '/en/journal/just-a-hobby', element: <JournalArticle locale="en" slug="just-a-hobby" /> },
   { path: '/journal/software-a-medida', element: <JournalArticle locale="es" slug="software-a-medida" /> },
   { path: '/en/journal/software-a-medida', element: <JournalArticle locale="en" slug="software-a-medida" /> },
   { path: '/journal/software-personal', element: <JournalArticle locale="es" slug="software-personal" /> },
