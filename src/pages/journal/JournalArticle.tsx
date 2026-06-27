@@ -25,9 +25,10 @@ function parseLinks(text: string): React.ReactNode {
         href={match[2]}
         target="_blank"
         rel="noopener noreferrer"
-        className="underline hover:text-emerald-500 transition-colors"
+        className="font-semibold text-ink dark:text-white hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors"
       >
         {match[1]}
+        <span className="text-emerald-500 text-sm align-super">*</span>
       </a>
     )
     lastIndex = match.index + match[0].length
