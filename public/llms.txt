@@ -35,6 +35,7 @@ Para solicitar información o presupuesto, usa el formulario en https://autarqui
 
 ## Journal (artículos recientes)
 
+- /journal/just-a-hobby — Just a hobby
 - /journal/software-personal — La era del software personal
 - /journal/software-a-medida — El boom del software a medida
 - /journal/manifiesto — Manifiesto
