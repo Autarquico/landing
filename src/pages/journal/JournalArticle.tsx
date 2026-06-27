@@ -9,6 +9,37 @@ import type { Locale } from '../../seo/routes'
 
 const SITE_URL = 'https://autarqui.co'
 
+function parseLinks(text: string): React.ReactNode {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index))
+    }
+    parts.push(
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline hover:text-emerald-500 transition-colors"
+      >
+        {match[1]}
+      </a>
+    )
+    lastIndex = match.index + match[0].length
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex))
+  }
+
+  return parts.length > 0 ? parts : text
+}
+
 interface Props {
   locale: Locale
   slug?: string
@@ -118,7 +149,7 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
                 key={i}
                 className="text-lg md:text-xl leading-relaxed text-ink/80 dark:text-white/80 mb-6 text-justify"
               >
-                {paragraph}
+                {parseLinks(paragraph)}
               </p>
             ))}
           </div>
