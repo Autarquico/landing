@@ -27,3 +27,33 @@ for await (const file of walk(DIST)) {
   }
 }
 console.log(`[postbuild] adjusted html lang on ${fixed} file(s)`)
+
+// Create trailing-slash redirects
+const SITE_URL = 'https://autarqui.co'
+const redirectTemplate = (target) => `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${target}"><link rel="canonical" href="${SITE_URL}${target}"></head></html>`
+
+let redirects = 0
+for await (const file of walk(DIST)) {
+  if (!file.endsWith('.html')) continue
+  const rel = path.relative(DIST, file)
+  if (rel === 'index.html' || rel.endsWith('/index.html')) continue
+
+  // e.g. journal.html → journal/index.html redirecting to /journal
+  const name = path.basename(rel, '.html')
+  const dir = path.dirname(rel)
+  const targetDir = dir === '.' ? name : path.join(dir, name)
+  const targetPath = '/' + (dir === '.' ? name : path.join(dir, name).replace(/\\/g, '/'))
+
+  const redirectDir = path.join(DIST, targetDir)
+  const redirectFile = path.join(redirectDir, 'index.html')
+
+  try {
+    await fs.access(redirectFile)
+  } catch {
+    await fs.mkdir(redirectDir, { recursive: true })
+    await fs.writeFile(redirectFile, redirectTemplate(targetPath))
+    redirects++
+  }
+}
+console.log(`[postbuild] created ${redirects} trailing-slash redirect(s)`)
