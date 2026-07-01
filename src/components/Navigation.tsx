@@ -14,6 +14,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
   const { pathname } = useLocation()
   const isDelta = pathname === '/delta' || pathname === '/en/delta'
   const isSigma = pathname === '/sigma' || pathname === '/en/sigma' || pathname.startsWith('/sigma/') || pathname.startsWith('/en/sigma/')
+  const isJournal = pathname === '/journal' || pathname === '/en/journal' || pathname.startsWith('/journal/') || pathname.startsWith('/en/journal/')
   const productSignupUrl = isDelta
     ? 'https://delta.autarqui.co/signup'
     : isSigma
@@ -65,7 +66,16 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
             <LanguageSwitcher dark={!scrolled} />
             <ThemeSwitcher dark={!scrolled} />
           </div>
-          {productSignupUrl ? (
+          {isJournal ? (
+            <motion.a
+              href="/feed.xml"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-black text-white px-5 py-1.5 lg:px-6 lg:py-1.5 rounded-full text-sm font-medium transition-all duration-200"
+            >
+              {t('nav.subscribe')}
+            </motion.a>
+          ) : productSignupUrl ? (
             <motion.a
               href={productSignupUrl}
               target="_blank"
@@ -92,7 +102,16 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
         <div className="md:hidden flex items-center gap-3">
           <LanguageSwitcher dark={!scrolled} />
           <ThemeSwitcher dark={!scrolled} />
-          {productSignupUrl ? (
+          {isJournal ? (
+            <motion.a
+              href="/feed.xml"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
+            >
+              {t('nav.subscribeMobile')}
+            </motion.a>
+          ) : productSignupUrl ? (
             <motion.a
               href={productSignupUrl}
               target="_blank"

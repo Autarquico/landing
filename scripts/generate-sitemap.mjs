@@ -25,9 +25,15 @@ async function getJournalArticles() {
     if (!file.endsWith('.json')) continue
     const content = JSON.parse(await fs.readFile(path.join(journalDir, file), 'utf-8'))
     if (content.published === false) continue
-    articles.push({ slug: content.slug, date: content.date })
+    articles.push({
+      slug: content.slug,
+      date: content.date,
+      title: content.title,
+      excerpt: content.excerpt,
+      author: content.author,
+    })
   }
-  return articles
+  return articles.sort((a, b) => b.date.localeCompare(a.date))
 }
 
 const today = new Date().toISOString().slice(0, 10)
@@ -79,4 +85,31 @@ Sitemap: ${SITE_URL}/sitemap.xml
 
 await fs.writeFile(path.join(ROOT, 'public', 'sitemap.xml'), sitemap)
 await fs.writeFile(path.join(ROOT, 'public', 'robots.txt'), robots)
-console.log('[sitemap] wrote public/sitemap.xml and public/robots.txt')
+
+// Generate RSS feed
+const escapeXml = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+const rssItems = journalArticles.map((a) => `    <item>
+      <title>${escapeXml(a.title.es)}</title>
+      <link>${SITE_URL}/journal/${a.slug}</link>
+      <guid isPermaLink="true">${SITE_URL}/journal/${a.slug}</guid>
+      <pubDate>${new Date(a.date).toUTCString()}</pubDate>
+      <description>${escapeXml(a.excerpt.es)}</description>
+      <author>info@autarqui.co (${a.author})</author>
+    </item>`).join('\n')
+
+const feed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>autarqui.co Journal</title>
+    <link>${SITE_URL}/journal</link>
+    <description>Ensayos sobre software, IA y autonomía operativa</description>
+    <language>es</language>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+${rssItems}
+  </channel>
+</rss>
+`
+
+await fs.writeFile(path.join(ROOT, 'public', 'feed.xml'), feed)
+console.log('[sitemap] wrote public/sitemap.xml, public/robots.txt, public/feed.xml')

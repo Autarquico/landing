@@ -35,6 +35,7 @@ export function JournalIndex({ locale }: Props) {
         <link rel="alternate" hrefLang="es" href={`${SITE_URL}/journal`} />
         <link rel="alternate" hrefLang="en" href={`${SITE_URL}/en/journal`} />
         <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/journal`} />
+        <link rel="alternate" type="application/rss+xml" title="autarqui.co Journal" href={`${SITE_URL}/feed.xml`} />
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="autarqui.co" />

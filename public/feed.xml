@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>autarqui.co Journal</title>
+    <link>https://autarqui.co/journal</link>
+    <description>Ensayos sobre software, IA y autonomía operativa</description>
+    <language>es</language>
+    <lastBuildDate>Wed, 01 Jul 2026 12:20:41 GMT</lastBuildDate>
+    <atom:link href="https://autarqui.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Just a hobby</title>
+      <link>https://autarqui.co/journal/just-a-hobby</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/just-a-hobby</guid>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <description>La IA es el compilador de esta época. Así que la próxima vez que oigas a alguien preguntar quién va a mantener semejante desbarajuste, acuérdate del finlandés del 386.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
+    <item>
+      <title>La era del software personal</title>
+      <link>https://autarqui.co/journal/software-personal</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/software-personal</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <description>No habrá menos software. Habrá una marea. La demanda no se va a encoger: se va a desbordar por todos los huecos donde hasta ayer no salía a cuenta escribir una sola línea.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
+    <item>
+      <title>El boom del software a medida</title>
+      <link>https://autarqui.co/journal/software-a-medida</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/software-a-medida</guid>
+      <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Durante décadas, las empresas han tenido que adaptarse al software mucho más de lo que el software se ha adaptado a ellas. Eso está cambiando.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
+    <item>
+      <title>Manifiesto por la autosuficiencia</title>
+      <link>https://autarqui.co/journal/manifiesto</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/manifiesto</guid>
+      <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+      <description>Durante demasiado tiempo la tecnología nos vendió eficiencia. Ya va siendo hora de exigirle lo que prometió desde la primera rueda.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
+  </channel>
+</rss>
