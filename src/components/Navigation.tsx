@@ -48,7 +48,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
           <span className={`font-display text-lg md:text-xl transition-colors duration-300 ${
             scrolled ? 'text-black' : 'text-white'
           }`}>
-            <em className="font-light">autarqui</em>.co
+            autarqui.co
           </span>
         </Link>
 

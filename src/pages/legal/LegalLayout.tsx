@@ -11,20 +11,28 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, lastUpdated, ch
   return (
     <div className="min-h-screen bg-white">
       <ScrollToTop />
-      <nav className="bg-white border-b border-gray-100 px-4 md:px-6 lg:px-12 py-4">
+      <nav className="bg-white/95 backdrop-blur-md shadow-sm px-4 md:px-6 lg:px-12 py-2">
         <div className="container mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-1.5">
-            <img src="/logo-clear.svg" alt="α" className="h-10 md:h-12" />
-            <span className="text-lg md:text-xl font-semibold">
-              utarqui<span className="text-emerald-500">.co</span>
+            <img src="/logo-clear.svg" alt="α" className="h-8 md:h-9 lg:h-10" />
+            <span className="font-display text-lg md:text-xl text-black">
+              autarqui.co
             </span>
           </Link>
-          <Link
-            to="/"
-            className="text-sm text-gray-500 hover:text-black transition-colors"
-          >
-            ← Volver
-          </Link>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/"
+              className="text-sm text-gray-500 hover:text-black transition-colors"
+            >
+              ← Volver
+            </Link>
+            <a
+              href="mailto:info@autarqui.co"
+              className="bg-black text-white px-5 py-1.5 lg:px-6 lg:py-1.5 rounded-full text-sm font-medium transition-all duration-200 hover:scale-[1.02]"
+            >
+              Contacta
+            </a>
+          </div>
         </div>
       </nav>
 
