@@ -1,6 +1,13 @@
 import './i18n'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { routes } from './routes'
+import '@fontsource/inter/400.css'
+import '@fontsource/inter/500.css'
+import '@fontsource/inter/600.css'
+import '@fontsource/inter/700.css'
+import '@fontsource/fraunces/300.css'
+import '@fontsource/fraunces/400.css'
+import '@fontsource/fraunces/500.css'
 import './index.css'
 
 if (typeof window !== 'undefined') {
