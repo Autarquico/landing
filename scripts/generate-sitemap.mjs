@@ -8,13 +8,16 @@ const ROOT = path.resolve(__dirname, '..')
 const SITE_URL = 'https://autarqui.co'
 
 const routes = [
-  { id: 'home',    paths: { es: '/',                 en: '/en' } },
-  { id: 'sigma',   paths: { es: '/sigma',            en: '/en/sigma' } },
-  { id: 'delta',   paths: { es: '/delta',            en: '/en/delta' } },
-  { id: 'terms',   paths: { es: '/legal/terminos' } },
-  { id: 'privacy', paths: { es: '/legal/privacidad' } },
-  { id: 'gdpr',    paths: { es: '/legal/gdpr' } },
-  { id: 'journal', paths: { es: '/journal',          en: '/en/journal' } },
+  { id: 'home',            paths: { es: '/',                    en: '/en' } },
+  { id: 'sigma',           paths: { es: '/sigma',               en: '/en/sigma' } },
+  { id: 'sigma-negocios',  paths: { es: '/sigma/negocios',      en: '/en/sigma/businesses' } },
+  { id: 'sigma-asesorias', paths: { es: '/sigma/asesorias',     en: '/en/sigma/advisors' } },
+  { id: 'delta',           paths: { es: '/delta',               en: '/en/delta' } },
+  { id: 'canarias',        paths: { es: '/canarias',            en: '/en/canarias' } },
+  { id: 'terms',           paths: { es: '/legal/terminos' } },
+  { id: 'privacy',         paths: { es: '/legal/privacidad' } },
+  { id: 'gdpr',            paths: { es: '/legal/gdpr' } },
+  { id: 'journal',         paths: { es: '/journal',             en: '/en/journal' } },
 ]
 
 async function getJournalArticles() {
