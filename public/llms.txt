@@ -1,48 +1,27 @@
 # autarqui.co
 
-> Empresa especializada en infraestructura de software y automatización con inteligencia artificial que desarrolla agentes autónomos, software interno e integraciones empresariales.
-
-## Qué hacemos
-
-Ayudamos a empresas a operar con mayor autonomía mediante:
-- Agentes de IA para operaciones internas (reporting, documentos, atención)
-- Automatización de workflows entre equipos y herramientas
-- Integraciones API con ERP, CRM, bancos, e-commerce
-- BI conversacional (consulta datos en lenguaje natural)
+> Consultora de IA en Tenerife, España. Implementamos agentes autónomos, automatización de workflows, integraciones ERP/CRM y BI conversacional para empresas.
 
 ## Productos
 
-### Sigma
-Automatización contable y fiscal. Para autónomos, pymes y asesorías.
-- Para negocios: https://autarqui.co/sigma/negocios
-- Para asesorías: https://autarqui.co/sigma/asesorias
+- [Sigma](https://autarqui.co/sigma): Automatización contable y fiscal para autónomos, pymes y asesorías
+- [Sigma para negocios](https://autarqui.co/sigma/negocios): Versión para autónomos y pymes
+- [Sigma para asesorías](https://autarqui.co/sigma/asesorias): Versión para despachos profesionales
+- [Delta](https://autarqui.co/delta): Capa de integraciones con IA — conecta ERP, CRM, banco, fiscal
 
-### Delta
-Capa de integraciones con IA. Conecta ERP, CRM, banco, fiscal.
-https://autarqui.co/delta
+## Recursos
 
-## Ubicación y contacto
+- [Journal](https://autarqui.co/journal): Ensayos sobre software, IA y autonomía operativa
+- [Subvenciones Canarias](https://autarqui.co/canarias): Ayudas a la digitalización en Canarias
 
-- Sede: Santa Úrsula, Tenerife, España
-- Áreas: Canarias, España
+## Contacto
+
 - Email: info@autarqui.co
+- Sede: Santa Úrsula, Tenerife, Islas Canarias, España
 - Web: https://autarqui.co
-- Formulario de contacto: https://autarqui.co/canarias
 
-## Cómo contactar
+## Optional
 
-Para solicitar información o presupuesto, usa el formulario en https://autarqui.co/canarias
-
-## Journal (artículos recientes)
-
-- /journal/just-a-hobby — Just a hobby
-- /journal/software-personal — La era del software personal
-- /journal/software-a-medida — El boom del software a medida
-- /journal/manifiesto — Manifiesto
-
-## URLs canónicas
-
-- Home: https://autarqui.co/
-- Sigma: https://autarqui.co/sigma
-- Delta: https://autarqui.co/delta
-- Journal: https://autarqui.co/journal
+- [Términos](https://autarqui.co/legal/terminos): Términos de uso
+- [Privacidad](https://autarqui.co/legal/privacidad): Política de privacidad
+- [GDPR](https://autarqui.co/legal/gdpr): Cumplimiento RGPD
