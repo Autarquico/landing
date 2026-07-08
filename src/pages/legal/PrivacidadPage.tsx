@@ -7,9 +7,9 @@ export const PrivacidadPage: React.FC = () => {
       <SEO routeId="privacy" locale="es" />
       <h2>1. Responsable del tratamiento</h2>
       <p>
-        Autarquico Labs S.L.U. (en adelante, "el Responsable"), con correo electrónico de contacto:
-        info@autarqui.co, es el responsable del tratamiento de los datos personales
-        recogidos a través del sitio web autarqui.co.
+        Autarquico Labs S.L.U., con NIF B93768125 (en adelante, "el Responsable"), con correo
+        electrónico de contacto: info@autarqui.co, es el responsable del tratamiento de los
+        datos personales recogidos a través del sitio web autarqui.co.
       </p>
 
       <h2>2. Datos que recogemos</h2>

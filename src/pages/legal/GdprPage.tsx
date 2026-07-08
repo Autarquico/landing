@@ -7,7 +7,7 @@ export const GdprPage: React.FC = () => {
       <SEO routeId="gdpr" locale="es" />
       <h2>1. Marco normativo</h2>
       <p>
-        Autarquico Labs S.L.U. cumple con el Reglamento (UE) 2016/679 del Parlamento Europeo y del
+        Autarquico Labs S.L.U., con NIF B93768125, cumple con el Reglamento (UE) 2016/679 del Parlamento Europeo y del
         Consejo, de 27 de abril de 2016, relativo a la protección de las personas
         físicas en lo que respecta al tratamiento de datos personales (RGPD), así como
         con la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos

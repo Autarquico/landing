@@ -7,8 +7,9 @@ export const TerminosPage: React.FC = () => {
       <SEO routeId="terms" locale="es" />
       <h2>1. Identificación del titular</h2>
       <p>
-        El presente sitio web es propiedad de Autarquico Labs S.L.U. (en adelante, "la Empresa"),
-        con domicilio social en España y correo electrónico de contacto: info@autarqui.co.
+        El presente sitio web es propiedad de Autarquico Labs S.L.U., con NIF B93768125
+        (en adelante, "la Empresa"), con domicilio social en España y correo electrónico
+        de contacto: info@autarqui.co.
       </p>
 
       <h2>2. Objeto</h2>
