@@ -12,6 +12,31 @@
 
     <!-- Per-route SEO metadata is rendered via react-helmet-async at build time -->
 
+    <!-- LocalBusiness structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Autarquico Labs S.L.U.",
+      "description": "Consultora de IA en Tenerife. Implementamos agentes autónomos, automatización de workflows, integraciones ERP/CRM y BI conversacional.",
+      "url": "https://autarqui.co",
+      "email": "info@autarqui.co",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santa Úrsula",
+        "addressRegion": "Tenerife",
+        "addressCountry": "ES"
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Tenerife" },
+        { "@type": "Place", "name": "Islas Canarias" },
+        { "@type": "Place", "name": "España" }
+      ],
+      "priceRange": "$$",
+      "sameAs": ["https://instagram.com/autarqui.co"]
+    }
+    </script>
+
     <!-- Fonts: Fraunces (display) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

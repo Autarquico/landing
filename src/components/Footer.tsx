@@ -95,7 +95,10 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-white/10">
+        <div className="pt-8 border-t border-white/10 space-y-2">
+          <p className="text-center text-sm text-white/50">
+            Santa Úrsula, Tenerife · Islas Canarias · España
+          </p>
           <p className="text-center text-sm text-white/50">
             {t('footer.copyright', { year: currentYear })}
           </p>
