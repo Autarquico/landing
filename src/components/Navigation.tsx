@@ -43,6 +43,8 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
           <img
             src={scrolled ? '/logo-clear.svg' : '/logo-dark.svg'}
             alt="α"
+            width={40}
+            height={40}
             className="h-8 md:h-9 lg:h-10 transition-all duration-300"
           />
           <span className={`font-display text-lg md:text-xl transition-colors duration-300 ${

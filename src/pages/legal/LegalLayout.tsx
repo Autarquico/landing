@@ -14,7 +14,7 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, lastUpdated, ch
       <nav className="bg-white/95 backdrop-blur-md shadow-sm px-4 md:px-6 lg:px-12 py-2">
         <div className="container mx-auto flex items-center justify-between">
           <Link to="/" className="flex items-center gap-1.5">
-            <img src="/logo-clear.svg" alt="α" className="h-8 md:h-9 lg:h-10" />
+            <img src="/logo-clear.svg" alt="α" width={40} height={40} className="h-8 md:h-9 lg:h-10" />
             <span className="font-display text-lg md:text-xl text-black">
               autarqui.co
             </span>

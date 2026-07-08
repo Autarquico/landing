@@ -12,7 +12,7 @@ import { useLocale } from './seo/useLocale'
 import type { Locale } from './seo/routes'
 
 const SigmaMark: React.FC<{ className?: string }> = ({ className }) => (
-  <img src="/sigma-logo.svg" alt="" className={`${className} dark:invert`} />
+  <img src="/sigma-logo.svg" alt="" width={48} height={48} className={`${className} dark:invert`} />
 )
 
 const DeltaMark: React.FC<{ className?: string }> = ({ className }) => (

@@ -132,8 +132,8 @@ export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) =
                 href={locale === 'en' ? '/en/delta' : '/delta'}
                 className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
               >
-                <img src="/delta-logo.svg" alt="delta" className="w-16 h-16 mb-4 dark:hidden" />
-                <img src="/delta-logo-dark.svg" alt="delta" className="w-16 h-16 mb-4 hidden dark:block" />
+                <img src="/delta-logo.svg" alt="delta" width={64} height={64} className="w-16 h-16 mb-4 dark:hidden" />
+                <img src="/delta-logo-dark.svg" alt="delta" width={64} height={64} className="w-16 h-16 mb-4 hidden dark:block" />
                 <span className="text-xs font-medium tracking-[0.42em] mb-2">D&nbsp;E&nbsp;L&nbsp;T&nbsp;A</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">Business Intelligence</p>
               </a>
@@ -141,8 +141,8 @@ export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) =
                 href={locale === 'en' ? '/en/sigma' : '/sigma'}
                 className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-sigma transition-colors"
               >
-                <img src="/sigma-logo.svg" alt="sigma" className="w-16 h-16 mb-4 dark:hidden" />
-                <img src="/sigma-logo-dark.svg" alt="sigma" className="w-16 h-16 mb-4 hidden dark:block" />
+                <img src="/sigma-logo.svg" alt="sigma" width={64} height={64} className="w-16 h-16 mb-4 dark:hidden" />
+                <img src="/sigma-logo-dark.svg" alt="sigma" width={64} height={64} className="w-16 h-16 mb-4 hidden dark:block" />
                 <span className="text-xs font-medium tracking-[0.42em] mb-2">S&nbsp;I&nbsp;G&nbsp;M&nbsp;A</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">{t(k('solutions.sigma'))}</p>
               </a>
