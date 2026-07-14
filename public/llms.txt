@@ -12,7 +12,7 @@
 ## Recursos
 
 - [Journal](https://autarqui.co/journal): Ensayos sobre software, IA y autonomía operativa
-- [El desorden ya tiene números](https://autarqui.co/journal/el-desorden-ya-tiene-numeros): El boom del software a medida — otra vuelta de tuerca
+- [El desorden ya tiene números](https://autarqui.co/journal/el-desorden-ya-tiene-numeros): Otra interpretación sobre la deuda técnica de la IA
 - [Subvenciones Canarias](https://autarqui.co/canarias): Ayudas a la digitalización en Canarias
 
 ## Contacto
