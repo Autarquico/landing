@@ -1,3 +1,4 @@
+import elDesordenYaTieneNumeros from './el-desorden-ya-tiene-numeros.json'
 import justAHobby from './just-a-hobby.json'
 import manifiesto from './manifiesto.json'
 import softwareAMedida from './software-a-medida.json'
@@ -15,6 +16,7 @@ export interface JournalArticle {
 }
 
 export const articles: JournalArticle[] = [
+  elDesordenYaTieneNumeros as JournalArticle,
   justAHobby as JournalArticle,
   softwarePersonal as JournalArticle,
   softwareAMedida as JournalArticle,
