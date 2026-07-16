@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-ink text-white py-12 md:py-16 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto max-w-4xl">
-        <div className="flex flex-col md:flex-row justify-center gap-16 md:gap-24 mb-8 md:mb-12">
+        <div className="flex flex-col md:flex-row justify-center gap-12 md:gap-16 mb-8 md:mb-12">
           {/* Producto */}
           <div className="text-center md:text-left">
             <h4 className="font-display font-light text-lg mb-4">{t('footer.product')}</h4>
@@ -22,6 +22,11 @@ export const Footer: React.FC = () => {
               <li>
                 <a href={`${prefix}/sigma`} className="hover:text-white transition-colors">
                   σ sigma — {t('footer.sigmaDesc')}
+                </a>
+              </li>
+              <li>
+                <a href="https://reservit.co" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  ρ reservit — {t('footer.reservitDesc')}
                 </a>
               </li>
             </ul>
