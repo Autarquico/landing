@@ -16,12 +16,12 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <a href={`${prefix}/delta`} className="hover:text-white transition-colors">
-                  δ delta
+                  δ delta — {t('footer.deltaDesc')}
                 </a>
               </li>
               <li>
                 <a href={`${prefix}/sigma`} className="hover:text-white transition-colors">
-                  σ sigma
+                  σ sigma — {t('footer.sigmaDesc')}
                 </a>
               </li>
             </ul>

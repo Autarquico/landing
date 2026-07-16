@@ -101,7 +101,9 @@
   "email.validationShort": "Email too short",
   "email.validationInvalid": "Invalid email",
 
-  "footer.product": "Product",
+  "footer.product": "Products",
+  "footer.deltaDesc": "AI-powered integrations",
+  "footer.sigmaDesc": "autonomous accounting",
   "footer.timekeeping": "Automation",
   "footer.payroll": "Processes",
   "footer.employeePortal": "Portal",

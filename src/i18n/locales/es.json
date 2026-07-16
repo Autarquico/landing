@@ -101,6 +101,8 @@
   "email.validationInvalid": "Email no válido",
 
   "footer.product": "Productos",
+  "footer.deltaDesc": "integraciones con IA",
+  "footer.sigmaDesc": "contabilidad autónoma",
   "footer.timekeeping": "Automatización",
   "footer.payroll": "Procesos",
   "footer.employeePortal": "Portal",
