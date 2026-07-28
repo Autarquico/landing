@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Navigation } from './components/Navigation'
 import { Footer } from './components/Footer'
@@ -31,7 +30,6 @@ interface AppProps {
 function App({ locale = 'es' }: AppProps) {
   useLocale(locale)
   const { t } = useTranslation()
-  const prefix = locale === 'en' ? '/en' : ''
   useEffect(() => {
     const html = document.documentElement
     const prevSnap = html.style.scrollSnapType
@@ -107,13 +105,12 @@ function App({ locale = 'es' }: AppProps) {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { id: 'sigma', path: `${prefix}/sigma`, Mark: SigmaMark },
-                { id: 'delta', path: `${prefix}/delta`, Mark: DeltaMark },
-              ].map(({ id, path, Mark }) => (
-                <Link
+                { id: 'sigma', Mark: SigmaMark },
+                { id: 'delta', Mark: DeltaMark },
+              ].map(({ id, Mark }) => (
+                <div
                   key={id}
-                  to={path}
-                  className="group flex flex-col items-center text-center gap-5 border border-gray-100 dark:border-neutral-800 rounded-lg p-10 hover:border-gray-300 dark:hover:border-neutral-600 transition-colors"
+                  className="flex flex-col items-center text-center gap-5 border border-gray-100 dark:border-neutral-800 rounded-lg p-10"
                 >
                   <Mark className="w-20 h-20 text-black dark:text-neutral-100" />
                   <h3 className="font-display italic text-3xl md:text-4xl tracking-tight">
@@ -122,10 +119,7 @@ function App({ locale = 'es' }: AppProps) {
                   <p className="text-gray-500 dark:text-neutral-400 leading-relaxed max-w-[28ch]">
                     {t(`home.products.${id}.desc`)}
                   </p>
-                  <span className="text-sm font-medium border-b border-black dark:border-neutral-100 pb-1 group-hover:opacity-60 transition-opacity">
-                    {t(`home.products.${id}.cta`)}
-                  </span>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
