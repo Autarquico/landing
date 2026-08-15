@@ -5,8 +5,16 @@
     <link>https://autarqui.co/journal</link>
     <description>Ensayos sobre software, IA y autonomía operativa</description>
     <language>es</language>
-    <lastBuildDate>Tue, 28 Jul 2026 12:09:38 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 17:26:25 GMT</lastBuildDate>
     <atom:link href="https://autarqui.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>¿Qué queda cuando pensar es gratis?</title>
+      <link>https://autarqui.co/journal/que-queda-cuando-pensar-es-gratis</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/que-queda-cuando-pensar-es-gratis</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <description>La inteligencia se ha vuelto agua: barata, infinita. Pero hay una sed que el agua no sacia. La máquina piensa; nosotros sabemos. Y ese saber que se cuece en la carne —el ojo, el oído, el paladar, la mano, las tripas— será tu mejor herramienta.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
     <item>
       <title>El software como oficio de obra</title>
       <link>https://autarqui.co/journal/oficio-de-obra</link>

@@ -1,3 +1,4 @@
+import queQuedaCuandoPensarEsGratis from './que-queda-cuando-pensar-es-gratis.json'
 import oficioDeObra from './oficio-de-obra.json'
 import elDesordenYaTieneNumeros from './el-desorden-ya-tiene-numeros.json'
 import justAHobby from './just-a-hobby.json'
@@ -17,6 +18,7 @@ export interface JournalArticle {
 }
 
 export const articles: JournalArticle[] = [
+  queQuedaCuandoPensarEsGratis as JournalArticle,
   oficioDeObra as JournalArticle,
   elDesordenYaTieneNumeros as JournalArticle,
   justAHobby as JournalArticle,

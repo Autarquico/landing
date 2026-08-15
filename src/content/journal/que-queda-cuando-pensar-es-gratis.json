@@ -1,0 +1,51 @@
+{
+  "slug": "que-queda-cuando-pensar-es-gratis",
+  "published": true,
+  "date": "2026-08-15",
+  "author": "Alex",
+  "readingTime": 4,
+  "title": {
+    "es": "¿Qué queda cuando pensar es gratis?",
+    "en": "What's left when thinking is free?"
+  },
+  "subtitle": {
+    "es": "La inteligencia sin sentido.",
+    "en": "Intelligence without sense."
+  },
+  "excerpt": {
+    "es": "La inteligencia se ha vuelto agua: barata, infinita. Pero hay una sed que el agua no sacia. La máquina piensa; nosotros sabemos. Y ese saber que se cuece en la carne —el ojo, el oído, el paladar, la mano, las tripas— será tu mejor herramienta.",
+    "en": "Intelligence has become water: cheap, infinite. But there's a thirst it doesn't slake. The machine thinks; we know. And that knowing cooked in the flesh —the eye, the ear, the palate, the hand, the gut— will be your best tool."
+  },
+  "body": {
+    "es": [
+      "Empecemos por rendirnos. La inteligencia es gratis. O casi ya: pensar, que durante toda la historia fue lo caro, lo raro, lo que separaba a unos de otros, hoy sale de un grifo y cuesta como el agua.",
+      "Los números no dejan mucho sitio a la discusión. En la [Arena](https://lmarena.ai), donde se los puntúa a ciegas, los cuatro de cabeza (Anthropic, Google, OpenAI, xAI) caben en veinticinco puntos en una escala de mil quinientos. El examen con el que medimos a los modelos parece converger.",
+      "El precio de una respuesta de calidad cayó mil veces en tres años. El consejero delegado de Intuit, Sasan Goodarzi, lo dijo sin anestesia: los modelos de lenguaje son un commodity. Una materia prima. Agua embotellada, y cada vez más barata.",
+      "Y sin embargo. Si la inteligencia es el agua, hay una sed que no se sacia, y llevo un tiempo dándole vueltas a cuál es.",
+      "Porque una cosa es tener la respuesta y otra saber si es buena, o cuánto de buena. Y eso segundo, que parece lo mismo, no lo es en absoluto. No está en la cabeza.",
+      "Mira la fotografía. En 1888, Kodak sacó una cámara con un eslogan que lo cambió todo: \"usted apriete el botón, nosotros hacemos el resto\". Disparar dejó de ser un oficio de químicos y se volvió un gesto. Hoy llevas en el bolsillo una cámara que hace lo que un laboratorio entero no podía hace cuarenta años. Y disparas mil veces sin pensarlo. Apretar el botón es gratis e infinito. ¿Y qué fue del fotógrafo? Que no desapareció. Porque su oficio nunca fue apretar el botón. Era el ojo. Saber dónde ponerse, qué dejar fuera, cuál de diez mil disparos es *la foto* y cuáles son ruido. Todo el mundo tiene cámara. ¿Cuántos tienen ese ojo? Y voy más allá, hay distintos grados de genialidad en él. Los simplemente buenos, por encima de la media, y todos los grados hasta los mejores.",
+      "Con la música, igual. El estudio en casa primero, y ahora la máquina, hacen temas a paladas; nunca fue tan barato fabricar un sonido, y nunca sobró tanto. Lo escaso es el oído: saber, en el diluvio, qué merece sonar. Con la cocina, lo mismo, y más viejo. La receta siempre fue gratis, y hoy es infinita; pídele mil a la máquina. Pero la receta nunca fue lo difícil. Lo difícil es el punto de sal, el momento exacto, la nariz que sabe antes que el reloj. Y con las manos, con la madera y el barro: la máquina corta la forma perfecta, pero no siente cuándo está bien. El luthier lo sabe por el tacto, en la yema, en un sitio que no sabría explicarte.",
+      "Cuatro oficios, la misma ley cada vez. Cuando hacer cayó a cero, lo que sobrevivió, y encima subió de precio, fue un sentido. El ojo, el oído, el paladar, la mano, el criterio.",
+      "Hasta el dinero llegó a esta orilla. Sonya Huang, de Sequoia, una de las firmas que reparte el capital de medio Silicon Valley, bautizó el año pasado esto como la \"era de la abundancia\": cuando el trabajo, el humano y el de la máquina, se vuelve infinito y gratis, lo único que se aprecia es el gusto. El taste. Y tienen toda la razón. Solo que lo dijeron en idioma de negocio, y el gusto no es de negocio. Taste es una lengua. Un sentido. Lo nombraron en la sala de juntas, pero siempre fue del cuerpo.",
+      "Y aquí es a donde quería llegar, porque el gusto es solo la superficie. Debajo de los cuatro sentidos hay un quinto que no tiene nombre. Las tripas. Esa corazonada que sabe que algo está torcido antes de que puedas decir por qué. El médico veterano que mira al enfermo y se le tuerce el gesto sin tener aún la prueba. Hace sesenta años, un filósofo llamado Michael Polanyi lo dejó en una frase que no consigo olvidar: sabemos más de lo que podemos contar.",
+      "Ese saber que no cabe en palabras es el poso de lo que somos: de cada cosa que viviste. Un conocimiento que aún no sabemos explicar, y puede que no del todo nunca.",
+      "Y creo que ahí está la raya que la máquina no cruza, por lista que se ponga. Porque la inteligencia artificial es, exactamente, inteligencia que nunca fue un cuerpo. No tiene sentidos, y debajo no tiene tripas, porque no tuvo genes, ni ancestros, ni una infancia, ni una cicatriz, ni una sola noche en vela que le dejara marca. Tiene todo el saber del mundo y nada del saber que se cuece en la carne. Piensa. Pero no vivió.",
+      "La máquina no tiene tu ojo, ni tu oído, ni tu paladar, ni tus manos, ni tu criterio. No tiene tus tripas. La máquina piensa. Nosotros sabemos. No es lo mismo, y me da que no lo será, y esa será tu mejor herramienta."
+    ],
+    "en": [
+      "Let's start by surrendering. Intelligence is free. Or nearly, by now: thinking, which for all of history was the expensive thing, the rare thing, the thing that set some apart from others, today comes out of a tap and costs about what water costs.",
+      "The numbers don't leave much room for argument. On the [Arena](https://lmarena.ai), where they're scored blind, the top four (Anthropic, Google, OpenAI, xAI) fit inside twenty-five points on a scale of fifteen hundred. The exam we measured them by looks like it's converging.",
+      "The price of a quality answer fell a thousandfold in three years. Intuit's chief executive, Sasan Goodarzi, said it without anesthetic: language models are a commodity. A raw material. Bottled water, and cheaper by the month.",
+      "And yet. If intelligence is the water, there's a thirst it doesn't slake, and I've been turning over which one for a while.",
+      "Because having the answer is one thing, and knowing whether it's good, or how good, is another. And that second thing, which looks like the same thing, isn't at all. It isn't in the head.",
+      "Look at photography. In 1888, Kodak put out a camera with a slogan that changed everything: \"You press the button, we do the rest.\" Taking a picture stopped being a chemist's trade and became a gesture. Today you carry in your pocket a camera that does what a whole laboratory couldn't forty years ago. And you shoot a thousand times without thinking about it. Pressing the button is free and infinite. And what became of the photographer? He didn't vanish. Because his trade was never pressing the button. It was the eye. Knowing where to stand, what to leave out, which of ten thousand shots is *the photo* and which are noise. Everyone has a camera. How many have that eye? And I'll go further: there are grades of genius in it. The merely good, the ones above average, and every grade up to the best.",
+      "With music, the same. The home studio first, and now the machine, churn out tracks by the shovelful; it was never so cheap to make a sound, and there was never such a glut. What's scarce is the ear: knowing, in the flood, what deserves to be heard. With cooking, the same, and older. The recipe was always free, and now it's infinite; ask the machine for a thousand. But the recipe was never the hard part. The hard part is the pinch of salt, the exact moment, the nose that knows before the clock does. And with your hands, with wood and clay: the machine cuts the perfect shape, but it doesn't feel when it's right. The luthier knows it by touch, in the fingertip, in a place he couldn't explain to you.",
+      "Four trades, the same law every time. When making fell to zero, what survived, and what got dearer on top of it, was a sense. The eye, the ear, the palate, the hand, the judgment.",
+      "Even the money washed up on this shore. Sonya Huang, of Sequoia, one of the firms that hands out the capital of half of Silicon Valley, christened this last year the \"age of abundance\": when work, human or machine, becomes infinite and free, the only thing that appreciates is taste. And they're dead right. It's just that they said it in the language of business, and taste isn't a business word. Taste is a tongue. A sense. They named it in the boardroom, but it was always of the body.",
+      "And this is where I was heading, because taste is only the surface. Beneath the four senses there's a fifth with no name. The gut. That hunch that knows something's off before you can say why. The veteran doctor who looks at the patient and whose face falls before he has the test. Sixty years ago, a philosopher named Michael Polanyi put it in a line I can't forget: we know more than we can tell.",
+      "That knowing that won't fit into words is the sediment of what we are: of every single thing you've lived. A knowledge we still can't explain, and maybe never fully will.",
+      "And I reckon that's the line the machine doesn't cross, however clever it gets. Because artificial intelligence is, exactly, intelligence that was never a body. It has no senses, and underneath it has no gut, because it had no genes, no ancestors, no childhood, no scar, not one sleepless night that left a mark. It has all the knowledge in the world and none of the knowing that's cooked in the flesh. It thinks. But it never lived.",
+      "The machine doesn't have your eye, or your ear, or your palate, or your hands, or your judgment. It doesn't have your gut. The machine thinks. We know. It's not the same, and my hunch is it never will be, and that will be your best tool."
+    ]
+  }
+}
