@@ -21,8 +21,8 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
       ? 'https://sigma.autarqui.co/signup'
       : null
 
-  const scrollToWaitlist = () => {
-    const element = document.getElementById('productos')
+  const scrollToContact = () => {
+    const element = document.getElementById('contacto')
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -90,7 +90,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
             </motion.a>
           ) : (
             <motion.button
-              onClick={scrollToWaitlist}
+              onClick={scrollToContact}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-black text-white px-5 py-1.5 lg:px-6 lg:py-1.5 rounded-full text-sm font-medium transition-all duration-200"
@@ -126,7 +126,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
             </motion.a>
           ) : (
             <motion.button
-              onClick={scrollToWaitlist}
+              onClick={scrollToContact}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-black text-white px-5 py-2 rounded-full font-medium text-sm"
