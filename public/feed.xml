@@ -5,8 +5,16 @@
     <link>https://autarqui.co/journal</link>
     <description>Ensayos sobre software, IA y autonomía operativa</description>
     <language>es</language>
-    <lastBuildDate>Sat, 15 Aug 2026 17:26:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 15:17:41 GMT</lastBuildDate>
     <atom:link href="https://autarqui.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La fábrica después del código</title>
+      <link>https://autarqui.co/journal/la-fabrica-despues-del-codigo</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/la-fabrica-despues-del-codigo</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Cuando generar código es gratis, lo escaso no es producir: es poder fiarte de lo producido. El software se está industrializando, y su ley es simple — la autonomía de un sistema solo crece al ritmo de su capacidad de verificarse. Pero queda una deuda en la letra pequeña: ¿quién le enseñará a la próxima generación a ver el hilo?</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
     <item>
       <title>¿Qué queda cuando pensar es gratis?</title>
       <link>https://autarqui.co/journal/que-queda-cuando-pensar-es-gratis</link>

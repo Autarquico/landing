@@ -31,6 +31,8 @@ export const routes: RouteRecord[] = [
   { path: '/en/legal/gdpr',          element: <GdprPage /> },
   { path: '/journal',                element: <JournalIndex locale="es" /> },
   { path: '/en/journal',             element: <JournalIndex locale="en" /> },
+  { path: '/journal/la-fabrica-despues-del-codigo', element: <JournalArticle locale="es" slug="la-fabrica-despues-del-codigo" /> },
+  { path: '/en/journal/la-fabrica-despues-del-codigo', element: <JournalArticle locale="en" slug="la-fabrica-despues-del-codigo" /> },
   { path: '/journal/que-queda-cuando-pensar-es-gratis', element: <JournalArticle locale="es" slug="que-queda-cuando-pensar-es-gratis" /> },
   { path: '/en/journal/que-queda-cuando-pensar-es-gratis', element: <JournalArticle locale="en" slug="que-queda-cuando-pensar-es-gratis" /> },
   { path: '/journal/oficio-de-obra', element: <JournalArticle locale="es" slug="oficio-de-obra" /> },
