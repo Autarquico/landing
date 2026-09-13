@@ -5,8 +5,16 @@
     <link>https://autarqui.co/journal</link>
     <description>Ensayos sobre software, IA y autonomía operativa</description>
     <language>es</language>
-    <lastBuildDate>Sun, 06 Sep 2026 15:17:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 10:34:37 GMT</lastBuildDate>
     <atom:link href="https://autarqui.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Fijar las fronteras</title>
+      <link>https://autarqui.co/journal/fijar-las-fronteras</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/fijar-las-fronteras</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 GMT</pubDate>
+      <description>El agente propone; el sistema autoriza. La pregunta ya no es cómo evitar que el modelo se equivoque, sino qué pasa cuando lo hace — y por eso dejamos de trazar la ruta para fijar la frontera. La inteligencia puede ser probabilística; la autoridad, no.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
     <item>
       <title>La fábrica después del código</title>
       <link>https://autarqui.co/journal/la-fabrica-despues-del-codigo</link>
