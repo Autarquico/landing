@@ -5,8 +5,16 @@
     <link>https://autarqui.co/journal</link>
     <description>Ensayos sobre software, IA y autonomía operativa</description>
     <language>es</language>
-    <lastBuildDate>Sun, 13 Sep 2026 10:34:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 15:46:37 GMT</lastBuildDate>
     <atom:link href="https://autarqui.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Que viene el lobo</title>
+      <link>https://autarqui.co/journal/que-viene-el-lobo</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/que-viene-el-lobo</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Se le dio tanto bombo a que la IA miente y maquina que fui a comprobarlo, fuente por fuente. Salió una foto de dos mitades: el que te avisa cobra por el susto, y el lobo, esta vez, existe. Verificar deja de ser manía y pasa a ser la única defensa que queda.</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
     <item>
       <title>Fijar las fronteras</title>
       <link>https://autarqui.co/journal/fijar-las-fronteras</link>

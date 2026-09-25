@@ -1,3 +1,4 @@
+import queVieneElLobo from './que-viene-el-lobo.json'
 import fijarLasFronteras from './fijar-las-fronteras.json'
 import laFabricaDespuesDelCodigo from './la-fabrica-despues-del-codigo.json'
 import queQuedaCuandoPensarEsGratis from './que-queda-cuando-pensar-es-gratis.json'
@@ -20,6 +21,7 @@ export interface JournalArticle {
 }
 
 export const articles: JournalArticle[] = [
+  queVieneElLobo as JournalArticle,
   fijarLasFronteras as JournalArticle,
   laFabricaDespuesDelCodigo as JournalArticle,
   queQuedaCuandoPensarEsGratis as JournalArticle,
