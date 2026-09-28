@@ -1,6 +1,5 @@
 import { Mail, Instagram } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { NewsletterForm } from './NewsletterForm'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -98,10 +97,6 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className="max-w-md mx-auto mb-12 md:mb-16">
-          <NewsletterForm variant="dark" />
         </div>
 
         {/* Bottom */}
