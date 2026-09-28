@@ -52,3 +52,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Ping IndexNow (Bing/Yandex → ChatGPT)
+        env:
+          INDEXNOW_KEY: 7ab7a4f36c7fc9045a42585c7e7b9071
+        run: |
+          sleep 15
+          urls=$(curl -s https://autarqui.co/sitemap.xml | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g')
+          if [ -z "$urls" ]; then echo "IndexNow: no URLs found, skipping"; exit 0; fi
+          payload=$(printf '%s\n' "$urls" | jq -R . | jq -s \
+            "{host:\"autarqui.co\",key:\"$INDEXNOW_KEY\",keyLocation:\"https://autarqui.co/$INDEXNOW_KEY.txt\",urlList:.}")
+          curl -sS -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json" -d "$payload" \
+            -o /dev/null -w "IndexNow HTTP %{http_code}\n" || true

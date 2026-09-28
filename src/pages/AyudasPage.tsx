@@ -36,10 +36,35 @@ const RequirementItem: React.FC<{ children: React.ReactNode }> = ({ children }) 
   </li>
 )
 
-export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
+const ProgramCard: React.FC<{
+  name: string
+  status: string
+  amount: string
+  desc: string
+  tone: 'active' | 'upcoming'
+}> = ({ name, status, amount, desc, tone }) => (
+  <div className="flex flex-col gap-3 text-left bg-white dark:bg-neutral-900 rounded-2xl p-6 border border-gray-100 dark:border-neutral-800">
+    <div className="flex items-center justify-between gap-3">
+      <h3 className="font-display text-lg">{name}</h3>
+      <span
+        className={`text-xs font-medium px-2.5 py-1 rounded-full whitespace-nowrap ${
+          tone === 'active'
+            ? 'bg-emerald-500 text-white'
+            : 'bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-neutral-300'
+        }`}
+      >
+        {status}
+      </span>
+    </div>
+    <p className="font-display text-2xl text-emerald-500">{amount}</p>
+    <p className="text-sm text-gray-500 dark:text-neutral-400 leading-relaxed">{desc}</p>
+  </div>
+)
+
+export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => {
   useLocale(locale)
   const { t } = useTranslation()
-  const k = (key: string) => `canarias.${key}`
+  const k = (key: string) => `ayudas.${key}`
 
   useEffect(() => {
     const html = document.documentElement
@@ -53,10 +78,17 @@ export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) =
     }
   }, [])
 
+  const programs: Array<{ id: string; tone: 'active' | 'upcoming' }> = [
+    { id: 'kitdigital', tone: 'active' },
+    { id: 'bonoia', tone: 'upcoming' },
+    { id: 'canarias', tone: 'upcoming' },
+    { id: 'ticket', tone: 'active' },
+  ]
+
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-neutral-100">
       <ScrollToTop />
-      <SEO routeId="canarias" locale={locale} />
+      <SEO routeId="ayudas" locale={locale} />
       <Navigation lightBackground />
 
       <main className="pt-24 md:pt-28">
@@ -66,65 +98,63 @@ export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) =
             <p className="text-xs font-medium tracking-[0.22em] uppercase text-emerald-500 mb-4">
               {t(k('hero.eyebrow'))}
             </p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 max-w-[20ch] mx-auto">
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-6 max-w-[22ch] mx-auto">
               {t(k('hero.title'))}
             </h1>
-            <p className="text-lg md:text-xl text-gray-500 dark:text-neutral-400 max-w-[44ch] mx-auto mb-8">
+            <p className="text-lg md:text-xl text-gray-500 dark:text-neutral-400 max-w-[52ch] mx-auto mb-8">
               {t(k('hero.subtitle'))}
             </p>
-            <p className="inline-block bg-gray-100 dark:bg-neutral-800 px-4 py-2 rounded-full text-sm">
-              {t(k('hero.nextCall'))}
-            </p>
+            <a
+              href="#contacto"
+              className="inline-block bg-emerald-500 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-emerald-600 transition-colors"
+            >
+              {t(k('hero.cta'))}
+            </a>
           </div>
         </RevealSection>
 
-        {/* Stats */}
-        <RevealSection className="snap-start py-16 md:py-24">
+        {/* Programas */}
+        <RevealSection className="snap-start py-16 md:py-24 bg-gray-50 dark:bg-neutral-900/50">
           <div className="container mx-auto px-4 md:px-6 lg:px-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              <StatCard value="100%" label={t(k('stats.subsidy'))} />
-              <StatCard value="25.000€" label={t(k('stats.max'))} />
-              <StatCard value="18" label={t(k('stats.months'))} />
-              <StatCard value={t(k('stats.advanceValue'))} label={t(k('stats.advance'))} />
+            <div className="text-center mb-12 max-w-2xl mx-auto">
+              <h2 className="font-display text-2xl md:text-4xl mb-4">{t(k('programs.title'))}</h2>
+              <p className="text-gray-500 dark:text-neutral-400">{t(k('programs.subtitle'))}</p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {programs.map(({ id, tone }) => (
+                <ProgramCard
+                  key={id}
+                  tone={tone}
+                  name={t(k(`programs.${id}.name`))}
+                  status={t(k(`programs.${id}.status`))}
+                  amount={t(k(`programs.${id}.amount`))}
+                  desc={t(k(`programs.${id}.desc`))}
+                />
+              ))}
             </div>
           </div>
         </RevealSection>
 
-        {/* Projects */}
-        <RevealSection className="snap-start py-16 md:py-24 bg-gray-50 dark:bg-neutral-900/50">
+        {/* Qué puedes financiar */}
+        <RevealSection className="snap-start py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center">
             <h2 className="font-display text-2xl md:text-4xl mb-8">{t(k('projects.title'))}</h2>
             <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-              <ProjectCard title="ERP" />
-              <ProjectCard title="CRM" />
+              <ProjectCard title={t(k('projects.ai'))} highlight />
               <ProjectCard title="Business Intelligence" highlight />
               <ProjectCard title={t(k('projects.processes'))} highlight />
+              <ProjectCard title="ERP" />
+              <ProjectCard title="CRM" />
               <ProjectCard title={t(k('projects.cyber'))} />
-              <ProjectCard title={t(k('projects.ai'))} highlight />
             </div>
           </div>
         </RevealSection>
 
-        {/* Requirements */}
-        <RevealSection className="snap-start py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-2xl">
-            <h2 className="font-display text-2xl md:text-4xl text-center mb-8">
-              {t(k('requirements.title'))}
-            </h2>
-            <ul className="space-y-4 text-lg">
-              <RequirementItem>{t(k('requirements.years'))}</RequirementItem>
-              <RequirementItem>{t(k('requirements.location'))}</RequirementItem>
-              <RequirementItem>{t(k('requirements.employees'))}</RequirementItem>
-              <RequirementItem>{t(k('requirements.taxes'))}</RequirementItem>
-            </ul>
-          </div>
-        </RevealSection>
-
-        {/* Solutions */}
+        {/* Soluciones elegibles */}
         <RevealSection className="snap-start py-16 md:py-24 bg-gray-50 dark:bg-neutral-900/50">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center">
             <h2 className="font-display text-2xl md:text-4xl mb-4">{t(k('solutions.title'))}</h2>
-            <p className="text-gray-500 dark:text-neutral-400 mb-10 max-w-[44ch] mx-auto">
+            <p className="text-gray-500 dark:text-neutral-400 mb-10 max-w-[46ch] mx-auto">
               {t(k('solutions.subtitle'))}
             </p>
             <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -150,22 +180,69 @@ export const CanariasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) =
           </div>
         </RevealSection>
 
-        {/* Contact */}
-        <RevealSection id="contacto" className="snap-start py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center">
-            <h2 className="font-display text-2xl md:text-4xl mb-4">{t(k('contact.title'))}</h2>
-            <p className="text-gray-500 dark:text-neutral-400 mb-10 max-w-[44ch] mx-auto">
-              {t(k('contact.subtitle'))}
-            </p>
-            <ContactForm source="canarias" />
+        {/* Subvención Canarias (detalle regional) */}
+        <RevealSection className="snap-start py-16 md:py-24">
+          <div className="container mx-auto px-4 md:px-6 lg:px-12">
+            <div className="text-center mb-10 max-w-2xl mx-auto">
+              <h2 className="font-display text-2xl md:text-4xl mb-4">{t(k('canarias.title'))}</h2>
+              <p className="text-gray-500 dark:text-neutral-400">{t(k('canarias.subtitle'))}</p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+              <StatCard value={t(k('canarias.stats.subsidyValue'))} label={t(k('canarias.stats.subsidy'))} />
+              <StatCard value={t(k('canarias.stats.maxValue'))} label={t(k('canarias.stats.max'))} />
+              <StatCard value={t(k('canarias.stats.minValue'))} label={t(k('canarias.stats.min'))} />
+              <StatCard value={t(k('canarias.stats.nextCallValue'))} label={t(k('canarias.stats.nextCall'))} />
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <h3 className="font-display text-xl md:text-2xl text-center mb-6">
+                {t(k('canarias.requirements.title'))}
+              </h3>
+              <ul className="space-y-4 text-lg">
+                <RequirementItem>{t(k('canarias.requirements.years'))}</RequirementItem>
+                <RequirementItem>{t(k('canarias.requirements.location'))}</RequirementItem>
+                <RequirementItem>{t(k('canarias.requirements.employees'))}</RequirementItem>
+                <RequirementItem>{t(k('canarias.requirements.taxes'))}</RequirementItem>
+              </ul>
+            </div>
           </div>
         </RevealSection>
 
-        {/* Resources */}
-        <RevealSection className="snap-start py-16 md:py-24 bg-gray-50 dark:bg-neutral-900/50">
+        {/* Contacto */}
+        <RevealSection id="contacto" className="snap-start py-16 md:py-24 bg-gray-50 dark:bg-neutral-900/50">
+          <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center">
+            <h2 className="font-display text-2xl md:text-4xl mb-4">{t(k('contact.title'))}</h2>
+            <p className="text-gray-500 dark:text-neutral-400 mb-10 max-w-[46ch] mx-auto">
+              {t(k('contact.subtitle'))}
+            </p>
+            <ContactForm source="ayudas" />
+          </div>
+        </RevealSection>
+
+        {/* Recursos */}
+        <RevealSection className="snap-start py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6 lg:px-12 text-center">
             <h2 className="font-display text-xl md:text-2xl mb-6">{t(k('resources.title'))}</h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-4">
+              <a
+                href="https://www.acelerapyme.gob.es/kit-digital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-neutral-400 hover:text-emerald-500 transition-colors"
+              >
+                {t(k('resources.kitdigital'))}
+                <ExternalLink className="w-4 h-4" />
+              </a>
+              <a
+                href="https://espanadigital.gob.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-neutral-400 hover:text-emerald-500 transition-colors"
+              >
+                {t(k('resources.planIa'))}
+                <ExternalLink className="w-4 h-4" />
+              </a>
               <a
                 href="https://sede.gobiernodecanarias.org/sede/tramites/10206"
                 target="_blank"

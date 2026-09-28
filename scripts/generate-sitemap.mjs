@@ -13,7 +13,7 @@ const routes = [
   { id: 'sigma-negocios',  paths: { es: '/sigma/negocios',      en: '/en/sigma/businesses' } },
   { id: 'sigma-asesorias', paths: { es: '/sigma/asesorias',     en: '/en/sigma/advisors' } },
   { id: 'delta',           paths: { es: '/delta',               en: '/en/delta' } },
-  { id: 'canarias',        paths: { es: '/canarias',            en: '/en/canarias' } },
+  { id: 'ayudas',          paths: { es: '/ayudas',              en: '/en/ayudas' } },
   { id: 'terms',           paths: { es: '/legal/terminos' } },
   { id: 'privacy',         paths: { es: '/legal/privacidad' } },
   { id: 'gdpr',            paths: { es: '/legal/gdpr' } },

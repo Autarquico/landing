@@ -1,5 +1,6 @@
 import { Mail, Instagram } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { NewsletterForm } from './NewsletterForm'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -42,7 +43,7 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href={`${prefix}/canarias`} className="hover:text-white transition-colors">
+                <a href={`${prefix}/ayudas`} className="hover:text-white transition-colors">
                   {t('footer.subsidies')}
                 </a>
               </li>
@@ -97,6 +98,10 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="max-w-md mx-auto mb-12 md:mb-16">
+          <NewsletterForm variant="dark" />
         </div>
 
         {/* Bottom */}

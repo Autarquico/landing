@@ -1,7 +1,7 @@
 import { Head } from 'vite-react-ssg'
 import { useTranslation } from 'react-i18next'
 import { routes, ogImageFor, SITE_URL, type Locale } from './routes'
-import { organizationJsonLd, softwareAppJsonLd } from './jsonLd'
+import { organizationJsonLd, softwareAppJsonLd, ayudasJsonLd } from './jsonLd'
 
 interface SEOProps {
   routeId: string
@@ -21,6 +21,7 @@ export const SEO: React.FC<SEOProps> = ({ routeId, locale }) => {
   const description = t('description')
   const ogAlt = t('ogAlt', { defaultValue: stripSuffix(title) })
   const ogTitle = stripSuffix(title)
+  const keywords = t('keywords', { defaultValue: '' })
   const url = `${SITE_URL}${path}`
   const ogImg = `${SITE_URL}/og/${ogImageFor(routeId, locale)}`
 
@@ -39,12 +40,14 @@ export const SEO: React.FC<SEOProps> = ({ routeId, locale }) => {
       })
     )
   }
+  if (route.jsonLd === 'ayudas') jsonLd.push(ayudasJsonLd(locale))
 
   return (
     <Head>
       <html lang={locale} />
       <title>{title}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={url} />
 
       <link rel="alternate" hrefLang="es" href={`${SITE_URL}${esPath}`} />

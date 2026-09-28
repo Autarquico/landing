@@ -57,3 +57,28 @@ for await (const file of walk(DIST)) {
   }
 }
 console.log(`[postbuild] created ${redirects} trailing-slash redirect(s)`)
+
+// Explicit route redirects (old URLs → new). GH Pages has no server-side 301,
+// so we emit static meta-refresh + canonical stubs (same pattern as above).
+const ROUTE_REDIRECTS = {
+  canarias: '/ayudas',
+  'en/canarias': '/en/ayudas',
+}
+let routeRedirects = 0
+for (const [from, to] of Object.entries(ROUTE_REDIRECTS)) {
+  const dir = path.join(DIST, from)
+  await fs.mkdir(dir, { recursive: true })
+  await fs.writeFile(path.join(dir, 'index.html'), redirectTemplate(to))
+  routeRedirects++
+}
+console.log(`[postbuild] created ${routeRedirects} route redirect(s)`)
+
+// Vía A del newsletter: no-op salvo NEWSLETTER_AUTOSEND=1. Nunca rompe el build.
+const broadcaster = path.join(ROOT, '../newsletter/bin/ci-broadcast.ts')
+try {
+  await fs.access(broadcaster)
+  const { execFileSync } = await import('node:child_process')
+  execFileSync(process.execPath, [broadcaster], { stdio: 'inherit' })
+} catch (error) {
+  console.log('[postbuild] newsletter omitido:', error.message)
+}
