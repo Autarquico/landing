@@ -160,31 +160,26 @@ export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a
                 href={locale === 'en' ? '/en/delta' : '/delta'}
-                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
+                className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
               >
-                <img src="/delta-logo.svg" alt="delta" width={64} height={64} className="w-16 h-16 mb-4 dark:hidden" />
-                <img src="/delta-logo-dark.svg" alt="delta" width={64} height={64} className="w-16 h-16 mb-4 hidden dark:block" />
-                <span className="text-xs font-medium tracking-[0.42em] mb-2">D&nbsp;E&nbsp;L&nbsp;T&nbsp;A</span>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">Business Intelligence</p>
+                <span className="font-display text-2xl md:text-3xl">δ delta</span>
+                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.deltaDesc')}</p>
               </a>
               <a
                 href={locale === 'en' ? '/en/sigma' : '/sigma'}
-                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-sigma transition-colors"
+                className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-sigma transition-colors"
               >
-                <img src="/sigma-logo.svg" alt="sigma" width={64} height={64} className="w-16 h-16 mb-4 dark:hidden" />
-                <img src="/sigma-logo-dark.svg" alt="sigma" width={64} height={64} className="w-16 h-16 mb-4 hidden dark:block" />
-                <span className="text-xs font-medium tracking-[0.42em] mb-2">S&nbsp;I&nbsp;G&nbsp;M&nbsp;A</span>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">{t(k('solutions.sigma'))}</p>
+                <span className="font-display text-2xl md:text-3xl">σ sigma</span>
+                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.sigmaDesc')}</p>
               </a>
               <a
                 href="https://reservit.co"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
+                className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
               >
-                <span className="font-display h-16 mb-4 flex items-center text-6xl leading-none text-black dark:text-white">ρ</span>
-                <span className="text-xs font-medium tracking-[0.42em] mb-2">R&nbsp;E&nbsp;S&nbsp;E&nbsp;R&nbsp;V&nbsp;I&nbsp;T</span>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">{t(k('solutions.reservit'))}</p>
+                <span className="font-display text-2xl md:text-3xl">ρ reservit</span>
+                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.reservitDesc')}</p>
               </a>
             </div>
           </div>
