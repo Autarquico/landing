@@ -157,7 +157,7 @@ export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => 
             <p className="text-gray-500 dark:text-neutral-400 mb-10 max-w-[46ch] mx-auto">
               {t(k('solutions.subtitle'))}
             </p>
-            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <a
                 href={locale === 'en' ? '/en/delta' : '/delta'}
                 className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
@@ -175,6 +175,16 @@ export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => 
                 <img src="/sigma-logo-dark.svg" alt="sigma" width={64} height={64} className="w-16 h-16 mb-4 hidden dark:block" />
                 <span className="text-xs font-medium tracking-[0.42em] mb-2">S&nbsp;I&nbsp;G&nbsp;M&nbsp;A</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">{t(k('solutions.sigma'))}</p>
+              </a>
+              <a
+                href="https://reservit.co"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
+              >
+                <span className="font-display h-16 mb-4 flex items-center text-6xl leading-none text-black dark:text-white">ρ</span>
+                <span className="text-xs font-medium tracking-[0.42em] mb-2">R&nbsp;E&nbsp;S&nbsp;E&nbsp;R&nbsp;V&nbsp;I&nbsp;T</span>
+                <p className="text-sm text-gray-500 dark:text-neutral-400">{t(k('solutions.reservit'))}</p>
               </a>
             </div>
           </div>
