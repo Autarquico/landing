@@ -162,14 +162,14 @@ export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => 
                 href={locale === 'en' ? '/en/delta' : '/delta'}
                 className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
               >
-                <span className="font-display text-2xl md:text-3xl">δ delta</span>
+                <span className="font-display text-2xl md:text-3xl">delta</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.deltaDesc')}</p>
               </a>
               <a
                 href={locale === 'en' ? '/en/sigma' : '/sigma'}
                 className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-sigma transition-colors"
               >
-                <span className="font-display text-2xl md:text-3xl">σ sigma</span>
+                <span className="font-display text-2xl md:text-3xl">sigma</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.sigmaDesc')}</p>
               </a>
               <a
@@ -178,7 +178,7 @@ export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => 
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
               >
-                <span className="font-display text-2xl md:text-3xl">ρ reservit</span>
+                <span className="font-display text-2xl md:text-3xl">reservit</span>
                 <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.reservitDesc')}</p>
               </a>
             </div>
