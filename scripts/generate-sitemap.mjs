@@ -10,8 +10,8 @@ const SITE_URL = 'https://autarqui.co'
 const routes = [
   { id: 'home',            paths: { es: '/',                    en: '/en' } },
   { id: 'sigma',           paths: { es: '/sigma',               en: '/en/sigma' } },
-  { id: 'sigma-negocios',  paths: { es: '/sigma/negocios',      en: '/en/sigma/businesses' } },
-  { id: 'sigma-asesorias', paths: { es: '/sigma/asesorias',     en: '/en/sigma/advisors' } },
+  { id: 'sigma-negocios',  paths: { es: '/sigma/negocios',      en: '/en/sigma/negocios' } },
+  { id: 'sigma-asesorias', paths: { es: '/sigma/asesorias',     en: '/en/sigma/asesorias' } },
   { id: 'delta',           paths: { es: '/delta',               en: '/en/delta' } },
   { id: 'ayudas',          paths: { es: '/ayudas',              en: '/en/ayudas' } },
   { id: 'terms',           paths: { es: '/legal/terminos' } },
