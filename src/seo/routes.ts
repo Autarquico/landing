@@ -12,6 +12,8 @@ export interface RouteEntry {
 
 export const routes: RouteEntry[] = [
   { id: 'home',    paths: { es: '/',                 en: '/en' },        ogImage: 'home.png',  jsonLd: 'organization' },
+  { id: 'firm',    paths: { es: '/firm',             en: '/en/firm' },   ogImage: 'home.png' },
+  { id: 'work',    paths: { es: '/work',             en: '/en/work' },   ogImage: 'home.png' },
   { id: 'sigma',             paths: { es: '/sigma',             en: '/en/sigma' },             ogImage: 'sigma.png', jsonLd: 'softwareApp', productName: 'sigma' },
   { id: 'sigma-negocios',    paths: { es: '/sigma/negocios',    en: '/en/sigma/negocios' },    ogImage: 'sigma.png', jsonLd: 'softwareApp', productName: 'sigma' },
   { id: 'sigma-asesorias',   paths: { es: '/sigma/asesorias',   en: '/en/sigma/asesorias' },   ogImage: 'sigma.png', jsonLd: 'softwareApp', productName: 'sigma' },

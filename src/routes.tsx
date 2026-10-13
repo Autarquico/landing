@@ -2,6 +2,8 @@ import type { RouteRecord } from 'vite-react-ssg'
 import App from './App'
 import { DeltaPage } from './pages/DeltaPage'
 import { AyudasPage } from './pages/AyudasPage'
+import { FirmPage } from './pages/FirmPage'
+import { WorkPage } from './pages/WorkPage'
 import { SigmaPage } from './pages/SigmaPage'
 import { SigmaSelectorPage } from './pages/SigmaSelectorPage'
 import { TerminosPage } from './pages/legal/TerminosPage'
@@ -13,6 +15,10 @@ import { JournalArticle } from './pages/journal/JournalArticle'
 export const routes: RouteRecord[] = [
   { path: '/',                       element: <App locale="es" /> },
   { path: '/en',                     element: <App locale="en" /> },
+  { path: '/work',                   element: <WorkPage locale="es" /> },
+  { path: '/en/work',                element: <WorkPage locale="en" /> },
+  { path: '/firm',                   element: <FirmPage locale="es" /> },
+  { path: '/en/firm',                element: <FirmPage locale="en" /> },
   { path: '/sigma',                  element: <SigmaSelectorPage locale="es" /> },
   { path: '/en/sigma',               element: <SigmaSelectorPage locale="en" /> },
   { path: '/sigma/negocios',         element: <SigmaPage locale="es" audience="businesses" /> },

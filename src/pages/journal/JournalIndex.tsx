@@ -1,6 +1,7 @@
 import { Head } from 'vite-react-ssg'
 import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
+import { ScrollToTop } from '../../components/ScrollToTop'
 import { getArticlesByLocale } from '../../content/journal'
 import { useLocale } from '../../seo/useLocale'
 import type { Locale } from '../../seo/routes'
@@ -26,6 +27,7 @@ export function JournalIndex({ locale }: Props) {
 
   return (
     <div className="min-h-screen bg-paper dark:bg-ink">
+      <ScrollToTop />
       <Head>
         <html lang={locale} />
         <title>{title}</title>

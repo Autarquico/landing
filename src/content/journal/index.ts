@@ -14,6 +14,7 @@ export interface JournalArticle {
   date: string
   author: string
   readingTime: number
+  published?: boolean
   title: { es: string; en: string }
   subtitle: { es: string; en: string }
   excerpt: { es: string; en: string }
@@ -47,4 +48,19 @@ export function getArticlesByLocale(locale: 'es' | 'en') {
     subtitle: a.subtitle[locale],
     excerpt: a.excerpt[locale],
   }))
+}
+
+// Los N artículos publicados más recientes por fecha, de forma automática.
+export function getLatestArticles(locale: 'es' | 'en', limit = 3) {
+  return articles
+    .filter((a) => a.published !== false)
+    .slice()
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, limit)
+    .map((a) => ({
+      slug: a.slug,
+      date: a.date,
+      readingTime: a.readingTime,
+      title: a.title[locale],
+    }))
 }

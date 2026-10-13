@@ -33,6 +33,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_NEWSLETTER_ENDPOINT: https://autarqui-newsletter.halprez.workers.dev/subscribe
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -1,7 +1,9 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
+import { ScrollToTop } from '../../components/ScrollToTop'
+import { NewsletterForm } from '../../components/NewsletterForm'
 import { getArticle } from '../../content/journal'
 import { useLocale } from '../../seo/useLocale'
 import { articleJsonLd, breadcrumbJsonLd } from '../../seo/jsonLd'
@@ -85,6 +87,7 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
 
   return (
     <div className="min-h-screen bg-paper dark:bg-ink">
+      <ScrollToTop />
       <Head>
         <html lang={locale} />
         <title>{title}</title>
@@ -155,7 +158,23 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
             ))}
           </div>
 
-          <footer className="mt-16 pt-8 border-t border-hairline dark:border-white/10 text-center">
+          <div className="mt-16 pt-8 border-t border-hairline dark:border-white/10 text-center">
+            <p className="font-display text-2xl md:text-3xl tracking-tight mb-5">
+              {locale === 'en' ? "Let's talk about your problem." : 'Hablemos de tu problema.'}
+            </p>
+            <Link
+              to={`${prefix}/#contacto`}
+              className="text-base font-medium border-b border-ink dark:border-white pb-1 hover:opacity-60 transition-opacity"
+            >
+              {locale === 'en' ? 'Tell us what you want to build' : 'Cuéntanos qué quieres construir'} →
+            </Link>
+          </div>
+
+          <div className="mt-12 pt-8 border-t border-hairline dark:border-white/10 max-w-md mx-auto">
+            <NewsletterForm />
+          </div>
+
+          <footer className="mt-12 pt-8 border-t border-hairline dark:border-white/10 text-center">
             <p className="text-sm text-muted">
               {locale === 'en' ? 'Written by' : 'Escrito por'}{' '}
               <span className="text-ink dark:text-white">{article.author}</span>

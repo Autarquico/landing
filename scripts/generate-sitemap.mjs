@@ -9,6 +9,8 @@ const SITE_URL = 'https://autarqui.co'
 
 const routes = [
   { id: 'home',            paths: { es: '/',                    en: '/en' } },
+  { id: 'firm',            paths: { es: '/firm',                en: '/en/firm' } },
+  { id: 'work',            paths: { es: '/work',                en: '/en/work' } },
   { id: 'sigma',           paths: { es: '/sigma',               en: '/en/sigma' } },
   { id: 'sigma-negocios',  paths: { es: '/sigma/negocios',      en: '/en/sigma/negocios' } },
   { id: 'sigma-asesorias', paths: { es: '/sigma/asesorias',     en: '/en/sigma/asesorias' } },
@@ -115,4 +117,14 @@ ${rssItems}
 `
 
 await fs.writeFile(path.join(ROOT, 'public', 'feed.xml'), feed)
-console.log('[sitemap] wrote public/sitemap.xml, public/robots.txt, public/feed.xml')
+
+// Lista de artículos para el Worker del newsletter (email de bienvenida).
+// Sólo lo imprescindible, bilingüe, ya ordenado por fecha descendente.
+const journalJson = journalArticles.map((a) => ({
+  slug: a.slug,
+  date: a.date,
+  title: a.title,
+}))
+await fs.writeFile(path.join(ROOT, 'public', 'journal.json'), JSON.stringify(journalJson))
+
+console.log('[sitemap] wrote public/sitemap.xml, public/robots.txt, public/feed.xml, public/journal.json')

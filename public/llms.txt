@@ -1,19 +1,24 @@
 # autarqui.co
 
-> Consultora de IA en Tenerife, España. Implementamos agentes autónomos, automatización de workflows, integraciones ERP/CRM y BI conversacional para empresas.
+> autarqui.co es una firma independiente de software. Diseñamos, construimos y adaptamos software para empresas. También para nosotros mismos. El software debe adaptarse a la empresa, no al revés.
 
-## Productos
+Razón social: Autarquico Labs SLU. Sede en Santa Úrsula, Tenerife (Islas Canarias, España); trabajamos con empresas sin importar su ubicación.
 
-- [Sigma](https://autarqui.co/sigma): Automatización contable y fiscal para autónomos, pymes y asesorías
-- [Sigma para negocios](https://autarqui.co/sigma/negocios): Versión para autónomos y pymes
-- [Sigma para asesorías](https://autarqui.co/sigma/asesorias): Versión para despachos profesionales
-- [Delta](https://autarqui.co/delta): Capa de integraciones con IA — conecta ERP, CRM, banco, fiscal
+## Secciones principales
+
+- [Firm](https://autarqui.co/firm): Qué significa trabajar con autarqui.co — build, adapt, connect, automate. Vendemos criterio, no horas.
+- [Work](https://autarqui.co/work): Software y productos construidos por la firma.
+- [Journal](https://autarqui.co/journal): Ensayos y notas sobre software, empresas, inteligencia artificial, producto e ingeniería.
+
+## Productos propios
+
+- [delta](https://autarqui.co/delta): Inteligencia empresarial conversacional sobre los datos de una organización.
+- [sigma](https://autarqui.co/sigma): Software profesional para la gestión fiscal y laboral de pymes y asesorías.
+- [reservit](https://reservit.co): CRM agéntico para las operaciones del día a día.
 
 ## Recursos
 
-- [Journal](https://autarqui.co/journal): Ensayos sobre software, IA y autonomía operativa
-- [El desorden ya tiene números](https://autarqui.co/journal/el-desorden-ya-tiene-numeros): Otra interpretación sobre la deuda técnica de la IA
-- [Subvenciones Canarias](https://autarqui.co/canarias): Ayudas a la digitalización en Canarias
+- [Ayudas y Kit Digital](https://autarqui.co/ayudas): Soluciones de digitalización con IA elegibles para ayudas públicas.
 
 ## Contacto
 

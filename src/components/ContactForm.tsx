@@ -10,6 +10,7 @@ const contactSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   company: z.string().min(2),
+  problem: z.string().min(5),
 })
 
 type ContactFormData = z.infer<typeof contactSchema>
@@ -115,6 +116,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 disabled={isLoading}
                 className={`w-full px-4 py-3 rounded-lg border ${
                   errors.company ? 'border-red-500' : 'border-gray-200 dark:border-neutral-700'
+                } bg-white dark:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50`}
+              />
+            </div>
+
+            <div>
+              <textarea
+                {...register('problem')}
+                rows={4}
+                placeholder={t('contact.problem')}
+                disabled={isLoading}
+                className={`w-full px-4 py-3 rounded-lg border resize-y ${
+                  errors.problem ? 'border-red-500' : 'border-gray-200 dark:border-neutral-700'
                 } bg-white dark:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50`}
               />
             </div>

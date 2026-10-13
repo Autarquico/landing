@@ -13,12 +13,8 @@ export const organizationJsonLd = {
       logo: `${SITE_URL}/logo-clear.svg`,
       email: 'info@autarqui.co',
       foundingDate: '2024',
-      description: 'Consultora de inteligencia artificial con sede en Tenerife (Canarias): asesoramiento, integración y automatización para empresas.',
-      areaServed: [
-        { '@type': 'AdministrativeArea', name: 'Tenerife' },
-        { '@type': 'AdministrativeArea', name: 'Canarias' },
-        { '@type': 'Country', name: 'España' },
-      ],
+      description: 'Firma independiente de software que diseña, construye y adapta software para empresas, con sede en Tenerife (Canarias). Software a medida, integraciones, automatización e inteligencia artificial aplicada.',
+      areaServed: { '@type': 'Country', name: 'España' },
       knowsAbout: [
         'Inteligencia artificial aplicada',
         'Automatización de procesos',
@@ -50,11 +46,7 @@ export const organizationJsonLd = {
         addressRegion: 'Santa Cruz de Tenerife',
         addressCountry: 'ES',
       },
-      areaServed: [
-        { '@type': 'AdministrativeArea', name: 'Tenerife' },
-        { '@type': 'AdministrativeArea', name: 'Canarias' },
-        { '@type': 'Country', name: 'España' },
-      ],
+      areaServed: { '@type': 'Country', name: 'España' },
       knowsAbout: [
         'Inteligencia artificial aplicada',
         'Automatización de procesos',
@@ -67,7 +59,7 @@ export const organizationJsonLd = {
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
       name: 'autarqui.co',
-      description: 'Consultora de IA en Tenerife: asesoramiento, integración y automatización empresarial',
+      description: 'Firma independiente de software: diseño, desarrollo y adaptación de software a medida para empresas, con sede en Tenerife (Canarias).',
       publisher: { '@id': `${SITE_URL}/#organization` },
       inLanguage: 'es-ES',
     },
