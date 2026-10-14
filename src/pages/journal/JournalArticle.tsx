@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Navigation } from '../../components/Navigation'
 import { Footer } from '../../components/Footer'
@@ -158,19 +158,10 @@ export function JournalArticle({ locale, slug: propSlug }: Props) {
             ))}
           </div>
 
-          <div className="mt-16 pt-8 border-t border-hairline dark:border-white/10 text-center">
-            <p className="font-display text-2xl md:text-3xl tracking-tight mb-5">
-              {locale === 'en' ? "Let's talk about your problem." : 'Hablemos de tu problema.'}
+          <div className="mt-16 pt-8 border-t border-hairline dark:border-white/10 max-w-md mx-auto">
+            <p className="font-display text-2xl md:text-3xl tracking-tight mb-6 text-center">
+              {locale === 'en' ? 'Enjoyed this? Subscribe.' : '¿Te ha gustado? Suscríbete.'}
             </p>
-            <Link
-              to={`${prefix}/#contacto`}
-              className="text-base font-medium border-b border-ink dark:border-white pb-1 hover:opacity-60 transition-opacity"
-            >
-              {locale === 'en' ? 'Tell us what you want to build' : 'Cuéntanos qué quieres construir'} →
-            </Link>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-hairline dark:border-white/10 max-w-md mx-auto">
             <NewsletterForm />
           </div>
 
