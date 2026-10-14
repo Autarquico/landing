@@ -5,8 +5,16 @@
     <link>https://autarqui.co/journal</link>
     <description>Ensayos sobre software, IA y autonomía operativa</description>
     <language>es</language>
-    <lastBuildDate>Wed, 14 Oct 2026 12:54:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 12:59:57 GMT</lastBuildDate>
     <atom:link href="https://autarqui.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>De Gutenberg a Darwin</title>
+      <link>https://autarqui.co/journal/de-gutenberg-a-darwin</link>
+      <guid isPermaLink="true">https://autarqui.co/journal/de-gutenberg-a-darwin</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
+      <description>La IA escribe software y consume lo que escribe: la imprenta que lee sus propios libros. Gutenberg explica la abundancia; Darwin, lo que viene después: la variación sola no es progreso, y la selección no escala al ritmo de la generación. Lo único que la máquina no hace aún es decidir qué merece sobrevivir. ¿O también?</description>
+      <author>info@autarqui.co (Alex)</author>
+    </item>
     <item>
       <title>Que viene el lobo</title>
       <link>https://autarqui.co/journal/que-viene-el-lobo</link>

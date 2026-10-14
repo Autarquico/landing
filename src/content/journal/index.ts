@@ -1,3 +1,4 @@
+import deGutenbergADarwin from './de-gutenberg-a-darwin.json'
 import queVieneElLobo from './que-viene-el-lobo.json'
 import fijarLasFronteras from './fijar-las-fronteras.json'
 import laFabricaDespuesDelCodigo from './la-fabrica-despues-del-codigo.json'
@@ -22,6 +23,7 @@ export interface JournalArticle {
 }
 
 export const articles: JournalArticle[] = [
+  deGutenbergADarwin as JournalArticle,
   queVieneElLobo as JournalArticle,
   fijarLasFronteras as JournalArticle,
   laFabricaDespuesDelCodigo as JournalArticle,
