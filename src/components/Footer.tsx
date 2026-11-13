@@ -15,18 +15,8 @@ export const Footer: React.FC = () => {
             <h4 className="font-display font-light text-lg mb-4">{t('footer.product')}</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href={`${prefix}/delta`} className="hover:text-white transition-colors">
-                  δ delta — {t('footer.deltaDesc')}
-                </a>
-              </li>
-              <li>
-                <a href={`${prefix}/sigma`} className="hover:text-white transition-colors">
-                  σ sigma — {t('footer.sigmaDesc')}
-                </a>
-              </li>
-              <li>
-                <a href="https://reservit.co" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  ρ reservit — {t('footer.reservitDesc')}
+                <a href="https://bisne.es" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  bisne — {t('footer.bisneDesc')}
                 </a>
               </li>
             </ul>

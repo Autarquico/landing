@@ -29,14 +29,7 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
     }
   }
 
-  const isDelta = pathname === '/delta' || pathname === '/en/delta'
-  const isSigma = pathname === '/sigma' || pathname === '/en/sigma' || pathname.startsWith('/sigma/') || pathname.startsWith('/en/sigma/')
   const isJournalIndex = pathname === '/journal' || pathname === '/en/journal'
-  const productSignupUrl = isDelta
-    ? 'https://delta.autarqui.co/signup'
-    : isSigma
-      ? 'https://sigma.autarqui.co/signup'
-      : null
 
   const [subscribeOpen, setSubscribeOpen] = useState(false)
 
@@ -115,23 +108,12 @@ export const Navigation: React.FC<NavigationProps> = ({ lightBackground: _lightB
             <ThemeSwitcher dark={false} />
           </div>
 
-          {isJournalIndex ? (
-            subscribeButton(
-              'bg-black text-white px-4 py-1.5 lg:px-6 rounded-full text-sm font-medium transition-all duration-200',
-              t('nav.subscribe'),
-            )
-          ) : productSignupUrl ? (
-            <motion.a
-              href={productSignupUrl}
-              target="_blank"
-              rel="noopener"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="bg-black text-white px-4 py-1.5 lg:px-6 rounded-full text-sm font-medium transition-all duration-200"
-            >
-              {t('nav.cta')}
-            </motion.a>
-          ) : null}
+          {isJournalIndex
+            ? subscribeButton(
+                'bg-black text-white px-4 py-1.5 lg:px-6 rounded-full text-sm font-medium transition-all duration-200',
+                t('nav.subscribe'),
+              )
+            : null}
         </div>
       </div>
 

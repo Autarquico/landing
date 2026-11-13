@@ -6,18 +6,13 @@ export interface RouteEntry {
   id: string
   paths: { es: string; en?: string }
   ogImage: string
-  jsonLd?: 'organization' | 'softwareApp' | 'ayudas'
-  productName?: string
+  jsonLd?: 'organization' | 'ayudas'
 }
 
 export const routes: RouteEntry[] = [
   { id: 'home',    paths: { es: '/',                 en: '/en' },        ogImage: 'home.png',  jsonLd: 'organization' },
   { id: 'firm',    paths: { es: '/firm',             en: '/en/firm' },   ogImage: 'home.png' },
   { id: 'work',    paths: { es: '/work',             en: '/en/work' },   ogImage: 'home.png' },
-  { id: 'sigma',             paths: { es: '/sigma',             en: '/en/sigma' },             ogImage: 'sigma.png', jsonLd: 'softwareApp', productName: 'sigma' },
-  { id: 'sigma-negocios',    paths: { es: '/sigma/negocios',    en: '/en/sigma/negocios' },    ogImage: 'sigma.png', jsonLd: 'softwareApp', productName: 'sigma' },
-  { id: 'sigma-asesorias',   paths: { es: '/sigma/asesorias',   en: '/en/sigma/asesorias' },   ogImage: 'sigma.png', jsonLd: 'softwareApp', productName: 'sigma' },
-  { id: 'delta',   paths: { es: '/delta',            en: '/en/delta' },  ogImage: 'delta.png', jsonLd: 'softwareApp', productName: 'delta' },
   { id: 'ayudas',  paths: { es: '/ayudas',           en: '/en/ayudas' },  ogImage: 'home.png', jsonLd: 'ayudas' },
   { id: 'terms',   paths: { es: '/legal/terminos' },                     ogImage: 'home.png' },
   { id: 'privacy', paths: { es: '/legal/privacidad' },                   ogImage: 'home.png' },
@@ -28,12 +23,7 @@ export const routes: RouteEntry[] = [
   { id: 'journal-software-personal', paths: { es: '/journal/software-personal', en: '/en/journal/software-personal' }, ogImage: 'home.png' },
 ]
 
-export function ogImageFor(routeId: string, locale: Locale): string {
+export function ogImageFor(routeId: string, _locale: Locale): string {
   const r = routes.find(x => x.id === routeId)
-  if (!r) return 'home.png'
-  if (locale === 'en' && (routeId.startsWith('sigma') || routeId === 'delta')) {
-    const base = routeId.startsWith('sigma') ? 'sigma' : routeId
-    return `${base}-en.png`
-  }
-  return r.ogImage
+  return r ? r.ogImage : 'home.png'
 }

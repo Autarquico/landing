@@ -157,29 +157,15 @@ export const AyudasPage: React.FC<{ locale?: Locale }> = ({ locale = 'es' }) => 
             <p className="text-gray-500 dark:text-neutral-400 mb-10 max-w-[46ch] mx-auto">
               {t(k('solutions.subtitle'))}
             </p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="grid gap-6 max-w-md mx-auto">
               <a
-                href={locale === 'en' ? '/en/delta' : '/delta'}
-                className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-delta transition-colors"
-              >
-                <span className="font-display text-2xl md:text-3xl">delta</span>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.deltaDesc')}</p>
-              </a>
-              <a
-                href={locale === 'en' ? '/en/sigma' : '/sigma'}
-                className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-sigma transition-colors"
-              >
-                <span className="font-display text-2xl md:text-3xl">sigma</span>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.sigmaDesc')}</p>
-              </a>
-              <a
-                href="https://reservit.co"
+                href="https://bisne.es"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-center gap-2 bg-white dark:bg-neutral-800 rounded-2xl p-8 border border-gray-100 dark:border-neutral-700 hover:border-emerald-500 transition-colors"
               >
-                <span className="font-display text-2xl md:text-3xl">reservit</span>
-                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.reservitDesc')}</p>
+                <span className="font-display text-2xl md:text-3xl">bisne</span>
+                <p className="text-sm text-gray-500 dark:text-neutral-400">{t('footer.bisneDesc')}</p>
               </a>
             </div>
           </div>

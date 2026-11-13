@@ -66,29 +66,6 @@ export const organizationJsonLd = {
   ],
 }
 
-export function softwareAppJsonLd(opts: {
-  name: string
-  description: string
-  path: string
-  locale: Locale
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: opts.name,
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
-    description: opts.description,
-    url: `${SITE_URL}${opts.path}`,
-    publisher: {
-      '@type': 'Organization',
-      name: 'Autarqui',
-      url: SITE_URL,
-    },
-    inLanguage: opts.locale,
-  }
-}
-
 export function ayudasJsonLd(locale: Locale) {
   const path = locale === 'en' ? '/en/ayudas' : '/ayudas'
   const url = `${SITE_URL}${path}`
@@ -109,7 +86,7 @@ export function ayudasJsonLd(locale: Locale) {
         },
         {
           q: "Are autarqui.co's solutions eligible for these grants?",
-          a: 'Yes. delta (Business Intelligence), sigma and our custom AI projects fit the fundable categories of Kit Digital, the AI Voucher and the Canary Islands grant. We help you understand which aid matches your project.',
+          a: 'Yes. Our custom software, business intelligence and AI projects fit the fundable categories of Kit Digital, the AI Voucher and the Canary Islands grant. We help you understand which aid matches your project.',
         },
       ]
     : [
@@ -127,7 +104,7 @@ export function ayudasJsonLd(locale: Locale) {
         },
         {
           q: '¿Las soluciones de autarqui.co son elegibles para estas ayudas?',
-          a: 'Sí. delta (Business Intelligence), sigma y los proyectos de IA a medida encajan en las categorías subvencionables del Kit Digital, el Bono de IA y la subvención de Canarias. Te orientamos sobre qué ayuda encaja con tu proyecto.',
+          a: 'Sí. Nuestro software a medida, business intelligence y los proyectos de IA encajan en las categorías subvencionables del Kit Digital, el Bono de IA y la subvención de Canarias. Te orientamos sobre qué ayuda encaja con tu proyecto.',
         },
       ]
 

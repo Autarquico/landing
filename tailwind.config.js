@@ -28,16 +28,6 @@ export default {
         },
         green: '#10B981',
         red: '#EF4444',
-        delta: {
-          DEFAULT: '#5DBCD0',
-          hover: '#4FA8BB',
-          soft: '#E6F4F7',
-        },
-        sigma: {
-          DEFAULT: '#5DBC83',
-          hover: '#4FA86E',
-          soft: '#E6F7ED',
-        },
       },
       fontFamily: {
         display: ['Fraunces', '"Iowan Old Style"', 'Georgia', 'serif'],

@@ -1,7 +1,7 @@
 import { Head } from 'vite-react-ssg'
 import { useTranslation } from 'react-i18next'
 import { routes, ogImageFor, SITE_URL, type Locale } from './routes'
-import { organizationJsonLd, softwareAppJsonLd, ayudasJsonLd } from './jsonLd'
+import { organizationJsonLd, ayudasJsonLd } from './jsonLd'
 
 interface SEOProps {
   routeId: string
@@ -30,16 +30,6 @@ export const SEO: React.FC<SEOProps> = ({ routeId, locale }) => {
 
   const jsonLd: object[] = []
   if (route.jsonLd === 'organization') jsonLd.push(organizationJsonLd)
-  if (route.jsonLd === 'softwareApp' && route.productName) {
-    jsonLd.push(
-      softwareAppJsonLd({
-        name: route.productName,
-        description,
-        path,
-        locale,
-      })
-    )
-  }
   if (route.jsonLd === 'ayudas') jsonLd.push(ayudasJsonLd(locale))
 
   return (

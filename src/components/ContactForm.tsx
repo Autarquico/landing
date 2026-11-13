@@ -6,6 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
+const CONTACT_ENDPOINT =
+  import.meta.env.VITE_CONTACT_ENDPOINT ??
+  'https://autarqui-newsletter.halprez.workers.dev/contact'
+
 const contactSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
@@ -22,12 +26,14 @@ interface ContactFormProps {
 
 export const ContactForm: React.FC<ContactFormProps> = ({
   source,
-  endpoint = 'https://sigma.autarqui.co/api/public/contact',
+  endpoint = CONTACT_ENDPOINT,
 }) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  // Señuelo anti-bot: invisible para una persona, irresistible para un bot.
+  const [website, setWebsite] = useState('')
 
   const {
     register,
@@ -46,7 +52,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, source }),
+        body: JSON.stringify({
+          ...data,
+          source,
+          website,
+          locale: i18n.language === 'en' ? 'en' : 'es',
+        }),
       })
 
       if (!response.ok) throw new Error('Request failed')
@@ -131,6 +142,18 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 } bg-white dark:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:opacity-50`}
               />
             </div>
+
+            {/* Señuelo: invisible para una persona, irresistible para un bot. */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              value={website}
+              onChange={(event) => setWebsite(event.target.value)}
+              className="hidden"
+            />
 
             <motion.button
               type="submit"

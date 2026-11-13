@@ -12,9 +12,7 @@ Razón social: Autarquico Labs SLU. Sede en Santa Úrsula, Tenerife (Islas Canar
 
 ## Productos propios
 
-- [delta](https://autarqui.co/delta): Inteligencia empresarial conversacional sobre los datos de una organización.
-- [sigma](https://autarqui.co/sigma): Software profesional para la gestión fiscal y laboral de pymes y asesorías.
-- [reservit](https://reservit.co): CRM agéntico para las operaciones del día a día.
+- [bisne](https://bisne.es): Gestión todo-en-uno para autónomos y pymes: agenda, clientes, facturas, impuestos y personal en una sola app.
 
 ## Recursos
 

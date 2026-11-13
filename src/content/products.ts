@@ -1,5 +1,5 @@
 export interface Product {
-  id: 'delta' | 'sigma' | 'reservit'
+  id: 'bisne'
   name: string
   typeKey: string
   domainKey: string
@@ -11,28 +11,12 @@ export interface Product {
 // Taxonomía pública (§9 del spec), localizada vía i18n para no mezclar idiomas.
 export const products: Product[] = [
   {
-    id: 'delta',
-    name: 'delta',
+    id: 'bisne',
+    name: 'bisne',
     typeKey: 'work.type.product',
-    domainKey: 'work.domain.businessIntelligence',
-    descKey: 'home.work.delta.desc',
-    href: (prefix) => `${prefix}/delta`,
-  },
-  {
-    id: 'sigma',
-    name: 'sigma',
-    typeKey: 'work.type.product',
-    domainKey: 'work.domain.professionalSoftware',
-    descKey: 'home.work.sigma.desc',
-    href: (prefix) => `${prefix}/sigma`,
-  },
-  {
-    id: 'reservit',
-    name: 'reservit',
-    typeKey: 'work.type.product',
-    domainKey: 'work.domain.operations',
-    descKey: 'home.work.reservit.desc',
-    href: () => 'https://reservit.co',
+    domainKey: 'work.domain.business',
+    descKey: 'home.work.bisne.desc',
+    href: () => 'https://bisne.es',
     external: true,
   },
 ]
