@@ -8,6 +8,7 @@ import { PrivacidadPage } from './pages/legal/PrivacidadPage'
 import { GdprPage } from './pages/legal/GdprPage'
 import { JournalIndex } from './pages/journal/JournalIndex'
 import { JournalArticle } from './pages/journal/JournalArticle'
+import { NotFoundPage } from './pages/NotFoundPage'
 
 export const routes: RouteRecord[] = [
   { path: '/',                       element: <App locale="es" /> },
@@ -48,4 +49,5 @@ export const routes: RouteRecord[] = [
   { path: '/en/journal/software-personal', element: <JournalArticle locale="en" slug="software-personal" /> },
   { path: '/journal/manifiesto', element: <JournalArticle locale="es" slug="manifiesto" /> },
   { path: '/en/journal/manifiesto', element: <JournalArticle locale="en" slug="manifiesto" /> },
+  { path: '*', element: <NotFoundPage /> },
 ]
